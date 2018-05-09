@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
+  <listeners>
+    <listener class-name="mBankingUtilityCenter.AnotationListner"/>
+    <listener class-name="mBankingUtilityCenter.PriorityInterceptor"/>
+  </listeners>
+  <test name="Login App">
+    <classes>
+      <class name="mBankingTestPages.LoginPageTest"/>
+    </classes>
+  </test> <!-- Login App -->
+  <test name="Add Bank">
+    <classes>
+      <class name="mBankingTestPages.AddBankTest"/>
+    </classes>
+  </test> <!-- Add Bank -->
+  <test name="Set UPI PIN">
+    <classes>
+      <class name="mBankingTestPages.SetUPIPINTest"/>
+    </classes>
+  </test> <!-- Set UPI PIN -->
+  <test name="Login App(failed)">
+    <classes>
+      <class name="mBankingTestPages.LoginPageTest">
+        <methods>
+          <include name="AppExit"/>
+          <include name="AppLogin"/>
+          <include name="appStart"/>
+        </methods>
+      </class> <!-- mBankingTestPages.LoginPageTest -->
+      <class name="mBankingTestPages.SetUPIPINTest">
+        <methods>
+          <include name="extentReportSetUp"/>
+          <include name="appStart"/>
+        </methods>
+      </class> <!-- mBankingTestPages.SetUPIPINTest -->
+      <class name="mBankingTestPages.AddBankTest">
+        <methods>
+          <include name="appStart"/>
+        </methods>
+      </class> <!-- mBankingTestPages.AddBankTest -->
+    </classes>
+  </test> <!-- Login App(failed) -->
+  <test name="Add Bank(failed)">
+    <classes>
+      <class name="mBankingTestPages.SetUPIPINTest">
+        <methods>
+          <include name="extentReportSetUp"/>
+          <include name="appStart"/>
+        </methods>
+      </class> <!-- mBankingTestPages.SetUPIPINTest -->
+      <class name="mBankingTestPages.LoginPageTest">
+        <methods>
+          <include name="appStart"/>
+        </methods>
+      </class> <!-- mBankingTestPages.LoginPageTest -->
+      <class name="mBankingTestPages.AddBankTest">
+        <methods>
+          <include name="AddBankValid"/>
+          <include name="appStart"/>
+        </methods>
+      </class> <!-- mBankingTestPages.AddBankTest -->
+    </classes>
+  </test> <!-- Add Bank(failed) -->
+  <test name="Set UPI PIN(failed)">
+    <classes>
+      <class name="mBankingTestPages.SetUPIPINTest">
+        <methods>
+          <include name="setUPIPIN"/>
+          <include name="extentReportSetUp"/>
+          <include name="appStart"/>
+        </methods>
+      </class> <!-- mBankingTestPages.SetUPIPINTest -->
+      <class name="mBankingTestPages.LoginPageTest">
+        <methods>
+          <include name="appStart"/>
+        </methods>
+      </class> <!-- mBankingTestPages.LoginPageTest -->
+      <class name="mBankingTestPages.AddBankTest">
+        <methods>
+          <include name="appStart"/>
+        </methods>
+      </class> <!-- mBankingTestPages.AddBankTest -->
+    </classes>
+  </test> <!-- Set UPI PIN(failed) -->
+</suite> <!-- Failed suite [Positive Transaction flow] -->

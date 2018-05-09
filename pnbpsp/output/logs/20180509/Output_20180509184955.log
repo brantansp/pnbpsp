@@ -1,0 +1,32 @@
+[INFO] 2018-05-09 18:49:55,378 AppiumController extentReportSetUp - Running UPI Appium Automation testing for PNB
+[INFO] 2018-05-09 18:49:55,463 Driver init - App started : com.fss.pnbpsp
+[INFO] 2018-05-09 18:49:55,464 Driver instantiateDriver - The platform is : Android platform
+[INFO] 2018-05-09 18:50:26,625 AppiumController extentReportSetUp - 
+
+[INFO] 2018-05-09 18:50:26,627 AppiumController appStart - Login to Application
+[INFO] 2018-05-09 18:50:26,735 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 18:50:32,362 AppiumController waitForElement - Element found : ******
+[INFO] 2018-05-09 18:50:37,840 AppiumController sendText - Send Text : 123789
+[INFO] 2018-05-09 18:50:37,841 LoginPage loginApp - Login Pin send  : 123789
+[INFO] 2018-05-09 18:50:41,524 AppiumController click - clicked element
+[INFO] 2018-05-09 18:50:41,541 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-09 18:50:41,553 AddBankTest AddBankValid - **********Add Bank**********
+[INFO] 2018-05-09 18:50:41,565 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 18:50:41,689 AppiumController waitForElement - Element found : ••••••
+[INFO] 2018-05-09 18:50:47,205 AppiumController sendText - Send Text : 123789
+[INFO] 2018-05-09 18:50:47,207 LoginPage loginApp - Login Pin send  : 123789
+[INFO] 2018-05-09 18:50:50,856 AppiumController click - clicked element
+[INFO] 2018-05-09 18:50:50,857 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 18:51:14,920 AppiumController waitForElement - Element found : Add Bank A/C
+[INFO] 2018-05-09 18:51:15,416 AppiumController click - clicked element
+[INFO] 2018-05-09 18:51:15,416 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 18:51:23,540 AppiumController waitForElement - Element found : ADD BANK ACCOUNT
+[INFO] 2018-05-09 18:51:29,580 AppiumController sendText - Send Text : Sarva UP Gramin Bank
+[INFO] 2018-05-09 18:51:30,150 AppiumController getxy - X is 15,Y is 492
+[INFO] 2018-05-09 18:51:30,192 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 18:51:35,585 AppiumController waitForElement - Element found : OK
+[INFO] 2018-05-09 18:51:35,585 LoginPage addBank - Transaction timed out : 1
+[INFO] 2018-05-09 18:51:38,730 AppiumController click - clicked element
+[INFO] 2018-05-09 18:51:41,934 AppiumController click - clicked element
+[INFO] 2018-05-09 18:51:42,028 AppiumController getxy - X is 15,Y is 492
+[INFO] 2018-05-09 18:51:42,056 AppiumController waitForElement - Entered Wait for locator

@@ -1,0 +1,33 @@
+[INFO] 2018-05-09 19:03:26,733 AppiumController extentReportSetUp - Running UPI Appium Automation testing for PNB
+[INFO] 2018-05-09 19:03:26,823 Driver init - App started : com.fss.pnbpsp
+[INFO] 2018-05-09 19:03:26,823 Driver instantiateDriver - The platform is : Android platform
+[INFO] 2018-05-09 19:03:55,013 AppiumController extentReportSetUp - 
+
+[INFO] 2018-05-09 19:03:55,015 AppiumController appStart - Login to Application
+[INFO] 2018-05-09 19:03:55,195 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 19:03:58,519 AppiumController waitForElement - Element found : ******
+[INFO] 2018-05-09 19:04:03,541 AppiumController sendText - Send Text : 123789
+[INFO] 2018-05-09 19:04:03,542 LoginPage loginApp - Login Pin send  : 123789
+[INFO] 2018-05-09 19:04:06,538 AppiumController click - clicked element
+[INFO] 2018-05-09 19:04:06,574 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-09 19:04:06,592 AddBankTest AddBankValid - **********Add Bank**********
+[INFO] 2018-05-09 19:04:06,605 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 19:04:38,466 LoginPage loginApp - org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
+- native content: "By.id: com.fss.pnbpsp:id/editText_login_password" 
+- html content: "by id or name "pwdBox""
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: driver.version: unknown
+[INFO] 2018-05-09 19:04:39,873 AppiumController extentGetResult - @AfterMethod
+
+[INFO] 2018-05-09 19:04:43,114 AppiumController takeScreenShot - Failed Screenshot captured : Wed_May_09_19_04_39_IST_2018.png
+[INFO] 2018-05-09 19:04:43,124 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 19:04:43,255 AppiumController waitForElement - Element found : 
+[INFO] 2018-05-09 19:04:43,490 AppiumController click - clicked element
+[INFO] 2018-05-09 19:04:43,490 LoginPage exitApp - Clicked on Menu Drawer box
+[INFO] 2018-05-09 19:04:44,726 AppiumController click - clicked element
+[INFO] 2018-05-09 19:04:44,727 LoginPage exitApp - Clicked on Logout button
+[INFO] 2018-05-09 19:04:45,764 AppiumController click - clicked element
+[INFO] 2018-05-09 19:04:45,765 LoginPage exitApp - Clicked on Yes button
+[INFO] 2018-05-09 19:04:45,835 AppiumController tearDown - @AfterSuite

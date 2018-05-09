@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "Positive Transaction flow" >
+<listeners>
+<listener class-name="mBankingUtilityCenter.AnotationListner"></listener>
+<listener class-name="mBankingUtilityCenter.PriorityInterceptor" />
+</listeners>
+
+<test name = "Login App">
+      <classes>
+          <class name = "mBankingTestPages.LoginPageTest"/>
+      </classes>        
+ </test>
+  
+ <test name = "Add Bank">
+      <classes>
+          <class name = "mBankingTestPages.AddBankTest"/>
+      </classes>        
+ </test> 
+ 
+<test name = "Set UPI PIN">
+      <classes>
+          <class name = "mBankingTestPages.SetUPIPINTest"/>
+      </classes>        
+ </test> 
+ 
+</suite>
