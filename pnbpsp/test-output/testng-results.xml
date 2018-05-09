@@ -1,21 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50752" started-at="2018-05-09T13:33:55Z" finished-at="2018-05-09T13:34:45Z">
+  <suite name="Positive Transaction flow" duration-ms="89367" started-at="2018-05-09T14:05:06Z" finished-at="2018-05-09T14:06:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50752" started-at="2018-05-09T13:33:55Z" finished-at="2018-05-09T13:34:45Z">
+    <test name="Login App" duration-ms="16656" started-at="2018-05-09T14:05:06Z" finished-at="2018-05-09T14:05:22Z">
+      <class name="mBankingTestPages.LoginPageTest">
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestPages.LoginPageTest@13291e3]" name="extentbeforeMethod" is-config="true" duration-ms="4" started-at="2018-05-09T19:35:06Z" finished-at="2018-05-09T19:35:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingTestPages.LoginPageTest.AppLogin() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="PASS" signature="AppLogin()[pri:0, instance:mBankingTestPages.LoginPageTest@13291e3]" name="AppLogin" duration-ms="13360" started-at="2018-05-09T19:35:06Z" finished-at="2018-05-09T19:35:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppLogin -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestPages.LoginPageTest@13291e3]" name="extentGetResult" is-config="true" duration-ms="4" started-at="2018-05-09T19:35:19Z" finished-at="2018-05-09T19:35:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AppLogin status=SUCCESS method=LoginPageTest.AppLogin()[pri:0, instance:mBankingTestPages.LoginPageTest@13291e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestPages.LoginPageTest@13291e3]" name="extentbeforeMethod" is-config="true" duration-ms="1" started-at="2018-05-09T19:35:19Z" finished-at="2018-05-09T19:35:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingTestPages.LoginPageTest.AppExit() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="PASS" signature="AppExit()[pri:0, instance:mBankingTestPages.LoginPageTest@13291e3]" name="AppExit" duration-ms="3217" started-at="2018-05-09T19:35:19Z" finished-at="2018-05-09T19:35:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppExit -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestPages.LoginPageTest@13291e3]" name="extentGetResult" is-config="true" duration-ms="2" started-at="2018-05-09T19:35:22Z" finished-at="2018-05-09T19:35:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AppExit status=SUCCESS method=LoginPageTest.AppExit()[pri:0, instance:mBankingTestPages.LoginPageTest@13291e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestPages.LoginPageTest -->
+    </test> <!-- Login App -->
+    <test name="Add Bank" duration-ms="47517" started-at="2018-05-09T14:05:22Z" finished-at="2018-05-09T14:06:10Z">
       <class name="mBankingTestPages.AddBankTest">
-        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestPages.AddBankTest@129cf23]" name="extentReportSetUp" is-config="true" duration-ms="28289" started-at="2018-05-09T19:03:26Z" finished-at="2018-05-09T19:03:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentReportSetUp -->
-        <test-method status="PASS" signature="appStart()[pri:0, instance:mBankingTestPages.AddBankTest@129cf23]" name="appStart" is-config="true" duration-ms="11524" started-at="2018-05-09T19:03:55Z" finished-at="2018-05-09T19:04:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- appStart -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestPages.AddBankTest@129cf23]" name="extentbeforeMethod" is-config="true" duration-ms="9" started-at="2018-05-09T19:04:06Z" finished-at="2018-05-09T19:04:06Z">
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestPages.AddBankTest@1809907]" name="extentbeforeMethod" is-config="true" duration-ms="1" started-at="2018-05-09T19:35:22Z" finished-at="2018-05-09T19:35:22Z">
           <params>
             <param index="0">
               <value>
@@ -26,12 +74,46 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentbeforeMethod -->
-        <test-method status="FAIL" signature="AddBankValid()[pri:3, instance:mBankingTestPages.AddBankTest@129cf23]" name="AddBankValid" duration-ms="33278" started-at="2018-05-09T19:04:06Z" finished-at="2018-05-09T19:04:39Z">
+        <test-method status="PASS" signature="AddBankValid()[pri:3, instance:mBankingTestPages.AddBankTest@1809907]" name="AddBankValid" duration-ms="47514" started-at="2018-05-09T19:35:22Z" finished-at="2018-05-09T19:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddBankValid -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestPages.AddBankTest@1809907]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-05-09T19:36:10Z" finished-at="2018-05-09T19:36:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddBankValid status=SUCCESS method=AddBankTest.AddBankValid()[pri:3, instance:mBankingTestPages.AddBankTest@1809907] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestPages.AddBankTest -->
+    </test> <!-- Add Bank -->
+    <test name="Set UPI PIN" duration-ms="25145" started-at="2018-05-09T14:06:10Z" finished-at="2018-05-09T14:06:35Z">
+      <class name="mBankingTestPages.SetUPIPINTest">
+        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestPages.SetUPIPINTest@14abbdc]" name="extentReportSetUp" is-config="true" duration-ms="28548" started-at="2018-05-09T19:34:37Z" finished-at="2018-05-09T19:35:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReportSetUp -->
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestPages.SetUPIPINTest@14abbdc]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-05-09T19:36:10Z" finished-at="2018-05-09T19:36:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingTestPages.SetUPIPINTest.setUPIPIN() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="FAIL" signature="setUPIPIN()[pri:1, instance:mBankingTestPages.SetUPIPINTest@14abbdc]" name="setUPIPIN" duration-ms="22167" started-at="2018-05-09T19:36:10Z" finished-at="2018-05-09T19:36:32Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Can't locate an element by this strategy: Locator map: 
-- native content: "By.xpath: //*[@class='android.widget.EditText']" 
-- html content: "by id or name "loginBox""
+- native content: "By.id: com.fss.pnbpsp:id/imageView_arrow" 
+- html content: "by id or name "viewArrow""
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
@@ -39,18 +121,17 @@ Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
-- native content: "By.xpath: //*[@class='android.widget.EditText']" 
-- html content: "by id or name "loginBox""
+- native content: "By.id: com.fss.pnbpsp:id/imageView_arrow" 
+- html content: "by id or name "viewArrow""
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
 Driver info: driver.version: unknown
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.sendKeys(<generated>)
-	at mBankingBaseFactory.AppiumController.sendText(AppiumController.java:918)
-	at mBankingPageObjectFactory.LoginPage.loginApp(LoginPage.java:61)
-	at mBankingTestPages.AddBankTest.AddBankValid(AddBankTest.java:23)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.isDisplayed(<generated>)
+	at mBankingPageObjectFactory.LoginPage.setPIN(LoginPage.java:153)
+	at mBankingTestPages.SetUPIPINTest.setUPIPIN(SetUPIPINTest.java:23)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -80,27 +161,23 @@ Driver info: driver.version: unknown
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddBankValid -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestPages.AddBankTest@129cf23]" name="extentGetResult" is-config="true" duration-ms="3244" started-at="2018-05-09T19:04:39Z" finished-at="2018-05-09T19:04:43Z">
+        </test-method> <!-- setUPIPIN -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestPages.SetUPIPINTest@14abbdc]" name="extentGetResult" is-config="true" duration-ms="2958" started-at="2018-05-09T19:36:32Z" finished-at="2018-05-09T19:36:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AddBankValid status=FAILURE method=AddBankTest.AddBankValid()[pri:3, instance:mBankingTestPages.AddBankTest@129cf23] output={null}]]]>
+                <![CDATA[[TestResult name=setUPIPIN status=FAILURE method=SetUPIPINTest.setUPIPIN()[pri:1, instance:mBankingTestPages.SetUPIPINTest@14abbdc] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="appExit()[pri:0, instance:mBankingTestPages.AddBankTest@129cf23]" name="appExit" is-config="true" duration-ms="2648" started-at="2018-05-09T19:04:43Z" finished-at="2018-05-09T19:04:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- appExit -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestPages.AddBankTest@129cf23]" name="tearDown" is-config="true" duration-ms="454" started-at="2018-05-09T19:04:45Z" finished-at="2018-05-09T19:04:46Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestPages.SetUPIPINTest@14abbdc]" name="tearDown" is-config="true" duration-ms="217" started-at="2018-05-09T19:36:35Z" finished-at="2018-05-09T19:36:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mBankingTestPages.AddBankTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- mBankingTestPages.SetUPIPINTest -->
+    </test> <!-- Set UPI PIN -->
+  </suite> <!-- Positive Transaction flow -->
 </testng-results>

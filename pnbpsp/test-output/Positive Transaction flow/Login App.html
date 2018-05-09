@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Login App</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 09 18:40:47 IST 2018</td>
+<td>Started on:</td><td>Wed May 09 19:35:06 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (101 ms)</td>
+<tr><td>Total time:</td><td>16 seconds (16656 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,119 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='mBankingTestPages.LoginPageTest.appStart()'><b>appStart</b><br>Test class: mBankingTestPages.LoginPageTest</td>
-<td><div><pre>java.lang.NoClassDefFoundError: org/objectweb/asm/Type
-	at net.sf.cglib.core.TypeUtils.parseType(TypeUtils.java:184)
-	at net.sf.cglib.core.KeyFactory.&lt;clinit&gt;(KeyFactory.java:72)
-	at net.sf.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:72)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:53)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:34)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:248)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:246)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator$3.proxyForLocator(AppiumFieldDecorator.java:121)
-	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:172)
-	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-	at mBankingPageObjectFactory.LoginPage.&lt;init&gt;(LoginPage.java:51)
-	at mBankingBaseFactory.AppiumController.appStart(AppiumController.java:120)
-Caused by: java.lang.ClassNotFoundException: org.objectweb.asm.Type
-	at java.net.URLClassLoader.findClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	... 36 more
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace12245506", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace12245506'><pre>java.lang.NoClassDefFoundError: org/objectweb/asm/Type
-	at net.sf.cglib.core.TypeUtils.parseType(TypeUtils.java:184)
-	at net.sf.cglib.core.KeyFactory.&lt;clinit&gt;(KeyFactory.java:72)
-	at net.sf.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:72)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:53)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:34)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:248)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:246)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator$3.proxyForLocator(AppiumFieldDecorator.java:121)
-	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:172)
-	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-	at mBankingPageObjectFactory.LoginPage.&lt;init&gt;(LoginPage.java:51)
-	at mBankingBaseFactory.AppiumController.appStart(AppiumController.java:120)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:656)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.ClassNotFoundException: org.objectweb.asm.Type
-	at java.net.URLClassLoader.findClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	... 36 more
-</pre></div></td>
-<td>0</td>
-<td>null</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='mBankingTestPages.LoginPageTest.extentbeforeMethod()'><b>extentbeforeMethod</b><br>Test class: mBankingTestPages.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>mBankingTestPages.LoginPageTest@13291e3</td></tr>
-<tr>
-<td title='mBankingTestPages.LoginPageTest.extentbeforeMethod()'><b>extentbeforeMethod</b><br>Test class: mBankingTestPages.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>mBankingTestPages.LoginPageTest@13291e3</td></tr>
-<tr>
-<td title='mBankingTestPages.LoginPageTest.extentGetResult()'><b>extentGetResult</b><br>Test class: mBankingTestPages.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>mBankingTestPages.LoginPageTest@13291e3</td></tr>
-<tr>
-<td title='mBankingTestPages.LoginPageTest.extentGetResult()'><b>extentGetResult</b><br>Test class: mBankingTestPages.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>mBankingTestPages.LoginPageTest@13291e3</td></tr>
-<tr>
-<td title='mBankingTestPages.LoginPageTest.appExit()'><b>appExit</b><br>Test class: mBankingTestPages.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -188,12 +77,12 @@ Caused by: java.lang.ClassNotFoundException: org.objectweb.asm.Type
 <tr>
 <td title='mBankingTestPages.LoginPageTest.AppExit()'><b>AppExit</b><br>Test class: mBankingTestPages.LoginPageTest</td>
 <td></td>
-<td>0</td>
+<td>3</td>
 <td>mBankingTestPages.LoginPageTest@13291e3</td></tr>
 <tr>
 <td title='mBankingTestPages.LoginPageTest.AppLogin()'><b>AppLogin</b><br>Test class: mBankingTestPages.LoginPageTest</td>
 <td></td>
-<td>0</td>
+<td>13</td>
 <td>mBankingTestPages.LoginPageTest@13291e3</td></tr>
 </table><p>
 </body>

@@ -113,13 +113,13 @@ public class AppiumController {
 	    log.info("\n\r"); 
 	}
 
-    @BeforeTest
+/*    @BeforeTest
     public static void appStart() throws InterruptedException
     {
     	log.info("Login to Application");
     	LoginPage loginPage = new LoginPage(driver);
     	loginPage.loginApp("123789");
-    }
+    }*/
     
     @BeforeMethod
     public static void extentbeforeMethod(Method method)
@@ -156,12 +156,12 @@ public class AppiumController {
 		*/
 	}
      
-    @AfterTest
+/*    @AfterTest
     public static void appExit() throws InterruptedException
     {
     	LoginPage loginPage = new LoginPage(driver);
     	loginPage.exitApp();
-    }
+    }*/
     
     @AfterSuite
     public static void tearDown()

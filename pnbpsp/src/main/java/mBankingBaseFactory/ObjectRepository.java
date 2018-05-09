@@ -60,7 +60,7 @@ public class ObjectRepository extends AppiumController {
 	 * SetUPI PIN
 	 */
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/img_SetPIN")
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_SetPIN")
 	public static MobileElement setPINBtn;
 	
 	@AndroidFindBy(id = "com.fss.pnbpsp:id/imageView_arrow")

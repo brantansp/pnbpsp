@@ -1,0 +1,29 @@
+[INFO] 2018-05-09 19:24:12,148 AppiumController extentReportSetUp - Running UPI Appium Automation testing for PNB
+[INFO] 2018-05-09 19:24:12,366 Driver init - App started : com.fss.pnbpsp
+[INFO] 2018-05-09 19:24:12,367 Driver instantiateDriver - The platform is : Android platform
+[INFO] 2018-05-09 19:24:43,680 AppiumController extentReportSetUp - 
+
+[INFO] 2018-05-09 19:24:43,688 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-09 19:24:43,695 LoginPageTest AppExit - **********Exit Application**********
+[INFO] 2018-05-09 19:24:43,885 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 19:25:14,795 AppiumController waitForElement - Element found : 
+[INFO] 2018-05-09 19:25:15,093 AppiumController click - clicked element
+[INFO] 2018-05-09 19:25:15,094 LoginPage exitApp - Clicked on Menu Drawer box
+[INFO] 2018-05-09 19:25:16,237 AppiumController click - clicked element
+[INFO] 2018-05-09 19:25:16,237 LoginPage exitApp - Clicked on Logout button
+[INFO] 2018-05-09 19:25:17,329 AppiumController click - clicked element
+[INFO] 2018-05-09 19:25:17,330 LoginPage exitApp - Clicked on Yes button
+[INFO] 2018-05-09 19:25:17,331 LoginPageTest AppExit - ***************End***************
+[INFO] 2018-05-09 19:25:17,336 AppiumController extentGetResult - @AfterMethod
+
+[INFO] 2018-05-09 19:25:17,343 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-09 19:25:17,346 LoginPageTest AppLogin - **********Login to Application**********
+[INFO] 2018-05-09 19:25:17,358 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-09 19:25:18,668 AppiumController waitForElement - Element found : ******
+[INFO] 2018-05-09 19:25:23,586 AppiumController sendText - Send Text : 123789
+[INFO] 2018-05-09 19:25:23,588 LoginPage loginApp - Login Pin send  : 123789
+[INFO] 2018-05-09 19:25:26,200 AppiumController click - clicked element
+[INFO] 2018-05-09 19:25:26,202 LoginPageTest AppLogin - ***************End***************
+[INFO] 2018-05-09 19:25:26,206 AppiumController extentGetResult - @AfterMethod
+
+[INFO] 2018-05-09 19:25:26,309 AppiumController tearDown - @AfterSuite
