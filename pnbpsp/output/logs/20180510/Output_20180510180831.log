@@ -1,0 +1,29 @@
+[INFO] 2018-05-10 18:08:31,209 AppiumController extentReportSetUp - Running UPI Appium Automation testing for PNB
+[INFO] 2018-05-10 18:08:31,311 Driver init - App started : com.fss.pnbpsp
+[INFO] 2018-05-10 18:08:31,312 Driver instantiateDriver - The platform is : Android platform
+[INFO] 2018-05-10 18:09:00,470 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-10 18:09:00,477 BalanceEnquiryTest login - **********Login to application**********
+[INFO] 2018-05-10 18:09:00,604 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-10 18:09:04,543 AppiumController waitForElement - Element found : ******
+[INFO] 2018-05-10 18:09:09,502 AppiumController sendText - Send Text : 123789
+[INFO] 2018-05-10 18:09:09,503 BasePage loginApp - Login Pin send  : 123789
+[INFO] 2018-05-10 18:09:09,504 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-10 18:09:10,088 AppiumController waitForElement - Element found : 
+[INFO] 2018-05-10 18:09:12,187 AppiumController click - clicked element
+[INFO] 2018-05-10 18:09:12,188 BalanceEnquiryTest login - ***************End***************
+[INFO] 2018-05-10 18:09:12,193 AppiumController extentGetResult - @AfterMethod
+
+[INFO] 2018-05-10 18:09:12,197 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-10 18:09:12,199 BalanceEnquiryTest setUPIPIN - **********Balance Enquiry**********
+[INFO] 2018-05-10 18:09:12,207 AppiumController clickTextView - Click on element : View Balance
+[INFO] 2018-05-10 18:09:13,186 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-10 18:09:16,212 AppiumController waitForElement - Element found : Bank Name	:
+[INFO] 2018-05-10 18:09:16,398 AppiumController click - clicked element
+[INFO] 2018-05-10 18:09:16,398 BalanceEnquiryTest setUPIPIN - ***************End***************
+[INFO] 2018-05-10 18:09:16,399 AppiumController extentGetResult - @AfterMethod
+
+[INFO] 2018-05-10 18:09:16,400 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-10 18:09:16,403 BalanceEnquiryTest AppExit - **********Exit Application**********
+[INFO] 2018-05-10 18:09:16,409 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-10 18:09:25,585 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-10 18:09:34,708 AppiumController waitForElement - Entered Wait for locator

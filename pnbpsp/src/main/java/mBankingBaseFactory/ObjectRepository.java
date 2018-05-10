@@ -13,9 +13,17 @@ public class ObjectRepository extends AppiumController {
 	@AndroidFindBy(id = "com.fss.pnbpsp:id/editText_login_password")
 	public static MobileElement pwdBox;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_submit")
-	public static MobileElement loginBtn;
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_ok")
+	public static MobileElement okBtn;
 	
+	@AndroidFindBy (xpath="//android.widget.Button[@text='OK']")
+	protected MobileElement okbtn;      //bottomband ok
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_submit")
+	public static MobileElement submit;
+	
+	@AndroidFindBy (xpath="//android.widget.TextView[@text='Are you sure want to exit?']")
+	public MobileElement exitDialog;
 	/**
 	 * Welcome Page
 	 */
@@ -27,12 +35,12 @@ public class ObjectRepository extends AppiumController {
 	
 	@AndroidFindBy(id = "com.fss.pnbpsp:id/logout_btn")
 	public static MobileElement logoutBtn;
-	                                         
+	
 	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_yes")
 	public static MobileElement yesBtn;
 	
 	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_no")
-	public static MobileElement logoutNoBtn;
+	public static MobileElement noBtn;
 	
 	/**
 	 * Add Bank Page
@@ -40,7 +48,7 @@ public class ObjectRepository extends AppiumController {
 	
 	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_SelectBank")
 	public static MobileElement addbankBtn;
-	                                        
+
 	@AndroidFindBy(id = "com.fss.pnbpsp:id/textView_pagetitle_header")
 	public static MobileElement pageTitle;
 
@@ -62,7 +70,7 @@ public class ObjectRepository extends AppiumController {
 	
 	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_SetPIN")
 	public static MobileElement setPINBtn;
-	
+
 	@AndroidFindBy(id = "com.fss.pnbpsp:id/imageView_arrow")
 	public static MobileElement viewArrow;
 
@@ -93,16 +101,104 @@ public class ObjectRepository extends AppiumController {
 	@AndroidFindBy (xpath = "//*[@class='android.widget.Button'][@text='Detecting OTP']")
 	public MobileElement detectingOTP;
 
-	//@AndroidFindBy (xpath="//android.widget.TextView[@text='Are you sure want to exit?']")
-	@AndroidFindBy (xpath = "com.fss.pnbpsp:id/textView1_description")
-	public MobileElement exitDialog;		
-	//@AndroidFindBy (xpath="//android.widget.ImageView[@text='Fund Transfer - Within Bank']")
+
+	/**
+	 *  Balance Enquiry
+	 */
 	
-	//com.fss.pnbpsp:id/tv_acc_or_payee
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/heading")
+	public static MobileElement infoHeader;
 	
-	//android.widget.EditText index 1
+	/**
+	 * Pay Money
+	 */
 	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_sendmony")
+	public static MobileElement payMoney;
 	
+	@AndroidFindBy (xpath="//android.widget.TextView")
+	public MobileElement PayeeOptnList;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/spinner_virtual_address")
+	public static MobileElement payeeAddSpinner;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/company")
+	public static MobileElement fromAcc;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/company")
+	public static MobileElement payeeAddType;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/edittext_VIR_ACC_ADR_MOB1")
+	public static MobileElement VirTextbox;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/edittext_AMOUNT_VIR1")
+	public static MobileElement virAmt;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/editText_RemarksOptional")
+	public static MobileElement payremark;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/edittext_IFSC_IIN_MMID1")
+	public static MobileElement ifscfield;
+	
+	//com.fss.pnbpsp:id/button_submit;
+	
+/*	
+	com.fss.pnbpsp:id/edittext_VIR_ACC_ADR_MOB1
+	
+	com.fss.pnbpsp:id/edittext_IFSC_IIN_MMID1
+	
+	com.fss.pnbpsp:id/edittext_AMOUNT1
+	
+	com.fss.pnbpsp:id/edittext_VIR_ACC_ADR_MOB1
+	
+	com.fss.pnbpsp:id/spinner_BANKNAME_IIN1
+	
+	android.widget.TextView
+	
+	com.fss.pnbpsp:id/edittext_AMOUNT1
+	
+	com.fss.pnbpsp:id/imgview_search1
+	
+	com.fss.pnbpsp:id/imgview_qrscan1
+	
+	*/
+	
+	/**
+	 *  Collect Money
+	 */
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_CollectMoney")
+	public static MobileElement collectMoney;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/spinner_from_account")
+	public static MobileElement fromAccSpinner;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/spinner_from_account_VPA")
+	public static MobileElement fromAccVPA;
+
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/textview_ExpDate")
+	public static MobileElement expDate;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/textview_ExpTime")
+	public static MobileElement expTime;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/company")
+	public static MobileElement payeeVPA;
+	
+	@AndroidFindBy (xpath = "//*[@class='android.widget.RelativeLayout'][@index='1']")
+	public MobileElement list;
+	
+	//android:id/pm_label
+	//android:id/am_label
+	/**
+	 * change PIN
+	 */
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_ChangePIN")
+	public MobileElement changepin;
+	
+	@AndroidFindBy(id = "com.fss.pnbpsp:id/item_textview_bankname")
+	public MobileElement pinacc;
 	/**
 	 * 
 	 */
@@ -111,10 +207,9 @@ public class ObjectRepository extends AppiumController {
 	
 	
 	
-	
-	
-	
-	
+	/**
+	 * 
+	 */
 	
 	
 	
@@ -153,8 +248,6 @@ public class ObjectRepository extends AppiumController {
 	@AndroidFindBy (xpath="//android.widget.EditText[@text='Application PIN']")
 	protected static MobileElement Application_PIN;
 	
-	@AndroidFindBy (xpath="//android.widget.Button[@text='OK']")
-	protected MobileElement okBtn;      //bottomband ok
 	
 	@AndroidFindBy(xpath ="//*[@class='android.widget.Button'][2]")
 	public static MobileElement loginOkBtn;  //login page ok

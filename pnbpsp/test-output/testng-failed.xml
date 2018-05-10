@@ -1,48 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
-  <listeners>
-    <listener class-name="mBankingUtilityCenter.AnotationListner"/>
-    <listener class-name="mBankingUtilityCenter.PriorityInterceptor"/>
-  </listeners>
-  <test name="Login App">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="mBankingTestPages.LoginPageTest"/>
+      <class name="mBankingTestPages.BalanceEnquiryTest"/>
     </classes>
-  </test> <!-- Login App -->
-  <test name="Add Bank">
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
     <classes>
-      <class name="mBankingTestPages.AddBankTest"/>
-    </classes>
-  </test> <!-- Add Bank -->
-  <test name="Set UPI PIN">
-    <classes>
-      <class name="mBankingTestPages.SetUPIPINTest"/>
-    </classes>
-  </test> <!-- Set UPI PIN -->
-  <test name="Set UPI PIN(failed)">
-    <classes>
-      <class name="mBankingTestPages.SetUPIPINTest">
+      <class name="mBankingTestPages.BalanceEnquiryTest">
         <methods>
-          <include name="setUPIPIN"/>
           <include name="extentReportSetUp"/>
           <include name="extentbeforeMethod"/>
           <include name="tearDown"/>
+          <include name="AppExit"/>
           <include name="extentGetResult"/>
         </methods>
-      </class> <!-- mBankingTestPages.SetUPIPINTest -->
-      <class name="mBankingTestPages.AddBankTest">
-        <methods>
-          <include name="extentbeforeMethod"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestPages.AddBankTest -->
-      <class name="mBankingTestPages.LoginPageTest">
-        <methods>
-          <include name="extentbeforeMethod"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestPages.LoginPageTest -->
+      </class> <!-- mBankingTestPages.BalanceEnquiryTest -->
     </classes>
-  </test> <!-- Set UPI PIN(failed) -->
-</suite> <!-- Failed suite [Positive Transaction flow] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

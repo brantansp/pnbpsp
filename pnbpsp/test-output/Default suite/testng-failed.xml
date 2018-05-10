@@ -3,26 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="mBankingTestPages.AddBankTest">
-        <methods>
-          <include name="AddBankValid"/>
-        </methods>
-      </class> <!-- mBankingTestPages.AddBankTest -->
+      <class name="mBankingTestPages.BalanceEnquiryTest"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="mBankingTestPages.AddBankTest">
+      <class name="mBankingTestPages.BalanceEnquiryTest">
         <methods>
-          <include name="AddBankValid"/>
-          <include name="appExit"/>
           <include name="extentReportSetUp"/>
           <include name="extentbeforeMethod"/>
           <include name="tearDown"/>
+          <include name="AppExit"/>
           <include name="extentGetResult"/>
-          <include name="appStart"/>
         </methods>
-      </class> <!-- mBankingTestPages.AddBankTest -->
+      </class> <!-- mBankingTestPages.BalanceEnquiryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

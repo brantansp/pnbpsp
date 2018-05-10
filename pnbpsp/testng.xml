@@ -9,10 +9,16 @@
 <test name = "Login App">
       <classes>
           <class name = "mBankingTestPages.LoginPageTest"/>
+          <class name = "mBankingTestPages.AddBankTest"/>
+          <class name = "mBankingTestPages.SetUPIPINTest"/>
+          <class name = "mBankingTestPages.BalanceEnquiryTest"/>
+           <class name= "mBankingTestPages.PayMoneyTest"/>
+          <class name = "mBankingTestPages.CollectMoneyTest"/>
+          <class name = "mBankingTestPages.ChangePinTest"/>
       </classes>        
  </test>
   
- <test name = "Add Bank">
+<!--  <test name = "Add Bank">
       <classes>
           <class name = "mBankingTestPages.AddBankTest"/>
       </classes>        
@@ -22,6 +28,6 @@
       <classes>
           <class name = "mBankingTestPages.SetUPIPINTest"/>
       </classes>        
- </test> 
+ </test>  -->
  
 </suite>

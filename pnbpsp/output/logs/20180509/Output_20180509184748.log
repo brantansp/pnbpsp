@@ -1,6 +1,0 @@
-[INFO] 2018-05-09 18:47:48,386 AppiumController extentReportSetUp - Running UPI Appium Automation testing for PNB
-[INFO] 2018-05-09 18:47:48,471 Driver init - App started : com.fss.pnbpsp
-[INFO] 2018-05-09 18:47:48,472 Driver instantiateDriver - The platform is : Android platform
-[INFO] 2018-05-09 18:48:15,176 AppiumController extentReportSetUp - 
-
-[INFO] 2018-05-09 18:48:15,178 AppiumController appStart - Login to Application

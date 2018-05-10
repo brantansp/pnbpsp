@@ -10,7 +10,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import mBankingPageObjectFactory.LoginPage;
+import mBankingPageObjectFactory.BasePage;
 import mBankingUtilityCenter.ExcelReader;
 import mBankingUtilityCenter.ExtentManager;
 import mBankingUtilityCenter.MConstants;
@@ -63,6 +63,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -110,17 +111,8 @@ public class AppiumController {
 				   .withTimeout(30, TimeUnit.SECONDS)
 				   .pollingEvery(2, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 	    getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    log.info("\n\r"); 
 	}
 
-/*    @BeforeTest
-    public static void appStart() throws InterruptedException
-    {
-    	log.info("Login to Application");
-    	LoginPage loginPage = new LoginPage(driver);
-    	loginPage.loginApp("123789");
-    }*/
-    
     @BeforeMethod
     public static void extentbeforeMethod(Method method)
     {
@@ -156,12 +148,6 @@ public class AppiumController {
 		*/
 	}
      
-/*    @AfterTest
-    public static void appExit() throws InterruptedException
-    {
-    	LoginPage loginPage = new LoginPage(driver);
-    	loginPage.exitApp();
-    }*/
     
     @AfterSuite
     public static void tearDown()
@@ -533,6 +519,19 @@ public class AppiumController {
 		wait.until(expectedCondition);	
 	}
 
+	/*
+	 * Click by MobileElement
+	 */
+	public static void click(MobileElement elm)
+	{
+		try {
+			elm.click();
+			log.info("clicked element");
+		} catch (Exception e) {
+			log.info(e);
+		}
+	}
+	
 	
 	public static boolean waitForElement(MobileElement locator, Integer... timeout)
 	{
@@ -855,10 +854,52 @@ public class AppiumController {
 	}
 	
 	//clickText
-	public void clickView(String text) {
+	public void clickRelativeLayout(String text) {
+		try {
+		getDriver().findElement(By.xpath(("//*[@class='android.widget.RelativeLayout'][@index='"+text+"']"))).click();
+		log.info("Click on element : "+text);	
+		}catch(Exception e) {
+			//report an error 
+			System.out.println(e);
+		}
+	}
+	
+	public void clickRadioBtn(String text) {
+		try {
+		getDriver().findElement(By.xpath(("//*[@class='android.widget.RadioButton'][@text='"+text+"']"))).click();
+		log.info("Click on element : "+text);	
+		}catch(Exception e) {
+			//report an error 
+			System.out.println(e);
+		}
+	}
+	
+	//clickText
+	public void clickTextView(String text) {
 		try {
 		log.info("Click on element : "+text);	
 		getDriver().findElement(By.xpath(("//*[@class='android.widget.TextView'][@text='"+text+"']"))).click();
+		}catch(Exception e) {
+			//report an error 
+			System.out.println(e);
+		}
+	}
+	
+	//clickText
+	public void clickView(String text) {
+		try {
+		log.info("Click on element : "+text);	
+		getDriver().findElement(By.xpath(("//*[@class='android.view.View'][@text='"+text+"']"))).click();
+		}catch(Exception e) {
+			//report an error 
+			System.out.println(e);
+		}
+	}
+	
+	public void pickDate(String text) {
+		try {
+		log.info("Click on element : "+text);	
+		getDriver().findElement(By.xpath(("//*[@class='android.widget.RadialTimePickerView$RadialPickerTouchHelper'][@content-desc='"+text+"']"))).click();
 		}catch(Exception e) {
 			//report an error 
 			System.out.println(e);
@@ -875,15 +916,7 @@ public class AppiumController {
 		}
 	}
 	
-	/*
-	 * Click by MobileElement
-	 */
-	public void click(MobileElement element)
-	{
-		element.click();
-		log.info("clicked element");
-	}
-	
+
 	public boolean NPCIEnterText(String str) {
 		try {
 			

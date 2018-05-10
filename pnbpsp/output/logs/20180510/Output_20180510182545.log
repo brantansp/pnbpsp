@@ -1,0 +1,35 @@
+[INFO] 2018-05-10 18:25:45,950 AppiumController extentReportSetUp - Running UPI Appium Automation testing for PNB
+[INFO] 2018-05-10 18:25:46,046 Driver init - App started : com.fss.pnbpsp
+[INFO] 2018-05-10 18:25:46,046 Driver instantiateDriver - The platform is : Android platform
+[INFO] 2018-05-10 18:26:15,082 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-10 18:26:15,089 BalanceEnquiryTest login - **********Login to application**********
+[INFO] 2018-05-10 18:26:15,218 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-10 18:26:19,164 AppiumController waitForElement - Element found : ******
+[INFO] 2018-05-10 18:26:24,133 AppiumController sendText - Send Text : 123789
+[INFO] 2018-05-10 18:26:24,134 BasePage loginApp - Login Pin send  : 123789
+[INFO] 2018-05-10 18:26:24,135 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-10 18:26:24,752 AppiumController waitForElement - Element found : 
+[INFO] 2018-05-10 18:26:26,678 AppiumController click - clicked element
+[INFO] 2018-05-10 18:26:26,679 BalanceEnquiryTest login - ***************End***************
+[INFO] 2018-05-10 18:26:26,684 AppiumController extentGetResult - @AfterMethod
+
+[INFO] 2018-05-10 18:26:26,691 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-10 18:26:26,694 BalanceEnquiryTest setUPIPIN - **********Balance Enquiry**********
+[INFO] 2018-05-10 18:26:26,705 AppiumController clickTextView - Click on element : View Balance
+[INFO] 2018-05-10 18:26:27,652 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-10 18:26:34,240 AppiumController waitForElement - Element found : Bank Name	:
+[INFO] 2018-05-10 18:26:34,434 AppiumController click - clicked element
+[INFO] 2018-05-10 18:26:35,114 BasePage viewBalance - true
+[INFO] 2018-05-10 18:26:35,170 BasePage viewBalance - true
+[INFO] 2018-05-10 18:26:35,171 BalanceEnquiryTest setUPIPIN - ***************End***************
+[INFO] 2018-05-10 18:26:35,174 AppiumController extentGetResult - @AfterMethod
+
+[INFO] 2018-05-10 18:26:35,175 AppiumController extentbeforeMethod - @BeforeMethod : ThreadName: mainmBankingBaseFactory.AppiumController
+[INFO] 2018-05-10 18:26:35,178 BalanceEnquiryTest AppExit - **********Exit Application**********
+[INFO] 2018-05-10 18:26:35,187 AppiumController waitForElement - Entered Wait for locator
+[INFO] 2018-05-10 18:26:43,251 BasePage exitapp - true
+[INFO] 2018-05-10 18:26:43,286 BasePage exitapp - true
+[INFO] 2018-05-10 18:26:44,521 AppiumController extentGetResult - @AfterMethod
+
+[INFO] 2018-05-10 18:26:47,567 AppiumController takeScreenShot - Failed Screenshot captured : Thu_May_10_18_26_44_IST_2018.png
+[INFO] 2018-05-10 18:26:47,597 AppiumController tearDown - @AfterSuite

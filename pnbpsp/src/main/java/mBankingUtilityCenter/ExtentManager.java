@@ -1,11 +1,8 @@
 package mBankingUtilityCenter;
 
-
-import static org.testng.Assert.assertTrue;
 import java.io.File;
 import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Method;
-import java.net.MalformedURLException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.testng.ITestResult;
@@ -13,13 +10,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import io.appium.java_client.android.AndroidDriver;
 import mBankingBaseFactory.AppiumController;
-import mBankingBaseFactory.BasePage;
 
 
 public class ExtentManager {
