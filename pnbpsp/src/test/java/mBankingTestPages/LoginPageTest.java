@@ -23,7 +23,7 @@ public class LoginPageTest extends AppiumController{
 	{
 		log.info("**********Login to Application**********");
 		loginPage = new BasePage(driver);
-		loginPage.loginApp("123789");
+		loginPage.loginApp("111111");
 		//Assert.assertTrue(loginPage.welcomeBankLogo.isDisplayed());
 		log.info("***************End***************");
 	}

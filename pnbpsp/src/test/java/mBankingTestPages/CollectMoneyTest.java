@@ -15,31 +15,15 @@ public class CollectMoneyTest extends AppiumController {
     AppiumDriver<MobileElement> driver;// = getDriver(); 
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	@Test(priority = 0)
-	public void login() throws InterruptedException
-	{
-		log.info("**********Login to application**********");
-		loginPage = new BasePage(driver);
-        loginPage.loginApp("123789");
-        log.info("***************End***************");
-	}
-	
 	@Test(priority = 1)
 	public void CollectMoneyVir() throws InterruptedException
 	{
 		log.info("**********Collect Money using Virtual Address**********");
 		loginPage = new BasePage(driver);
+		loginPage.loginApp("111111");
         loginPage.CollectMoney("brantan@pnb", "100", "20", "9", "30", "AM", "Collect money");
+        loginPage.exitapp();
         log.info("***************End***************");
-	}
-
-	@Test(priority = 50)
-	public void AppExit() throws InterruptedException
-	{
-		log.info("**********Exit Application**********");
-		loginPage = new BasePage(driver);
-		loginPage.exitapp();
-		log.info("***************End***************");
 	}
 	
 }

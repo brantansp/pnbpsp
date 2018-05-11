@@ -20,7 +20,7 @@ public class PayMoneyTest extends AppiumController {
 	{
 		log.info("**********Login to application**********");
 		loginPage = new BasePage(driver);
-        loginPage.loginApp("123789");
+        
         log.info("***************End***************");
 	}
 	
@@ -29,6 +29,7 @@ public class PayMoneyTest extends AppiumController {
 	{
 		log.info("**********Pay Money using Virtual Address**********");
 		loginPage = new BasePage(driver);
+		loginPage.loginApp("111111");
         loginPage.PayMoneyVir("brantan@ybl", "100", "Sanity test");
         log.info("***************End***************");
 	}
@@ -48,16 +49,8 @@ public class PayMoneyTest extends AppiumController {
 		log.info("**********Pay Money using Aadhar number**********");
 		loginPage = new BasePage(driver);
         loginPage.PayMoneyAad("789546321452", "100", "Sanity test");
+        loginPage.exitapp();
         log.info("***************End***************");
-	}
-	
-	@Test(priority = 50)
-	public void AppExit() throws InterruptedException
-	{
-		log.info("**********Exit Application**********");
-		loginPage = new BasePage(driver);
-		loginPage.exitapp();
-		log.info("***************End***************");
 	}
 	
 }

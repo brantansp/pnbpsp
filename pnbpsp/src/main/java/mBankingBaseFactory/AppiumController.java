@@ -60,6 +60,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -113,6 +114,19 @@ public class AppiumController {
 	    getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
+    @BeforeClass
+    public static void beforeClass()
+    {
+    	log.info("Before class calling Application Login");
+    	BasePage loginPage = new BasePage(driver);
+		try {
+			loginPage.loginApp("123789");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
     @BeforeMethod
     public static void extentbeforeMethod(Method method)
     {
@@ -123,7 +137,6 @@ public class AppiumController {
 		extentLogger.assignAuthor("Brantansp");
 		extentLogger.assignCategory("Appium Automation Testing");
 		extentLogger.log(LogStatus.PASS, " : Test started Successfully");
-		
     }
     
     @AfterMethod
@@ -148,6 +161,13 @@ public class AppiumController {
 		*/
 	}
      
+    @AfterClass
+    public static void afterClass()
+    {
+    	log.info("After class calling Application Exit");
+    	BasePage loginPage = new BasePage(driver);
+			loginPage.exitapp();
+    }
     
     @AfterSuite
     public static void tearDown()

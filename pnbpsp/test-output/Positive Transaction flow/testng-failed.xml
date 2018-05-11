@@ -7,42 +7,22 @@
   </listeners>
   <test name="Login App">
     <classes>
-      <class name="mBankingTestPages.LoginPageTest"/>
-    </classes>
-  </test> <!-- Login App -->
-  <test name="Add Bank">
-    <classes>
       <class name="mBankingTestPages.AddBankTest"/>
     </classes>
-  </test> <!-- Add Bank -->
-  <test name="Set UPI PIN">
+  </test> <!-- Login App -->
+  <test name="Login App(failed)">
     <classes>
-      <class name="mBankingTestPages.SetUPIPINTest"/>
-    </classes>
-  </test> <!-- Set UPI PIN -->
-  <test name="Set UPI PIN(failed)">
-    <classes>
-      <class name="mBankingTestPages.SetUPIPINTest">
-        <methods>
-          <include name="setUPIPIN"/>
-          <include name="extentReportSetUp"/>
-          <include name="extentbeforeMethod"/>
-          <include name="tearDown"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestPages.SetUPIPINTest -->
       <class name="mBankingTestPages.AddBankTest">
         <methods>
+          <include name="AddBankAlreadyAdded"/>
+          <include name="extentReportSetUp"/>
+          <include name="AddBankAccNotExists"/>
           <include name="extentbeforeMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
           <include name="extentGetResult"/>
         </methods>
       </class> <!-- mBankingTestPages.AddBankTest -->
-      <class name="mBankingTestPages.LoginPageTest">
-        <methods>
-          <include name="extentbeforeMethod"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestPages.LoginPageTest -->
     </classes>
-  </test> <!-- Set UPI PIN(failed) -->
+  </test> <!-- Login App(failed) -->
 </suite> <!-- Failed suite [Positive Transaction flow] -->

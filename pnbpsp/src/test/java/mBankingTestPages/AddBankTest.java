@@ -15,14 +15,6 @@ public class AddBankTest extends AppiumController {
     AppiumDriver<MobileElement> driver;// = getDriver(); ;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	
-	@Test(priority = 0)
-	public void login() throws InterruptedException
-	{
-		log.info("**********Login to application**********");
-		loginPage = new BasePage(driver);
-        loginPage.loginApp("123789");
-        log.info("***************End***************");
-	}
 	
 	@Test(priority = 1)
 	public void AddBankValid() throws InterruptedException
@@ -33,12 +25,21 @@ public class AddBankTest extends AppiumController {
 		log.info("***************End***************");
 	}
 	
-	@Test(priority = 50)
-	public void AppExit() throws InterruptedException
+	@Test(priority = 2)
+	public void AddBankAlreadyAdded() throws InterruptedException
 	{
-		log.info("**********Exit Application**********");
+		log.info("**********Add Bank Already Added**********");
 		loginPage = new BasePage(driver);
-		loginPage.exitapp();
+		loginPage.addBank("Sarva UP Gramin Bank");
+		log.info("***************End***************");
+	}
+	
+	@Test(priority = 2)
+	public void AddBankAccNotExists() throws InterruptedException
+	{
+		log.info("**********Add Bank Acc Not Exists**********");
+		loginPage = new BasePage(driver);
+		loginPage.addBank("Sarva UP Gramin Bank");
 		log.info("***************End***************");
 	}
 

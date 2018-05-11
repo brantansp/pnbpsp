@@ -15,31 +15,15 @@ public class SetUPIPINTest extends AppiumController {
     AppiumDriver<MobileElement> driver;// = getDriver(); 
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	@Test(priority = 0)
-	public void login() throws InterruptedException
-	{
-		log.info("**********Login to application**********");
-		loginPage = new BasePage(driver);
-        loginPage.loginApp("123789");
-        log.info("***************End***************");
-	}
-	
 	@Test(priority = 1)
 	public void setUPIPIN() throws InterruptedException
 	{
 		log.info("**********Set UPI PIN**********");
 		loginPage = new BasePage(driver);
+		loginPage.loginApp("111111");
 		loginPage.setPIN("123456", "10", "20", "123456", "123456", "");
+		loginPage.exitapp();
         log.info("***************End***************");
 	}
 
-	@Test(priority = 50)
-	public void AppExit() throws InterruptedException
-	{
-		log.info("**********Exit Application**********");
-		loginPage = new BasePage(driver);
-		loginPage.exitapp();
-		log.info("***************End***************");
-	}
-	
 }
