@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
-  <listeners>
-    <listener class-name="mBankingUtilityCenter.AnotationListner"/>
-    <listener class-name="mBankingUtilityCenter.PriorityInterceptor"/>
-  </listeners>
-  <test name="Login App">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
       <class name="mBankingTestPages.AddBankTest"/>
     </classes>
-  </test> <!-- Login App -->
-  <test name="Login App(failed)">
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
     <classes>
       <class name="mBankingTestPages.AddBankTest">
         <methods>
-          <include name="AddBankAlreadyAdded"/>
+          <include name="AddBankValid"/>
           <include name="extentReportSetUp"/>
-          <include name="AddBankAccNotExists"/>
           <include name="extentbeforeMethod"/>
+          <include name="tearDown"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
           <include name="extentGetResult"/>
         </methods>
       </class> <!-- mBankingTestPages.AddBankTest -->
     </classes>
-  </test> <!-- Login App(failed) -->
-</suite> <!-- Failed suite [Positive Transaction flow] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

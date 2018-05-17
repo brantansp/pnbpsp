@@ -5,6 +5,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDeviceActionShortcuts;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -83,7 +84,7 @@ public class AppiumController {
 	private static WebDriverWait driverWait;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	protected static Properties loc;
-	protected static Properties prop;
+	protected static Properties prop=getProperty();
 	protected static Wait<WebDriver> wait;
 	static SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyyMMdd"); 
 	static SimpleDateFormat timeFormatter = new SimpleDateFormat("HHmmss"); 
@@ -112,6 +113,7 @@ public class AppiumController {
 				   .withTimeout(30, TimeUnit.SECONDS)
 				   .pollingEvery(2, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 	    getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 	}
 
     @BeforeClass
@@ -120,7 +122,7 @@ public class AppiumController {
     	log.info("Before class calling Application Login");
     	BasePage loginPage = new BasePage(driver);
 		try {
-			loginPage.loginApp("123789");
+			loginPage.loginApp(prop.getProperty("loginPin"));
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -297,18 +299,17 @@ public class AppiumController {
     	return btn;
     }
     
-	public void TapinBankName(int [] coords)
+	public void TapinBankName(int [] coords, int x, int y)
 	{	
-		int x = coords[0]+100;
-		int y = coords[1]+100;
-		getDriver().tap(1, x, y, 1);
+		int a = coords[0]+x;
+		int b = coords[1]+y;
+		getDriver().tap(1, a, b, 1);
 	}
 	
 	public void Tap(int x, int y)
 	{	
 		getDriver().tap(1, x, y, 1);
 	}
-	
 	
 	public int[] getxy(MobileElement elem)
 	{
@@ -398,24 +399,14 @@ public class AppiumController {
 	    Collections.addAll(both, fourth);
 	    return both.toArray(new String[both.size()]);
 	}
-    public static void waitUntil(MobileElement locator)
+   
+	 public static void waitUntil(MobileElement locator)
     {
     	log.info("entered wait until");
     	wait.until(ExpectedConditions.visibilityOf(locator));
     	log.info("entered wait until exit");
     }
 
-    
-	public static void main(String[] args) 
-	{
-		int n = 2;
-		for ( int b = 1 ; b <= n ; b++)
-		{
-             log.info("b-1 : "+ (b-1));
-             log.info("b : "+b);
-		}
-	}
-	
     @SuppressWarnings("unchecked")
     public String[] listOfAc()
 	{
@@ -552,10 +543,23 @@ public class AppiumController {
 		}
 	}
 	
+	public static boolean waitForBtn(String btnText, Integer... timeout)
+	{
+		log.info("Entered Wait for Element");
+		try {
+			//waitForCondition(ExpectedConditions.visibilityOf((WebElement) locator), (timeout.length > 0 ?  timeout[0] : null));
+			waitForCondition(ExpectedConditions.visibilityOf(getDriver().findElement(By.xpath("//android.widget.Button[@text='"+btnText+"']"))), (timeout.length > 0 ?  timeout[0] : null));
+		} catch (org.openqa.selenium.TimeoutException exception) {
+			log.info("Element not found");
+			return false;
+		}
+		log.info("Element found : "+getDriver().findElement(By.xpath("//android.widget.Button[@text='"+btnText+"']")).getAttribute("text"));
+		return true;
+	}
 	
 	public static boolean waitForElement(MobileElement locator, Integer... timeout)
 	{
-		log.info("Entered Wait for locator");
+		log.info("Entered Wait for Element");
 		try {
 			//waitForCondition(ExpectedConditions.visibilityOf((WebElement) locator), (timeout.length > 0 ?  timeout[0] : null));
 			waitForCondition(ExpectedConditions.visibilityOf((WebElement) locator), (timeout.length > 0 ?  timeout[0] : null));
@@ -594,7 +598,6 @@ public class AppiumController {
 		return true;
 	}
 
-	
 	public static void waitForActivity(String desiredActivity, int wait) throws InterruptedException
 	{
 		AndroidDriver<MobileElement> driver= (AndroidDriver<MobileElement>) getDriver();
@@ -686,10 +689,10 @@ public class AppiumController {
 	 * Press the back button *
 	 */
 	public static void back() {
+		log.info("Navigating back");
 		getDriver().navigate().back();
 	}
 
-	
 	/**
 	 * Return a list of elements by tag name *
 	 */
@@ -1049,11 +1052,12 @@ public class AppiumController {
 
     public void verticalScrollDown()
     {
+    	log.info("@ Vertical scroll down @ ");
         Dimension size = getDriver().manage().window().getSize();
-        int y_start=(int)(size.height*0.70);
-        int y_end=(int)(size.height*0.30);
+        int y_end=(int)(size.height*0.70);
+        int y_start=(int)(size.height*0.30);
         int x=size.width/2;
-        getDriver().swipe(x,y_start,x,y_end,1000);
+        getDriver().swipe(x, y_start, x, y_end,1000);
     }
 
     public void verticalScrollUp()
@@ -1063,7 +1067,7 @@ public class AppiumController {
         int y_start=(int)(size.height*0.70);
         int y_end=(int)(size.height*0.30);
         int x=size.width/2;
-        getDriver().swipe(x,y_start,x,y_end,1000);
+        getDriver().swipe(x, y_start, x, y_end,1000);
     }
 
     public boolean scrollToElement(String elem, String direction) {
@@ -1132,6 +1136,7 @@ public class AppiumController {
         return false;
     }
 
+    
     public boolean scrollDownToElement(String elem) {
         WebDriverWait wait = new WebDriverWait(getDriver(), 1);
         try{
@@ -1156,8 +1161,7 @@ public class AppiumController {
     public boolean scrollUpToElement(String elem) {
         WebDriverWait wait = new WebDriverWait(getDriver(), 1);
         try{
-//            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(elem))));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elem)));
+        	wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(elem))));
             return true;
         }catch(NoSuchElementException e){
             log.info("Scroll to element");

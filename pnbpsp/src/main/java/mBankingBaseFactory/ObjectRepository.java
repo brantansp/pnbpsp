@@ -8,18 +8,23 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 public class ObjectRepository extends AppiumController {
 	
 	/**
+	 * com.fss.pnbpsp
+	 * com.fss.vijayapsp
+	 */
+	
+	/**
 	 *  Login Page
 	 */
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/editText_login_password")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_login_password")
 	public static MobileElement pwdBox;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_ok")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_ok")
 	public static MobileElement okBtn;
 	
 	@AndroidFindBy (xpath="//android.widget.Button[@text='OK']")
 	protected MobileElement okbtn;      //bottomband ok
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_submit")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_submit")
 	public static MobileElement submit;
 	
 	@AndroidFindBy (xpath="//android.widget.TextView[@text='Are you sure want to exit?']")
@@ -27,66 +32,69 @@ public class ObjectRepository extends AppiumController {
 	/**
 	 * Welcome Page
 	 */
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/imageView3")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/imageView3")
 	public MobileElement welcomeBankLogo;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/drawermenu")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/drawermenu")
 	public static MobileElement menuDrawer;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/logout_btn")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/logout_btn")
 	public static MobileElement logoutBtn;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_yes")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_yes")
 	public static MobileElement yesBtn;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_no")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_no")
 	public static MobileElement noBtn;
 	
 	/**
 	 * Add Bank Page
 	 */
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_SelectBank")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/spinner_virtual_address")
+    public static MobileElement selectAcc;
+	
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_SelectBank")
 	public static MobileElement addbankBtn;
 
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/textView_pagetitle_header")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/textView_pagetitle_header")
 	public static MobileElement pageTitle;
 
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/backIcon")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/backIcon")
 	public static MobileElement inAppBackBtn;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/autoCompleteTextView1")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/autoCompleteTextView1")
 	public static MobileElement searchBankBox;
 
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/img_SelectBank")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/img_SelectBank")
 	public static MobileElement addBankSelect;
 	
-/*	com.fss.pnbpsp:id/button_yes
-	com.fss.pnbpsp:id/textView1_description*/
+/*	com.fss.vijayapsp:id/button_yes
+	com.fss.vijayapsp:id/textView1_description*/
 	
 	/**
 	 * SetUPI PIN
 	 */
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_SetPIN")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_SetPIN")
 	public static MobileElement setPINBtn;
 
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/imageView_arrow")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/imageView_arrow")
 	public static MobileElement viewArrow;
 
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/editText_debitcardno")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_debitcardno")
 	public static MobileElement debitCardBox;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/textView1_expirymonth")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/textView1_expirymonth")
 	public static MobileElement expMonthBox;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/textView1_expiryyear")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/textView1_expiryyear")
 	public static MobileElement expYearBox;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/button_submit")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_submit")
 	public static MobileElement submitBtn;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/form_item_title")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/form_item_title")
 	public static MobileElement NFormTitle;
 
 	@AndroidFindBy (xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.TableLayout/android.widget.TableRow[4]/android.widget.ImageView[2]")
@@ -95,7 +103,7 @@ public class ObjectRepository extends AppiumController {
 	@AndroidFindBy (xpath = "//*[@class='android.widget.Button'][@text='RESEND']")
 	public MobileElement resendBtn;
 
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/form_item_image")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/form_item_image")
 	public static MobileElement otpTickImg;
 	
 	@AndroidFindBy (xpath = "//*[@class='android.widget.Button'][@text='Detecting OTP']")
@@ -106,60 +114,60 @@ public class ObjectRepository extends AppiumController {
 	 *  Balance Enquiry
 	 */
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/heading")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/heading")
 	public static MobileElement infoHeader;
 	
 	/**
 	 * Pay Money
 	 */
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_sendmony")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_sendmony")
 	public static MobileElement payMoney;
 	
 	@AndroidFindBy (xpath="//android.widget.TextView")
 	public MobileElement PayeeOptnList;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/spinner_virtual_address")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/spinner_virtual_address")
 	public static MobileElement payeeAddSpinner;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/company")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/company")
 	public static MobileElement fromAcc;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/company")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/company")
 	public static MobileElement payeeAddType;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/edittext_VIR_ACC_ADR_MOB1")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/edittext_VIR_ACC_ADR_MOB1")
 	public static MobileElement VirTextbox;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/edittext_AMOUNT_VIR1")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/edittext_AMOUNT_VIR1")
 	public static MobileElement virAmt;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/editText_RemarksOptional")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_RemarksOptional")
 	public static MobileElement payremark;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/edittext_IFSC_IIN_MMID1")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/edittext_IFSC_IIN_MMID1")
 	public static MobileElement ifscfield;
 	
-	//com.fss.pnbpsp:id/button_submit;
+	//com.fss.vijayapsp:id/button_submit;
 	
 /*	
-	com.fss.pnbpsp:id/edittext_VIR_ACC_ADR_MOB1
+	com.fss.vijayapsp:id/edittext_VIR_ACC_ADR_MOB1
 	
-	com.fss.pnbpsp:id/edittext_IFSC_IIN_MMID1
+	com.fss.vijayapsp:id/edittext_IFSC_IIN_MMID1
 	
-	com.fss.pnbpsp:id/edittext_AMOUNT1
+	com.fss.vijayapsp:id/edittext_AMOUNT1
 	
-	com.fss.pnbpsp:id/edittext_VIR_ACC_ADR_MOB1
+	com.fss.vijayapsp:id/edittext_VIR_ACC_ADR_MOB1
 	
-	com.fss.pnbpsp:id/spinner_BANKNAME_IIN1
+	com.fss.vijayapsp:id/spinner_BANKNAME_IIN1
 	
 	android.widget.TextView
 	
-	com.fss.pnbpsp:id/edittext_AMOUNT1
+	com.fss.vijayapsp:id/edittext_AMOUNT1
 	
-	com.fss.pnbpsp:id/imgview_search1
+	com.fss.vijayapsp:id/imgview_search1
 	
-	com.fss.pnbpsp:id/imgview_qrscan1
+	com.fss.vijayapsp:id/imgview_qrscan1
 	
 	*/
 	
@@ -167,22 +175,22 @@ public class ObjectRepository extends AppiumController {
 	 *  Collect Money
 	 */
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_CollectMoney")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_CollectMoney")
 	public static MobileElement collectMoney;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/spinner_from_account")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/spinner_from_account")
 	public static MobileElement fromAccSpinner;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/spinner_from_account_VPA")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/spinner_from_account_VPA")
 	public static MobileElement fromAccVPA;
 
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/textview_ExpDate")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/textview_ExpDate")
 	public static MobileElement expDate;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/textview_ExpTime")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/textview_ExpTime")
 	public static MobileElement expTime;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/company")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/company")
 	public static MobileElement payeeVPA;
 	
 	@AndroidFindBy (xpath = "//*[@class='android.widget.RelativeLayout'][@index='1']")
@@ -194,18 +202,60 @@ public class ObjectRepository extends AppiumController {
 	 * change PIN
 	 */
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/txt_ChangePIN")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_ChangePIN")
 	public MobileElement changepin;
 	
-	@AndroidFindBy(id = "com.fss.pnbpsp:id/item_textview_bankname")
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/item_textview_bankname")
 	public MobileElement pinacc;
+	
 	/**
-	 * 
+	 * Silent SMS page 
 	 */
 	
+	@AndroidFindBy(xpath ="//*[@class='android.widget.TextView'][@index='0']")
+    public static MobileElement textViewNotes;	
 	
+	@AndroidFindBy(xpath ="//*[@class='android.widget.Button'][@index='0']")
+	public MobileElement clickMe;
 	
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_FirstName")
+	public MobileElement firstName;
+		
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_LastName")
+	public MobileElement lastName;
 	
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/auto_email")
+	public MobileElement autoEmail;
+	
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/textview_DOB")
+	public MobileElement dob;
+	
+	@AndroidFindBy(id = "android:id/date_picker_header_year")
+	public MobileElement yearHeader;
+	
+	@AndroidFindBy(xpath ="//*[@class='android.widget.RadioButton'][@text='Male']")
+    public static MobileElement genderMale;	
+	
+	@AndroidFindBy(xpath ="//*[@class='android.widget.RadioButton'][@text='Female']")
+    public static MobileElement genderFemale;	
+	
+	@AndroidFindBy(xpath ="//*[@class='android.widget.Button'][@text='CONFIRM REGISTRATION']")
+    public static MobileElement confirmRegistration;
+	
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_AadhaarNumber")
+	public MobileElement aadhar;
+	
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_password")
+	public MobileElement pwd;
+	
+	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_ConfirmPassword")
+	public MobileElement pwdRenter;
+	
+	@AndroidFindBy(id ="com.fss.vijayapsp:id/termsCheck")
+    public static MobileElement acceptTerms;
+	
+	@AndroidFindBy(xpath ="//*[@class='android.widget.TextView'][@text='I accept terms and conditions']")
+    public static MobileElement terms;
 	
 	/**
 	 * 

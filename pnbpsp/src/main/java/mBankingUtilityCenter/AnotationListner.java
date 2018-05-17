@@ -22,6 +22,12 @@ public class AnotationListner implements IAnnotationTransformer {
 		if(testsEnabled.contains(testMethod.getName()))
 			{
 				annotation.setEnabled(false);
-			}			
-		}
+			}		
+		
+		if("silentSMS".equals(testMethod.getName()))
+		{
+			//beforeClass()
+			annotation.setEnabled(false);
+		}	
+	}
 }

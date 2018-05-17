@@ -9,7 +9,7 @@ import io.appium.java_client.MobileElement;
 import mBankingBaseFactory.AppiumController;
 import mBankingPageObjectFactory.BasePage;
 
-public class BalanceEnquiryTest extends AppiumController {
+public class ViewBalanceTest extends AppiumController {
 
 	protected BasePage loginPage;
     AppiumDriver<MobileElement> driver;// = getDriver(); 
@@ -20,9 +20,7 @@ public class BalanceEnquiryTest extends AppiumController {
 	{
 		log.info("**********Balance Enquiry**********");
 		loginPage = new BasePage(driver);
-		loginPage.loginApp("111111");
 		loginPage.viewBalance();
-		loginPage.exitapp();
         log.info("***************End***************");
 	}
 

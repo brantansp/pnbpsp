@@ -3,10 +3,18 @@ package mBankingPageObjectFactory;
 import java.lang.invoke.MethodHandles;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import mBankingBaseFactory.ObjectRepository;
 
@@ -88,15 +96,32 @@ public class BasePage extends ObjectRepository {
 		}
 	}
 	
+	public void test(String bankName)
+	{
+        waitForElement (addbankBtn, 30);
+        click(addbankBtn);	
+        waitForElement (searchBankBox, 30);
+        sendText(searchBankBox,bankName);
+	    int [] coords =getxy(searchBankBox);
+	    TapinBankName(coords, 100, 100);
+		if(waitForElement (yesBtn, 50))
+		{
+			click(yesBtn);
+		}
+	}
+	
 	public void addBank(String bankName) throws InterruptedException
 	{
-	    try {
-			waitForElement (addbankBtn, 30);
-		} catch (Exception e) {
-			log.info(e);
+		if(!waitForElement (addbankBtn, 30))
+		{
+			log.info("add  bank not displayed");
+			if(waitForElement(yesBtn, 50))
+			{
+				log.info("Yes btn displayed");
+				click(yesBtn);
+			}
 		}
-		click(addbankBtn);
-		
+		click(addbankBtn);	
 	    try {
 			waitForElement (pageTitle, 30);
 		} catch (Exception e) {
@@ -105,22 +130,46 @@ public class BasePage extends ObjectRepository {
 	    //click(searchBankBox);
 	    sendText(searchBankBox,bankName);
 	    int [] coords =getxy(searchBankBox);
-	    TapinBankName(coords);
-	    Integer x=1;
-	    while (waitForElement (yesBtn, 50))
+	    TapinBankName(coords, 100, 100);
+	    if(waitForElement (yesBtn, 50))
 	    {
-	    	    log.info("Transaction timed out : " +x);
-		    	click(yesBtn);
-		    	click(searchBankBox);
-			    coords =getxy(searchBankBox);
-			    TapinBankName(coords);
-			    x++;
-			    if(x.equals(3))
+	    	String [] text= loadTextView();
+	    	log.info(text[0]);
+/*	    	if("ACCOUNT DOES NOT EXIST (REMITTER)".equals(text[0]))
+	    	{
+	    		log.info(text[0]);
+	    	}
+	    	*/
+	    	Integer x=1;
+	    	while ("Your last transaction was not processed due to a connectivity problem. Please retry after sometime. If the problem persists, then please contact your app provider.".equals(text[0]))
+	    	{
+	    		log.info("Transaction was time out");
+	    	    while (waitForElement (yesBtn, 50))
+	    	    {
+	    	    	    log.info("Transaction timed out and found OK : " +x);
+	    		    	click(yesBtn);
+	    		    	click(searchBankBox);
+	    			    coords =getxy(searchBankBox);
+	    			    TapinBankName(coords, 100, 100);
+	    			    x++;
+	    			    if(x-3==0)
+	    			    {
+	    			    	log.info("Breaking inner loop");
+	    			    	break;
+	    			    }
+	    	    }  
+			    if(x-3==0)
 			    {
+			    	log.info("Breaking outer loop");
 			    	break;
 			    }
-	    }  
-	    log.info("element found");
+	    	}
+	    }
+	    if(waitForElement (yesBtn, 50))
+	    {
+	    	click(yesBtn);
+	    	back();
+	    }
 	}
 	
 	public void setPIN (String cardNo, String expMnth, String year, String OTP, String newpin, String repin)
@@ -345,6 +394,59 @@ public class BasePage extends ObjectRepository {
 			 NPCIEnterText(repin);
 			 Tap(windowSize.getWidth()-100, windowSize.getHeight()-100);	
     }
+    
+    
+    public void silentSMS()
+    {
+    	waitForElement(clickMe, 30);
+    	click(clickMe);
+    	clickBtn("OK");
+    	waitForTextView("SIM SELECTION", 30);
+    	clickBtn("JIO 4G");
+    	waitForElement(firstName, 50);
+    	sendText(firstName, "brantan");
+    	sendText(lastName, "sp");
+    	back();
+    	sendText(autoEmail, "brantansp@fss.co.in");
+    	back();
+    	click(dob);
+    	click(yearHeader);
+    	clickBtn("OK"); 
+    	click(genderMale);
+    	int [] start= getxy(genderMale);
+    	TouchAction touchAction = new TouchAction(driver);
+    	touchAction.press(start[0], start[1]).waitAction(500).moveTo(start[0], 0).release().perform();
+    	sendText(pwd, "123456");
+    	sendText(pwdRenter, "123456");
+        click(acceptTerms);
+        click(confirmRegistration);
+    }
+    
+    public String textviewNotes()
+    {
+    	waitForElement(textViewNotes,30);
+    	String text =textViewNotes.getAttribute("text");
+    	return text;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 

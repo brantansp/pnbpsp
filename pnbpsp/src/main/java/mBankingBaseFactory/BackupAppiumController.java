@@ -859,6 +859,17 @@ public class BackupAppiumController {
 	/**
 	 * Returns True if element is present
 	 */
+	
+	public static boolean isElementPresent (MobileElement elm) throws InterruptedException
+	{
+		boolean flag = false;
+       if(elm.isDisplayed())
+       {
+    	   flag = true;
+       }
+		return flag;
+	}
+	
 	public static boolean isElementPresent(final By by)
 			throws InterruptedException {
 		boolean isPresent = true;

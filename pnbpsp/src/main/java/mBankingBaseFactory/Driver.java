@@ -24,6 +24,8 @@ public class Driver {
 	
 	private static String hostIp = "";
 	
+	private static Properties prop=AppiumController.getProperty();
+	
 	private static String hostPort = "";
 	
 	private static String deviceName = "";
@@ -161,19 +163,16 @@ public class Driver {
 	}
 	
 	private static void init() {
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		String path = System.getProperty("user.dir")+"\\property\\driver.properties";
-		PropertyFileReader handler = new PropertyFileReader(path);
-		log.info("App started : "+handler.getProperty("appPackage"));
-    	setHost(handler.getProperty("host_ip"));
-		setPort(handler.getProperty("host_port"));
-		setDeviceName(handler.getProperty("deviceName"));
-		setPlatformName(handler.getProperty("platformName"));
-		setPlatformVersion(handler.getProperty("platformVersion"));
-		setMobileUDID(handler.getProperty("udid"));
-		setAppPackageName(handler.getProperty("appPackage"));
-		setAppActivity(handler.getProperty("appActivity"));
-		setNoReset(handler.getProperty("noReset"));
+		log.info("App started : "+prop.getProperty("appPackage"));
+    	setHost(prop.getProperty("host_ip"));
+		setPort(prop.getProperty("host_port"));
+		setDeviceName(prop.getProperty("deviceName"));
+		setPlatformName(prop.getProperty("platformName"));
+		setPlatformVersion(prop.getProperty("platformVersion"));
+		setMobileUDID(prop.getProperty("udid"));
+		setAppPackageName(prop.getProperty("appPackage"));
+		setAppActivity(prop.getProperty("appActivity"));
+		setNoReset(prop.getProperty("noReset"));
 		//setOrientation(handler.getProperty("orientation"));
 	}
 
