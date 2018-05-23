@@ -304,6 +304,7 @@ public class AppiumController {
 		int a = coords[0]+x;
 		int b = coords[1]+y;
 		getDriver().tap(1, a, b, 1);
+		log.info("Clicked on x : " +a + " y : " + b);
 	}
 	
 	public void Tap(int x, int y)
@@ -651,6 +652,19 @@ public class AppiumController {
 		return (MobileElement) element;
 		}
 
+	public static MobileElement getTextViewElm(String elm)
+	{
+		MobileElement element = driver.findElement(By.xpath("//*[@class='android.widget.TextView'][@text='"+elm+"']"));
+		return element;
+	}
+	
+	public static MobileElement getEditTextElm(String elm)
+	{
+		MobileElement element = driver.findElement(By.xpath("//*[@class='android.widget.EditText'][@text='"+elm+"']"));
+		return element;
+	}
+	
+	
 	/**
 	 * Wrap WebElement in MobileElement *
 	 */
@@ -895,6 +909,7 @@ public class AppiumController {
 			//report an error 
 			System.out.println(e);
 		}
+
 	}
 	
 	//clickText
@@ -906,6 +921,23 @@ public class AppiumController {
 			//report an error 
 			System.out.println(e);
 		}
+	}
+	
+	public void clickTextViewContains(String text) {
+		try {
+		log.info("Click on element : "+text);	
+		getDriver().findElement(By.xpath(("//android.widget.TextView[contains(@text,‘"+text+"’)]"))).click();
+		}catch(Exception e) {
+			//report an error 
+			System.out.println(e);
+		}
+	}
+	
+	public String getText(MobileElement elm)
+	{
+		String text = elm.getAttribute("text");
+		log.info("Element found is :" + text);
+		return text;
 	}
 	
 	//clickText
@@ -961,6 +993,12 @@ public class AppiumController {
 	/*
 	 * Send keys via MobileElement
 	 */
+	
+	public static void clearText(MobileElement elm)
+	{
+		elm.clear();
+	}
+	
 	public static void sendText(MobileElement element,String text)
 	{
 /*		String [] args = {"cmd", "start", "adb", "-s", "HKE7YGUA", "shell", "input", "text", "123789"};
@@ -974,6 +1012,7 @@ public class AppiumController {
 		element.sendKeys(text);
 		log.info("Send Text : "+text);
 	}
+	
 	
 	public static void sendText(String element,String text)
 	{

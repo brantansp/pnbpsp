@@ -110,7 +110,7 @@ public class BasePage extends ObjectRepository {
 		}
 	}
 	
-	public void addBank(String bankName) throws InterruptedException
+	public void addBank(String bankName, String accNo) throws InterruptedException
 	{
 		if(!waitForElement (addbankBtn, 30))
 		{
@@ -131,15 +131,73 @@ public class BasePage extends ObjectRepository {
 	    sendText(searchBankBox,bankName);
 	    int [] coords =getxy(searchBankBox);
 	    TapinBankName(coords, 100, 100);
-	    if(waitForElement (yesBtn, 50))
+	    waitForElement(selectAcc ,30);
+		click(selectAcc);
+		loadTextView();
+		int [] coord= getxy(driver.findElement(By.xpath("//android.widget.TextView[@text='Select Your Account']")));
+		TapinBankName(coord, 100, 100);
+		click(submit);
+		String [] status=loadTextView();
+		
+		if("Status".equals(status[0]))
+		{
+			waitForElement(ok, 30);
+			click(ok);
+		} 
+		else if ("The mobile number and account are already registered.".equals(status[0]))	
+		{
+			click(yesBtn);
+		}
+	}
+	
+	public void addBankForAccNo(String bankName, String accNo) throws InterruptedException
+	{
+		if(!waitForElement (addbankBtn, 30))
+		{
+			log.info("add  bank not displayed");
+			if(waitForElement(yesBtn, 50))
+			{
+				log.info("Yes btn displayed");
+				click(yesBtn);
+			}
+		}
+		click(addbankBtn);	
+	    try {
+			waitForElement (pageTitle, 30);
+		} catch (Exception e) {
+			log.info(e);
+		}
+	    //click(searchBankBox);
+	    sendText(searchBankBox,bankName);
+	    int [] coords =getxy(searchBankBox);
+	    TapinBankName(coords, 100, 100);
+	    waitForElement(selectAcc ,30);
+		click(selectAcc);
+		loadTextView();
+		clickTextView("A/C: XXXXXXXXX"+accNo);
+		click(submit);
+		String [] status=loadTextView();
+		
+		if("Status".equals(status[0]))
+		{
+			waitForElement(ok, 30);
+			click(ok);
+		} 
+		else if ("The mobile number and account are already registered.".equals(status[0]))	
+		{
+			click(yesBtn);
+		}
+		
+		
+	   /* if(waitForElement (yesBtn, 50))
 	    {
 	    	String [] text= loadTextView();
 	    	log.info(text[0]);
-/*	    	if("ACCOUNT DOES NOT EXIST (REMITTER)".equals(text[0]))
+	    	if("ACCOUNT DOES NOT EXIST (REMITTER)".equals(text[0]))
 	    	{
 	    		log.info(text[0]);
 	    	}
-	    	*/
+	    	
 	    	Integer x=1;
 	    	while ("Your last transaction was not processed due to a connectivity problem. Please retry after sometime. If the problem persists, then please contact your app provider.".equals(text[0]))
 	    	{
@@ -164,12 +222,12 @@ public class BasePage extends ObjectRepository {
 			    	break;
 			    }
 	    	}
-	    }
-	    if(waitForElement (yesBtn, 50))
+	    }*/
+/*	    if(waitForElement (yesBtn, 50))
 	    {
 	    	click(yesBtn);
 	    	back();
-	    }
+	    }*/
 	}
 	
 	public void setPIN (String cardNo, String expMnth, String year, String OTP, String newpin, String repin)
@@ -395,7 +453,6 @@ public class BasePage extends ObjectRepository {
 			 Tap(windowSize.getWidth()-100, windowSize.getHeight()-100);	
     }
     
-    
     public void silentSMS()
     {
     	waitForElement(clickMe, 30);
@@ -422,6 +479,32 @@ public class BasePage extends ObjectRepository {
         click(confirmRegistration);
     }
     
+    public void selectVirTimeLimit(String year, String date, String mnth)
+    {
+    	click(timeLimit);
+    	String month = getText(pickedDate).substring(5, 8);
+    	while(!mnth.equals(month))
+    	{
+    		click(nextMnth);
+    		clickView(date);
+    		month = getText(pickedDate).substring(5, 8);
+    	}
+    	clickView(date);
+    	if(!year.equals(getText(yearHeader)))
+    	{
+        	click(yearHeader);
+        	clickTextView(year);
+    	}
+    	clickBtn("OK"); 
+    }
+    
+    public void setVirAmtLimit(String amt)
+    {
+    	click(virAmtLimit);
+    	clearText(virAmtLimit);
+    	sendText(virAmtLimit, amt);
+    }
+    
     public String textviewNotes()
     {
     	waitForElement(textViewNotes,30);
@@ -429,10 +512,19 @@ public class BasePage extends ObjectRepository {
     	return text;
     }
     
+    public void clickViewArrow(String bank)
+    {
+    	waitForElement(getTextViewElm(bank), 30);
+        clickTextView(bank);    	
+    }
     
-    
-    
-    
+
+    public void selectPSPHandle (String virID)
+    {
+    	waitForElement(getEditTextElm("Type your virtual Id"), 30);
+    	click(getEditTextElm("Type your virtual Id"));
+    	sendText(getEditTextElm("Type your virtual Id"), virID);
+    }	
     
     
     

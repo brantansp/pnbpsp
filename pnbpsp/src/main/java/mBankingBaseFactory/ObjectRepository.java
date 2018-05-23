@@ -2,6 +2,8 @@ package mBankingBaseFactory;
 
 import java.lang.reflect.Field;
 
+import org.openqa.selenium.By;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
@@ -10,6 +12,7 @@ public class ObjectRepository extends AppiumController {
 	/**
 	 * com.fss.pnbpsp
 	 * com.fss.vijayapsp
+	 * com.fss.unbipsp
 	 */
 	
 	/**
@@ -68,6 +71,12 @@ public class ObjectRepository extends AppiumController {
 
 	@AndroidFindBy(id = "com.fss.vijayapsp:id/img_SelectBank")
 	public static MobileElement addBankSelect;
+	
+	@AndroidFindBy(id ="com.fss.vijayapsp:id/company")
+	public static MobileElement selectAc;
+	
+	@AndroidFindBy(id="android:id/button1")
+    public static MobileElement ok;
 	
 /*	com.fss.vijayapsp:id/button_yes
 	com.fss.vijayapsp:id/textView1_description*/
@@ -258,12 +267,29 @@ public class ObjectRepository extends AppiumController {
     public static MobileElement terms;
 	
 	/**
-	 * 
+	 * AddVirAcc
 	 */
 	
+	@AndroidFindBy(id="com.fss.pnbpsp:id/spinner_for_psphandle")
+    public static MobileElement psphandle;
 	
+	@AndroidFindBy(id="com.fss.vijayapsp:id/textView_timebound_limit")
+	 public static MobileElement timeLimit;
 	
+	@AndroidFindBy(id="android:id/date_picker_header_date")
+	public static MobileElement pickedDate;
 	
+	@AndroidFindBy(id="android:id/prev")
+	public static MobileElement prevMnth;
+	
+	@AndroidFindBy(id="android:id/next")
+	public static MobileElement nextMnth;
+	
+	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_amount_bound_limit")
+	public static MobileElement virAmtLimit; 
+	/**
+	 *  
+	 */
 	
 	@AndroidFindBy(xpath ="//*[@class='android.widget.Button'][@text='Home']")
 	public static MobileElement homeBtn;
