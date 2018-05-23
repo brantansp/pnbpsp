@@ -479,6 +479,23 @@ public class BasePage extends ObjectRepository {
         click(confirmRegistration);
     }
     
+    public void selectExpDate(String year,  String mnth)
+    {
+    	String month = getText(pickedDate).substring(5, 8);
+    	while(!mnth.equals(month))
+    	{
+    		click(nextMnth);
+    		clickView("1");
+    		month = getText(pickedDate).substring(5, 8);
+    	}
+    	if(!year.equals(getText(yearHeader)))
+    	{
+        	click(yearHeader);
+        	clickTextView(year);
+    	}
+    	clickBtn("OK"); 
+    }
+    
     public void selectVirTimeLimit(String year, String date, String mnth)
     {
     	click(timeLimit);
@@ -503,6 +520,13 @@ public class BasePage extends ObjectRepository {
     	click(virAmtLimit);
     	clearText(virAmtLimit);
     	sendText(virAmtLimit, amt);
+    }
+    
+    public void setQrVirAmtLimit(String amt)
+    {
+    	click(qrVirAmtLimit);
+    	clearText(qrVirAmtLimit);
+    	sendText(qrVirAmtLimit, amt);
     }
     
     public String textviewNotes()

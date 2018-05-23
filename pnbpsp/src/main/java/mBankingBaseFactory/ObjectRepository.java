@@ -287,10 +287,43 @@ public class ObjectRepository extends AppiumController {
 	
 	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_amount_bound_limit")
 	public static MobileElement virAmtLimit; 
+	
 	/**
-	 *  
+	 *Manage Accounts  
 	 */
 	
+	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_qr_input_amount")
+	public static MobileElement qrTxnAmt; 
+	
+	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_qr_input_minamount")
+	public static MobileElement qrMinAmt;	
+	
+	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_qr_input_remarks")
+	public static MobileElement qrRemark;
+	
+	@AndroidFindBy(id="com.fss.vijayapsp:id/imageView1_qrcodeimage")
+	public static MobileElement qrScanImage;
+	
+	public static String qrImageView= "com.fss.vijayapsp:id/imageView_qrgenerate";
+	
+	public static String qrEditImage= "com.fss.vijayapsp:id/imageView_edit";
+	
+	public static String qrDeleteImage="com.fss.vijayapsp:id/imageView_delete";
+	
+	@AndroidFindBy(id="com.fss.vijayapsp:id/imageView_editprofile")
+	public static MobileElement  deleteQrProfile;
+	
+	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_available_limit")
+	public static MobileElement qrVirAmtLimit; 
+	
+	
+	
+	
+	
+	
+	/**
+	 * 
+	 */
 	@AndroidFindBy(xpath ="//*[@class='android.widget.Button'][@text='Home']")
 	public static MobileElement homeBtn;
 	

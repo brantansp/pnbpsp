@@ -1,55 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41703" started-at="2018-05-22T14:29:59Z" finished-at="2018-05-22T14:30:40Z">
+  <suite name="Default suite" duration-ms="24268" started-at="2018-05-23T13:36:50Z" finished-at="2018-05-23T13:37:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41703" started-at="2018-05-22T14:29:59Z" finished-at="2018-05-22T14:30:40Z">
-      <class name="mBankingTestPages.AddVirtualAddrTest">
-        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestPages.AddVirtualAddrTest@1fd97a8]" name="extentReportSetUp" is-config="true" duration-ms="38667" started-at="2018-05-22T19:59:20Z" finished-at="2018-05-22T19:59:59Z">
+    <test name="Default test" duration-ms="24268" started-at="2018-05-23T13:36:50Z" finished-at="2018-05-23T13:37:14Z">
+      <class name="mBankingTestPages.AddBankTest">
+        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestPages.AddBankTest@1fd97a8]" name="extentReportSetUp" is-config="true" duration-ms="30154" started-at="2018-05-23T19:06:20Z" finished-at="2018-05-23T19:06:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentReportSetUp -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:mBankingTestPages.AddVirtualAddrTest@1fd97a8]" name="beforeClass" is-config="true" duration-ms="8656" started-at="2018-05-22T19:59:59Z" finished-at="2018-05-22T20:00:07Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:mBankingTestPages.AddBankTest@1fd97a8]" name="beforeClass" is-config="true" duration-ms="8683" started-at="2018-05-23T19:06:50Z" finished-at="2018-05-23T19:06:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestPages.AddVirtualAddrTest@1fd97a8]" name="extentbeforeMethod" is-config="true" duration-ms="3" started-at="2018-05-22T20:00:07Z" finished-at="2018-05-22T20:00:07Z">
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestPages.AddBankTest@1fd97a8]" name="extentbeforeMethod" is-config="true" duration-ms="12" started-at="2018-05-23T19:06:59Z" finished-at="2018-05-23T19:06:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void mBankingTestPages.AddVirtualAddrTest.addVirAddressValid()]]>
+                <![CDATA[public void mBankingTestPages.AddBankTest.AddBankAccNotExists() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentbeforeMethod -->
-        <test-method status="PASS" signature="addVirAddressValid()[pri:1, instance:mBankingTestPages.AddVirtualAddrTest@1fd97a8]" name="addVirAddressValid" duration-ms="29887" started-at="2018-05-22T20:00:07Z" finished-at="2018-05-22T20:00:37Z">
+        <test-method status="FAIL" signature="AddBankAccNotExists()[pri:3, instance:mBankingTestPages.AddBankTest@1fd97a8]" name="AddBankAccNotExists" duration-ms="3363" started-at="2018-05-23T19:06:59Z" finished-at="2018-05-23T19:07:02Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.17 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: 61ccf01c-5279-4ef9-a4c9-f40da7c891b6
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text='Search/Select your bank']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.17 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: 61ccf01c-5279-4ef9-a4c9-f40da7c891b6
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text='Search/Select your bank']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:602)
+	at mBankingTestPages.AddBankTest.AddBankAccNotExists(AddBankTest.java:149)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addVirAddressValid -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestPages.AddVirtualAddrTest@1fd97a8]" name="extentGetResult" is-config="true" duration-ms="2" started-at="2018-05-22T20:00:37Z" finished-at="2018-05-22T20:00:37Z">
+        </test-method> <!-- AddBankAccNotExists -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestPages.AddBankTest@1fd97a8]" name="extentGetResult" is-config="true" duration-ms="2846" started-at="2018-05-23T19:07:02Z" finished-at="2018-05-23T19:07:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addVirAddressValid status=SUCCESS method=AddVirtualAddrTest.addVirAddressValid()[pri:1, instance:mBankingTestPages.AddVirtualAddrTest@1fd97a8] output={null}]]]>
+                <![CDATA[[TestResult name=AddBankAccNotExists status=FAILURE method=AddBankTest.AddBankAccNotExists()[pri:3, instance:mBankingTestPages.AddBankTest@1fd97a8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:mBankingTestPages.AddVirtualAddrTest@1fd97a8]" name="afterClass" is-config="true" duration-ms="3137" started-at="2018-05-22T20:00:37Z" finished-at="2018-05-22T20:00:40Z">
+        <test-method status="FAIL" signature="afterClass()[pri:0, instance:mBankingTestPages.AddBankTest@1fd97a8]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-05-23T19:07:05Z" finished-at="2018-05-23T19:07:05Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Can't locate an element by this strategy: Locator map: 
+- native content: "By.id: com.fss.vijayapsp:id/button_no" 
+- html content: "by id or name "noBtn""
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
+- native content: "By.id: com.fss.vijayapsp:id/button_no" 
+- html content: "by id or name "noBtn""
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: driver.version: unknown
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.isDisplayed(<generated>)
+	at mBankingBaseFactory.AppiumController.isDisplayed(AppiumController.java:641)
+	at mBankingPageObjectFactory.BasePage.exitapp(BasePage.java:83)
+	at mBankingBaseFactory.AppiumController.afterClass(AppiumController.java:172)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:232)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestPages.AddVirtualAddrTest@1fd97a8]" name="tearDown" is-config="true" duration-ms="1253" started-at="2018-05-22T20:00:40Z" finished-at="2018-05-22T20:00:42Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mBankingTestPages.AddBankTest@1fd97a8]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-05-23T19:07:14Z" finished-at="2018-05-23T19:07:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mBankingTestPages.AddVirtualAddrTest -->
+      </class> <!-- mBankingTestPages.AddBankTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

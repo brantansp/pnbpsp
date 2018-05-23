@@ -55,6 +55,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
+import org.openqa.selenium.support.ui.Duration;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -315,6 +316,30 @@ public class AppiumController {
 	public int[] getxy(MobileElement elem)
 	{
 		Point xy = elem.getLocation();
+		int x1 = (int) (xy.getX());
+		int y1 = (int) (xy.getY());
+		log.info("X is "+x1+",Y is "+y1);
+		int[] coords = new int[2];
+		coords[0] = x1;
+		coords[1]=y1;
+		return coords;
+	}
+	
+	public int[] getxyEditBox()
+	{
+		Point xy = getDriver().findElement(By.xpath("//android.widget.EditText")).getLocation();
+		int x1 = (int) (xy.getX());
+		int y1 = (int) (xy.getY());
+		log.info("X is "+x1+",Y is "+y1);
+		int[] coords = new int[2];
+		coords[0] = x1;
+		coords[1]=y1;
+		return coords;
+	}
+	
+	public int[] getxyEditBox(String elem)
+	{
+		Point xy = getDriver().findElement(By.xpath("//android.widget.EditText[@text='"+elem+"']")).getLocation();
 		int x1 = (int) (xy.getX());
 		int y1 = (int) (xy.getY());
 		log.info("X is "+x1+",Y is "+y1);
@@ -691,6 +716,10 @@ public class AppiumController {
 		return w(getDriver().findElement(locator));
 	}
 
+	public static MobileElement btnElement(String elm) {
+		return w(getDriver().findElement(By.xpath("android.widget.Button[@text='"+elm+"']")));
+	}
+	
 	/**
 	 * Return a list of elements by locator *
 	 */
@@ -763,6 +792,22 @@ public class AppiumController {
 		return By.xpath("//*[@text='" + text + "']");
 	}
 
+	public static void ScreenShotThis(String fileName){
+		Date d = new Date();
+		String REPORT_PATH = System.getProperty("user.dir") + "/output/Screenshots/QR/";
+		String path=REPORT_PATH+""+fileName+".png";
+		File scrFile = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(scrFile, new File(path));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		//Add screenshot to report
+/*		log.info("Snapshot below: ("+screenshotFile+")"+
+				 extentLogger.addScreenCapture(path));*/
+		log.info("QR Screenshot captured : "+fileName);
+	}
+	
 	public static String takeScreenShot(){
 		//decide the file name 
 		Date d = new Date();
@@ -909,7 +954,16 @@ public class AppiumController {
 			//report an error 
 			System.out.println(e);
 		}
-
+	}
+	
+	public void clickCheckBox(String text) {
+		try {
+		getDriver().findElement(By.xpath(("//*[@class='android.widget.CheckBox'][@text='"+text+"']"))).click();
+		log.info("Click on element : "+text);	
+		}catch(Exception e) {
+			//report an error 
+			System.out.println(e);
+		}
 	}
 	
 	//clickText
@@ -1060,6 +1114,14 @@ public class AppiumController {
 		return false;
 	}
 
+	public static void gestSwipeVertical(AppiumDriver driver, double startPercentage, double finalPercentage, double anchorPercentage, int duration) throws Exception {
+	    Dimension size = driver.manage().window().getSize();
+	    int anchor = (int) (size.width * anchorPercentage);
+	    int startPoint = (int) (size.height * startPercentage);
+	    int endPoint = (int) (size.height * finalPercentage);
+	    new TouchAction(driver).press(anchor, startPoint).waitAction(duration).moveTo(anchor, endPoint).release().perform();
+	}
+	
     public boolean swipeToElement(String elem, String direction) {
         WebDriverWait wait = new WebDriverWait(getDriver(), 1);
         try{
