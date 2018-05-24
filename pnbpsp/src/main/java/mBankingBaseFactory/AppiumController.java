@@ -117,7 +117,7 @@ public class AppiumController {
 
 	}
 
-    @BeforeClass
+   // @BeforeClass
     public static void beforeClass()
     {
     	log.info("Before class calling Application Login");
@@ -792,10 +792,10 @@ public class AppiumController {
 		return By.xpath("//*[@text='" + text + "']");
 	}
 
-	public static void ScreenShotThis(String fileName){
+	public static void screenShotThis(String fileName){
 		Date d = new Date();
-		String REPORT_PATH = System.getProperty("user.dir") + "/output/Screenshots/QR/";
-		String path=REPORT_PATH+""+fileName+".png";
+		String REPORT_PATH = System.getProperty("user.dir") + "/output/Screenshots/Custom/";
+		String path=REPORT_PATH+""+fileName+"_"+d.toString().replace(":", "_").replace(" ","_")+".png";
 		File scrFile = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(scrFile, new File(path));
@@ -805,7 +805,7 @@ public class AppiumController {
 		//Add screenshot to report
 /*		log.info("Snapshot below: ("+screenshotFile+")"+
 				 extentLogger.addScreenCapture(path));*/
-		log.info("QR Screenshot captured : "+fileName);
+		log.info("Screenshot captured : "+fileName);
 	}
 	
 	public static String takeScreenShot(){
@@ -990,6 +990,13 @@ public class AppiumController {
 	public String getText(MobileElement elm)
 	{
 		String text = elm.getAttribute("text");
+		log.info("Element found is :" + text);
+		return text;
+	}
+	
+	public String getText(String  elm)
+	{
+		String text = getDriver().findElement(By.xpath("")).getAttribute("text");
 		log.info("Element found is :" + text);
 		return text;
 	}

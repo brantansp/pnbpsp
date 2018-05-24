@@ -38,7 +38,7 @@ public class ManageAcTest extends AppiumController {
          sendText(ObjectRepository.qrRemark, prop.getProperty("qrRemark"));
          clickBtn(" GENERATE QR CODE ");
          waitForTextView("A/C Details", 10);
-         ScreenShotThis("QR_TxnAmt_"+prop.getProperty("qrTxnAmt")+"_MinAmt_"+prop.getProperty("qrMinAmt")+"_Remark_"+prop.getProperty("qrRemark"));
+         screenShotThis("QR_TxnAmt_"+prop.getProperty("qrTxnAmt")+"_MinAmt_"+prop.getProperty("qrMinAmt")+"_Remark_"+prop.getProperty("qrRemark"));
          back();
          back();
          back();
@@ -106,7 +106,7 @@ public class ManageAcTest extends AppiumController {
          waitForTextView("VIEW BANK ACCOUNTS",10);
          click(getDriver().findElement(By.xpath("//android.widget.LinearLayout[@index='0']")));
          waitForTextView("ADDED VIRTUAL ADDRESS LIST",10);     
-         click(ObjectRepository.deleteQrProfile);
+         click(ObjectRepository.viewEditProfile);
  		String [] status=loadTextView();
  		if("Are you sure want to delete the Regd Acc No?".equals(status[0]))
  		{

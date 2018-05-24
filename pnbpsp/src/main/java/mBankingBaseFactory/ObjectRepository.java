@@ -18,16 +18,16 @@ public class ObjectRepository extends AppiumController {
 	/**
 	 *  Login Page
 	 */
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_login_password")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/editText_login_password")
 	public static MobileElement pwdBox;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_ok")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/button_ok")
 	public static MobileElement okBtn;
 	
 	@AndroidFindBy (xpath="//android.widget.Button[@text='OK']")
 	protected MobileElement okbtn;      //bottomband ok
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_submit")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/button_submit")
 	public static MobileElement submit;
 	
 	@AndroidFindBy (xpath="//android.widget.TextView[@text='Are you sure want to exit?']")
@@ -35,75 +35,75 @@ public class ObjectRepository extends AppiumController {
 	/**
 	 * Welcome Page
 	 */
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/imageView3")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/imageView3")
 	public MobileElement welcomeBankLogo;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/drawermenu")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/drawermenu")
 	public static MobileElement menuDrawer;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/logout_btn")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/logout_btn")
 	public static MobileElement logoutBtn;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_yes")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/button_yes")
 	public static MobileElement yesBtn;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_no")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/button_no")
 	public static MobileElement noBtn;
 	
 	/**
 	 * Add Bank Page
 	 */
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/spinner_virtual_address")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/spinner_virtual_address")
     public static MobileElement selectAcc;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_SelectBank")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/txt_SelectBank")
 	public static MobileElement addbankBtn;
 
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/textView_pagetitle_header")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/textView_pagetitle_header")
 	public static MobileElement pageTitle;
 
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/backIcon")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/backIcon")
 	public static MobileElement inAppBackBtn;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/autoCompleteTextView1")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/autoCompleteTextView1")
 	public static MobileElement searchBankBox;
 
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/img_SelectBank")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/img_SelectBank")
 	public static MobileElement addBankSelect;
 	
-	@AndroidFindBy(id ="com.fss.vijayapsp:id/company")
+	@AndroidFindBy(id ="com.fss.unbipsp:id/company")
 	public static MobileElement selectAc;
 	
 	@AndroidFindBy(id="android:id/button1")
     public static MobileElement ok;
 	
-/*	com.fss.vijayapsp:id/button_yes
-	com.fss.vijayapsp:id/textView1_description*/
+/*	com.fss.unbipsp:id/button_yes
+	com.fss.unbipsp:id/textView1_description*/
 	
 	/**
 	 * SetUPI PIN
 	 */
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_SetPIN")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/txt_SetPIN")
 	public static MobileElement setPINBtn;
 
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/imageView_arrow")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/imageView_arrow")
 	public static MobileElement viewArrow;
 
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_debitcardno")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/editText_debitcardno")
 	public static MobileElement debitCardBox;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/textView1_expirymonth")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/textView1_expirymonth")
 	public static MobileElement expMonthBox;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/textView1_expiryyear")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/textView1_expiryyear")
 	public static MobileElement expYearBox;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/button_submit")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/button_submit")
 	public static MobileElement submitBtn;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/form_item_title")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/form_item_title")
 	public static MobileElement NFormTitle;
 
 	@AndroidFindBy (xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.TableLayout/android.widget.TableRow[4]/android.widget.ImageView[2]")
@@ -112,7 +112,7 @@ public class ObjectRepository extends AppiumController {
 	@AndroidFindBy (xpath = "//*[@class='android.widget.Button'][@text='RESEND']")
 	public MobileElement resendBtn;
 
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/form_item_image")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/form_item_image")
 	public static MobileElement otpTickImg;
 	
 	@AndroidFindBy (xpath = "//*[@class='android.widget.Button'][@text='Detecting OTP']")
@@ -123,60 +123,60 @@ public class ObjectRepository extends AppiumController {
 	 *  Balance Enquiry
 	 */
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/heading")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/heading")
 	public static MobileElement infoHeader;
 	
 	/**
 	 * Pay Money
 	 */
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_sendmony")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/txt_sendmony")
 	public static MobileElement payMoney;
 	
 	@AndroidFindBy (xpath="//android.widget.TextView")
 	public MobileElement PayeeOptnList;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/spinner_virtual_address")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/spinner_virtual_address")
 	public static MobileElement payeeAddSpinner;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/company")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/company")
 	public static MobileElement fromAcc;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/company")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/company")
 	public static MobileElement payeeAddType;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/edittext_VIR_ACC_ADR_MOB1")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/edittext_VIR_ACC_ADR_MOB1")
 	public static MobileElement VirTextbox;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/edittext_AMOUNT_VIR1")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/edittext_AMOUNT_VIR1")
 	public static MobileElement virAmt;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_RemarksOptional")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/editText_RemarksOptional")
 	public static MobileElement payremark;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/edittext_IFSC_IIN_MMID1")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/edittext_IFSC_IIN_MMID1")
 	public static MobileElement ifscfield;
 	
-	//com.fss.vijayapsp:id/button_submit;
+	//com.fss.unbipsp:id/button_submit;
 	
 /*	
-	com.fss.vijayapsp:id/edittext_VIR_ACC_ADR_MOB1
+	com.fss.unbipsp:id/edittext_VIR_ACC_ADR_MOB1
 	
-	com.fss.vijayapsp:id/edittext_IFSC_IIN_MMID1
+	com.fss.unbipsp:id/edittext_IFSC_IIN_MMID1
 	
-	com.fss.vijayapsp:id/edittext_AMOUNT1
+	com.fss.unbipsp:id/edittext_AMOUNT1
 	
-	com.fss.vijayapsp:id/edittext_VIR_ACC_ADR_MOB1
+	com.fss.unbipsp:id/edittext_VIR_ACC_ADR_MOB1
 	
-	com.fss.vijayapsp:id/spinner_BANKNAME_IIN1
+	com.fss.unbipsp:id/spinner_BANKNAME_IIN1
 	
 	android.widget.TextView
 	
-	com.fss.vijayapsp:id/edittext_AMOUNT1
+	com.fss.unbipsp:id/edittext_AMOUNT1
 	
-	com.fss.vijayapsp:id/imgview_search1
+	com.fss.unbipsp:id/imgview_search1
 	
-	com.fss.vijayapsp:id/imgview_qrscan1
+	com.fss.unbipsp:id/imgview_qrscan1
 	
 	*/
 	
@@ -184,22 +184,22 @@ public class ObjectRepository extends AppiumController {
 	 *  Collect Money
 	 */
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_CollectMoney")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/txt_CollectMoney")
 	public static MobileElement collectMoney;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/spinner_from_account")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/spinner_from_account")
 	public static MobileElement fromAccSpinner;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/spinner_from_account_VPA")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/spinner_from_account_VPA")
 	public static MobileElement fromAccVPA;
 
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/textview_ExpDate")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/textview_ExpDate")
 	public static MobileElement expDate;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/textview_ExpTime")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/textview_ExpTime")
 	public static MobileElement expTime;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/company")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/company")
 	public static MobileElement payeeVPA;
 	
 	@AndroidFindBy (xpath = "//*[@class='android.widget.RelativeLayout'][@index='1']")
@@ -211,10 +211,10 @@ public class ObjectRepository extends AppiumController {
 	 * change PIN
 	 */
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/txt_ChangePIN")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/txt_ChangePIN")
 	public MobileElement changepin;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/item_textview_bankname")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/item_textview_bankname")
 	public MobileElement pinacc;
 	
 	/**
@@ -227,16 +227,16 @@ public class ObjectRepository extends AppiumController {
 	@AndroidFindBy(xpath ="//*[@class='android.widget.Button'][@index='0']")
 	public MobileElement clickMe;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_FirstName")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/editText_FirstName")
 	public MobileElement firstName;
 		
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_LastName")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/editText_LastName")
 	public MobileElement lastName;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/auto_email")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/auto_email")
 	public MobileElement autoEmail;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/textview_DOB")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/textview_DOB")
 	public MobileElement dob;
 	
 	@AndroidFindBy(id = "android:id/date_picker_header_year")
@@ -251,16 +251,16 @@ public class ObjectRepository extends AppiumController {
 	@AndroidFindBy(xpath ="//*[@class='android.widget.Button'][@text='CONFIRM REGISTRATION']")
     public static MobileElement confirmRegistration;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_AadhaarNumber")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/editText_AadhaarNumber")
 	public MobileElement aadhar;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_password")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/editText_password")
 	public MobileElement pwd;
 	
-	@AndroidFindBy(id = "com.fss.vijayapsp:id/editText_ConfirmPassword")
+	@AndroidFindBy(id = "com.fss.unbipsp:id/editText_ConfirmPassword")
 	public MobileElement pwdRenter;
 	
-	@AndroidFindBy(id ="com.fss.vijayapsp:id/termsCheck")
+	@AndroidFindBy(id ="com.fss.unbipsp:id/termsCheck")
     public static MobileElement acceptTerms;
 	
 	@AndroidFindBy(xpath ="//*[@class='android.widget.TextView'][@text='I accept terms and conditions']")
@@ -273,7 +273,7 @@ public class ObjectRepository extends AppiumController {
 	@AndroidFindBy(id="com.fss.pnbpsp:id/spinner_for_psphandle")
     public static MobileElement psphandle;
 	
-	@AndroidFindBy(id="com.fss.vijayapsp:id/textView_timebound_limit")
+	@AndroidFindBy(id="com.fss.unbipsp:id/textView_timebound_limit")
 	 public static MobileElement timeLimit;
 	
 	@AndroidFindBy(id="android:id/date_picker_header_date")
@@ -285,36 +285,90 @@ public class ObjectRepository extends AppiumController {
 	@AndroidFindBy(id="android:id/next")
 	public static MobileElement nextMnth;
 	
-	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_amount_bound_limit")
+	@AndroidFindBy(id="com.fss.unbipsp:id/editText_amount_bound_limit")
 	public static MobileElement virAmtLimit; 
 	
 	/**
 	 *Manage Accounts  
 	 */
 	
-	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_qr_input_amount")
+	@AndroidFindBy(id="com.fss.unbipsp:id/editText_qr_input_amount")
 	public static MobileElement qrTxnAmt; 
 	
-	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_qr_input_minamount")
+	@AndroidFindBy(id="com.fss.unbipsp:id/editText_qr_input_minamount")
 	public static MobileElement qrMinAmt;	
 	
-	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_qr_input_remarks")
+	@AndroidFindBy(id="com.fss.unbipsp:id/editText_qr_input_remarks")
 	public static MobileElement qrRemark;
 	
-	@AndroidFindBy(id="com.fss.vijayapsp:id/imageView1_qrcodeimage")
+	@AndroidFindBy(id="com.fss.unbipsp:id/imageView1_qrcodeimage")
 	public static MobileElement qrScanImage;
 	
-	public static String qrImageView= "com.fss.vijayapsp:id/imageView_qrgenerate";
+	public static String qrImageView= "com.fss.unbipsp:id/imageView_qrgenerate";
 	
-	public static String qrEditImage= "com.fss.vijayapsp:id/imageView_edit";
+	public static String qrEditImage= "com.fss.unbipsp:id/imageView_edit";
 	
-	public static String qrDeleteImage="com.fss.vijayapsp:id/imageView_delete";
+	public static String qrDeleteImage="com.fss.unbipsp:id/imageView_delete";
 	
-	@AndroidFindBy(id="com.fss.vijayapsp:id/imageView_editprofile")
-	public static MobileElement  deleteQrProfile;
+	@AndroidFindBy(id="com.fss.unbipsp:id/imageView_editprofile")
+	public static MobileElement  viewEditProfile;
 	
-	@AndroidFindBy(id="com.fss.vijayapsp:id/editText_available_limit")
+	@AndroidFindBy(id="com.fss.unbipsp:id/editText_available_limit")
 	public static MobileElement qrVirAmtLimit; 
+	
+	/**
+	 * Menu Drawer
+	 */
+	
+	@AndroidFindBy(id="com.fss.unbipsp:id/startdate_cal")
+	public static MobileElement complainStartDate; 
+	
+	@AndroidFindBy(id="com.fss.unbipsp:id/enddate_cal")
+	public static MobileElement complainEndDate; 
+	
+	@AndroidFindBy(id="com.fss.unbipsp:id/submit_tran_status_btn")
+	public static MobileElement complainSubmit; 
+	
+	/**
+	 * Change Password
+	 */
+	
+	@AndroidFindBy(id="com.fss.unbipsp:id/editText_oldpassword")
+	public static MobileElement changePwdOld; 
+	
+	@AndroidFindBy(id="com.fss.unbipsp:id/editText_newpassword")
+	public static MobileElement changePwdNew; 
+	
+	@AndroidFindBy(id="com.fss.unbipsp:id/editText_confirmpassword")
+	public static MobileElement changePwdCfm; 
+	
+	/**
+	 * Edit Profile
+	 */
+	
+	@AndroidFindBy(id="com.fss.unbipsp:id/editIcon")
+	public static MobileElement editProfile; 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

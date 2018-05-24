@@ -3,21 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="mBankingTestPages.AddBankTest"/>
+      <class name="mBankingTestPages.SilentSMSTest"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="mBankingTestPages.AddBankTest">
+      <class name="mBankingTestPages.SilentSMSTest">
         <methods>
           <include name="extentReportSetUp"/>
-          <include name="AddBankAccNotExists"/>
           <include name="extentbeforeMethod"/>
           <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="silentSMS"/>
           <include name="extentGetResult"/>
         </methods>
-      </class> <!-- mBankingTestPages.AddBankTest -->
+      </class> <!-- mBankingTestPages.SilentSMSTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
