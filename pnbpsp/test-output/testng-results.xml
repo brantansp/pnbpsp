@@ -1,103 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44852" started-at="2018-05-24T12:45:37Z" finished-at="2018-05-24T12:46:22Z">
+  <suite name="Default suite" duration-ms="28765" started-at="2018-05-25T04:02:06Z" finished-at="2018-05-25T04:02:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44852" started-at="2018-05-24T12:45:37Z" finished-at="2018-05-24T12:46:22Z">
-      <class name="mBankingTestPages.SilentSMSTest">
-        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestPages.SilentSMSTest@15cd85e]" name="extentReportSetUp" is-config="true" duration-ms="20289" started-at="2018-05-24T18:15:17Z" finished-at="2018-05-24T18:15:37Z">
+    <test name="Default test" duration-ms="28765" started-at="2018-05-25T04:02:06Z" finished-at="2018-05-25T04:02:35Z">
+      <class name="mBankingTestPages.ViewBalanceTest">
+        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestPages.ViewBalanceTest@1fd97a8]" name="extentReportSetUp" is-config="true" duration-ms="28081" started-at="2018-05-25T09:31:38Z" finished-at="2018-05-25T09:32:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentReportSetUp -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestPages.SilentSMSTest@15cd85e]" name="extentbeforeMethod" is-config="true" duration-ms="27" started-at="2018-05-24T18:15:37Z" finished-at="2018-05-24T18:15:37Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:mBankingTestPages.ViewBalanceTest@1fd97a8]" name="beforeClass" is-config="true" duration-ms="8737" started-at="2018-05-25T09:32:06Z" finished-at="2018-05-25T09:32:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestPages.ViewBalanceTest@1fd97a8]" name="extentbeforeMethod" is-config="true" duration-ms="3" started-at="2018-05-25T09:32:15Z" finished-at="2018-05-25T09:32:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void mBankingTestPages.SilentSMSTest.silentSMS() throws java.lang.InterruptedException]]>
+                <![CDATA[public void mBankingTestPages.ViewBalanceTest.BalanceEnquiryValid() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentbeforeMethod -->
-        <test-method status="FAIL" signature="silentSMS()[pri:2, instance:mBankingTestPages.SilentSMSTest@15cd85e]" name="silentSMS" duration-ms="31822" started-at="2018-05-24T18:15:37Z" finished-at="2018-05-24T18:16:09Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: Locator map: 
-- native content: "By.xpath: //*[@class='android.widget.Button'][@index='0']" 
-- html content: "by id or name "clickMe""
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
-- native content: "By.xpath: //*[@class='android.widget.Button'][@index='0']" 
-- html content: "by id or name "clickMe""
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: driver.version: unknown
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.toString(<generated>)
-	at java.lang.String.valueOf(Unknown Source)
-	at java.lang.StringBuilder.append(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
-	at mBankingBaseFactory.AppiumController.waitForCondition(AppiumController.java:556)
-	at mBankingBaseFactory.AppiumController.waitForElement(AppiumController.java:591)
-	at mBankingPageObjectFactory.BasePage.silentSMS(BasePage.java:458)
-	at mBankingTestPages.SilentSMSTest.silentSMS(SilentSMSTest.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="BalanceEnquiryValid()[pri:1, instance:mBankingTestPages.ViewBalanceTest@1fd97a8]" name="BalanceEnquiryValid" duration-ms="10748" started-at="2018-05-25T09:32:15Z" finished-at="2018-05-25T09:32:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- silentSMS -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestPages.SilentSMSTest@15cd85e]" name="extentGetResult" is-config="true" duration-ms="3036" started-at="2018-05-24T18:16:09Z" finished-at="2018-05-24T18:16:12Z">
+        </test-method> <!-- BalanceEnquiryValid -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestPages.ViewBalanceTest@1fd97a8]" name="extentGetResult" is-config="true" duration-ms="2" started-at="2018-05-25T09:32:25Z" finished-at="2018-05-25T09:32:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=silentSMS status=FAILURE method=SilentSMSTest.silentSMS()[pri:2, instance:mBankingTestPages.SilentSMSTest@15cd85e] output={null}]]]>
+                <![CDATA[[TestResult name=BalanceEnquiryValid status=SUCCESS method=ViewBalanceTest.BalanceEnquiryValid()[pri:1, instance:mBankingTestPages.ViewBalanceTest@1fd97a8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentGetResult -->
-        <test-method status="FAIL" signature="afterClass()[pri:0, instance:mBankingTestPages.SilentSMSTest@15cd85e]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-05-24T18:16:12Z" finished-at="2018-05-24T18:16:12Z">
+        <test-method status="FAIL" signature="afterClass()[pri:0, instance:mBankingTestPages.ViewBalanceTest@1fd97a8]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-05-25T09:32:25Z" finished-at="2018-05-25T09:32:25Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Can't locate an element by this strategy: Locator map: 
-- native content: "By.id: com.fss.unbipsp:id/button_no" 
+- native content: "By.id: com.fss.vijayapsp:id/button_no" 
 - html content: "by id or name "noBtn""
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
@@ -106,7 +54,7 @@ Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
-- native content: "By.id: com.fss.unbipsp:id/button_no" 
+- native content: "By.id: com.fss.vijayapsp:id/button_no" 
 - html content: "by id or name "noBtn""
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
@@ -148,11 +96,11 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mBankingTestPages.SilentSMSTest@15cd85e]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-05-24T18:16:22Z" finished-at="2018-05-24T18:16:22Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mBankingTestPages.ViewBalanceTest@1fd97a8]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-05-25T09:32:35Z" finished-at="2018-05-25T09:32:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mBankingTestPages.SilentSMSTest -->
+      </class> <!-- mBankingTestPages.ViewBalanceTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

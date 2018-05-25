@@ -190,6 +190,20 @@ public class MenuDrawerOptionsText extends AppiumController {
 		log.info("***************End***************");
 	}
 	
+	public void FAQ()
+	{
+		log.info("**********FAQ**********");
+		waitForElement(ObjectRepository.menuDrawer, 5);
+		click(ObjectRepository.menuDrawer);
+		clickTextView("FAQ");
+		waitForTextView("FAQ",30);
+		loadView();
+		for (int i =0; i<loadView().length; i++)
+		{
+			clickView(loadView()[i]);
+			log.info(loadView()[i+1]);
+		}
+	}
 	
 	
 	

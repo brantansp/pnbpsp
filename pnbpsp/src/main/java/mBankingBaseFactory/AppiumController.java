@@ -117,7 +117,7 @@ public class AppiumController {
 
 	}
 
-   // @BeforeClass
+    @BeforeClass
     public static void beforeClass()
     {
     	log.info("Before class calling Application Login");
@@ -259,6 +259,19 @@ public class AppiumController {
 			//waitForElement(getDriver().findElement(By.xpath(("//android.widget.EditText[@text='Remarks']"))),30);
 			sendText(getDriver().findElement(By.xpath(("//android.widget.EditText[@text='Remarks']"))), "testuser");
     	}
+    }
+    
+    public static String[] loadView()
+    {
+    	ArrayList<AndroidElement> textView;
+    	textView =(ArrayList<AndroidElement>) ((FindsByAndroidUIAutomator<AndroidElement>) getDriver()).findElementsByAndroidUIAutomator("UiSelector().className(\"android.view.View\")");
+    	String [] textBtn = new String [textView.size()];
+    	for(int k =0 ; k<textView.size(); k++)
+    	{
+    		textBtn[k]= textView.get(k).getText();
+    		log.info("View : " +textBtn[k]);
+    	}
+    	return textBtn;
     }
     
     public static String[] loadTextView()

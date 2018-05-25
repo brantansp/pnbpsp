@@ -18,9 +18,21 @@ public class ViewBalanceTest extends AppiumController {
 	@Test(priority = 1)
 	public void BalanceEnquiryValid() throws InterruptedException
 	{
-		log.info("**********Balance Enquiry**********");
+		log.info("**********Balance Enquiry Valid**********");
 		loginPage = new BasePage(driver);
-		loginPage.viewBalance();
+		//loginPage.viewBalance();
+		waitForTextView("View Balance");
+		clickTextView("View Balance");
+		waitForTextView("BALANCE ENQUIRY");
+		clickTextView("XXXXXXXXXXX"+"4402");
+		waitForTextView("UPI PIN");
+		sendText("****","1234");
+		clickBtn("SUBMIT");
+		waitForBtn("OK");
+		String bal =loadTextView()[0];
+		 log.info("Ledger Bal : "+bal.substring(bal.lastIndexOf("Ledger")+18, bal.lastIndexOf("Available")));
+		 log.info("Available Bal : "+bal.substring(bal.lastIndexOf("Available")+21, bal.length()));
+		 clickBtn("OK");
         log.info("***************End***************");
 	}
 
