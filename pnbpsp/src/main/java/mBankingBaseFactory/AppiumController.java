@@ -12,6 +12,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import mBankingPageObjectFactory.BasePage;
+import mBankingTestPages.SilentSMSTest;
 import mBankingUtilityCenter.ExcelReader;
 import mBankingUtilityCenter.ExtentManager;
 import mBankingUtilityCenter.MConstants;
@@ -113,14 +114,17 @@ public class AppiumController {
 	    wait = new FluentWait<WebDriver>(getDriver())
 				   .withTimeout(30, TimeUnit.SECONDS)
 				   .pollingEvery(2, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
-	    getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+	   // getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    SilentSMSTest sms= new SilentSMSTest();
+	    //sms.verifyTextDisplayed();
+	    //sms.silentSMS();
 	}
 
-    @BeforeClass
-    public static void beforeClass()
+    @BeforeMethod
+    public static void extentbeforeMethod(Method method)
     {
-    	log.info("Before class calling Application Login");
+    	driver.launchApp();
+		log.info("**********Login to Application**********");
     	BasePage loginPage = new BasePage(driver);
 		try {
 			loginPage.loginApp(prop.getProperty("loginPin"));
@@ -128,11 +132,7 @@ public class AppiumController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    }
     
-    @BeforeMethod
-    public static void extentbeforeMethod(Method method)
-    {
     	log.info("@BeforeMethod : " + 
             "ThreadName: " + Thread.currentThread().getName() + Thread.currentThread()
                 .getStackTrace()[1].getClassName());
@@ -140,11 +140,13 @@ public class AppiumController {
 		extentLogger.assignAuthor("Brantansp");
 		extentLogger.assignCategory("Appium Automation Testing");
 		extentLogger.log(LogStatus.PASS, " : Test started Successfully");
+		log.info("***************Application started***************");
     }
     
     @AfterMethod
     public static void extentGetResult(ITestResult result)
     {
+		log.info("**********Closing Application**********");
     	log.info("@AfterMethod\n");
 		if(result.getStatus() == ITestResult.FAILURE){
 			String screenShotPath = AppiumController.takeScreenShot();
@@ -155,6 +157,8 @@ public class AppiumController {
 			extentLogger.log(LogStatus.SKIP, "Test Case Skipped is "+result.getName());
 		}
 			extent.endTest(extentLogger);
+			driver.closeApp();
+			log.info("***************Application Closed***************");
 			/*		try {
 			ExcelWriter.writeTestResult(TestCaseNum , result.getStatus());
 		} catch (Exception e) {
@@ -163,15 +167,7 @@ public class AppiumController {
 		}
 		*/
 	}
-     
-    @AfterClass
-    public static void afterClass()
-    {
-    	log.info("After class calling Application Exit");
-    	BasePage loginPage = new BasePage(driver);
-			loginPage.exitapp();
-    }
-    
+         
     @AfterSuite
     public static void tearDown()
     {
@@ -982,6 +978,12 @@ public class AppiumController {
 	//clickText
 	public void clickTextView(String text) {
 		try {
+			waitForTextView(text,50);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
 		log.info("Click on element : "+text);	
 		getDriver().findElement(By.xpath(("//*[@class='android.widget.TextView'][@text='"+text+"']"))).click();
 		}catch(Exception e) {
@@ -1090,6 +1092,12 @@ public class AppiumController {
 	
 	public static void sendText(String element,String text)
 	{
+		try {
+			waitForEditText(text,50);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		getDriver().findElement(By.xpath(("//android.widget.EditText[@text='"+element+"']"))).sendKeys(text);;
 		log.info("Send Text : "+text);
 	}

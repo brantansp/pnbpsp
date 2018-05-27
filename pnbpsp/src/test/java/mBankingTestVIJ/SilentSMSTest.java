@@ -1,4 +1,4 @@
-package mBankingTestPages;
+package mBankingTestVIJ;
 
 import static org.testng.Assert.assertTrue;
 

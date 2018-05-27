@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name = "Positive Transaction flow" >
-<listeners>
+
+<suite name = "Positive Transaction flow"  preserve-order="true" >
+<!-- <listeners>
 <listener class-name="mBankingUtilityCenter.AnotationListner"/>
 <listener class-name="mBankingUtilityCenter.PriorityInterceptor"/>
-</listeners>
+</listeners> -->
 
 
-<test name = "Login App">
+<test name = "Login App" preserve-order = "true">
       <classes>
-<!--           <class name = "mBankingTestPages.LoginPageTest"/> -->
+          <class name= "mBankingTestPages.SilentSMSTest"/>
           <class name = "mBankingTestPages.AddBankTest"/>
-<!--           <class name = "mBankingTestPages.SetUPIPINTest"/>
-          <class name = "mBankingTestPages.BalanceEnquiryTest"/>
-           <class name= "mBankingTestPages.PayMoneyTest"/>
+          <class name = "mBankingTestPages.AddVirtualAddrTest"/>
+          <class name = "mBankingTestPages.ChangePinTest"/>
           <class name = "mBankingTestPages.CollectMoneyTest"/>
-          <class name = "mBankingTestPages.ChangePinTest"/> -->
+          <!-- <class name = "mBankingTestPages.LoginPageTest"/> -->
+          <class name = "mBankingTestPages.ManageAcTest"/>
+          <class name = "mBankingTestPages.ParticipantsTest"/>
+          <class name= "mBankingTestPages.PayMoneyTest"/>
+          <class name= "mBankingTestPages.PendingApprovalTest"/>
+          <class name = "mBankingTestPages.SetUPIPINTest"/>
+          <class name= "mBankingTestPages.TxnStatusTest"/>
+          <class name = "mBankingTestPages.ViewBalanceTest"/>
+          <class name = "mBankingTestPages.MenuDrawerOptionsTest"/>                             
       </classes>        
  </test>
   

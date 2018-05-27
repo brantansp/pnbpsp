@@ -7,22 +7,100 @@
   </listeners>
   <test name="Login App">
     <classes>
+      <class name="mBankingTestPages.SilentSMSTest"/>
       <class name="mBankingTestPages.AddBankTest"/>
+      <class name="mBankingTestPages.AddVirtualAddrTest"/>
+      <class name="mBankingTestPages.ChangePinTest"/>
+      <class name="mBankingTestPages.CollectMoneyTest"/>
+      <class name="mBankingTestPages.ManageAcTest"/>
+      <class name="mBankingTestPages.ParticipantsTest"/>
+      <class name="mBankingTestPages.PayMoneyTest"/>
+      <class name="mBankingTestPages.PendingApprovalTest"/>
+      <class name="mBankingTestPages.SetUPIPINTest"/>
+      <class name="mBankingTestPages.TxnStatusTest"/>
+      <class name="mBankingTestPages.ViewBalanceTest"/>
+      <class name="mBankingTestPages.MenuDrawerOptionsTest"/>
     </classes>
   </test> <!-- Login App -->
   <test name="Login App(failed)">
     <classes>
+      <class name="mBankingTestPages.MenuDrawerOptionsTest">
+        <methods>
+          <include name="complaintStatus"/>
+          <include name="reportSpamBlock"/>
+          <include name="reportSpamUnBlock"/>
+          <include name="termsAndCondition"/>
+          <include name="deRegister"/>
+        </methods>
+      </class> <!-- mBankingTestPages.MenuDrawerOptionsTest -->
       <class name="mBankingTestPages.AddBankTest">
         <methods>
-          <include name="AddBankAlreadyAdded"/>
-          <include name="extentReportSetUp"/>
           <include name="AddBankAccNotExists"/>
-          <include name="extentbeforeMethod"/>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-          <include name="extentGetResult"/>
         </methods>
       </class> <!-- mBankingTestPages.AddBankTest -->
+      <class name="mBankingTestPages.AddVirtualAddrTest">
+        <methods>
+          <include name="addAlreadyAddedVirAddress"/>
+        </methods>
+      </class> <!-- mBankingTestPages.AddVirtualAddrTest -->
+      <class name="mBankingTestPages.ManageAcTest">
+        <methods>
+          <include name="deleteVirAddress"/>
+          <include name="editVirAddress"/>
+          <include name="deleteBankAccount"/>
+          <include name="generateQRforVirAdd"/>
+        </methods>
+      </class> <!-- mBankingTestPages.ManageAcTest -->
+      <class name="mBankingTestPages.ParticipantsTest">
+        <methods>
+          <include name="viewParticipantsAcIfsc"/>
+          <include name="addParticipantsVirNo"/>
+          <include name="viewParticipantsAadNum"/>
+          <include name="viewParticipantsVirAdd"/>
+          <include name="addParticipantsAccNo"/>
+          <include name="addParticipantsAadNo"/>
+        </methods>
+      </class> <!-- mBankingTestPages.ParticipantsTest -->
+      <class name="mBankingTestPages.ViewBalanceTest">
+        <methods>
+          <include name="BalanceEnquiryValid"/>
+        </methods>
+      </class> <!-- mBankingTestPages.ViewBalanceTest -->
+      <class name="mBankingTestPages.PendingApprovalTest">
+        <methods>
+          <include name="pendingApprovalBlock"/>
+          <include name="pendingApprovalDecline"/>
+          <include name="pendingApprovalDefer"/>
+          <include name="pendingApprovalApprove"/>
+        </methods>
+      </class> <!-- mBankingTestPages.PendingApprovalTest -->
+      <class name="mBankingTestPages.PayMoneyTest">
+        <methods>
+          <include name="PayMoneyIFSC"/>
+          <include name="PayMoneyVir"/>
+          <include name="PayMoneyAad"/>
+        </methods>
+      </class> <!-- mBankingTestPages.PayMoneyTest -->
+      <class name="mBankingTestPages.SetUPIPINTest">
+        <methods>
+          <include name="setUPIPIN"/>
+        </methods>
+      </class> <!-- mBankingTestPages.SetUPIPINTest -->
+      <class name="mBankingTestPages.ChangePinTest">
+        <methods>
+          <include name="ChangePinValid"/>
+        </methods>
+      </class> <!-- mBankingTestPages.ChangePinTest -->
+      <class name="mBankingTestPages.CollectMoneyTest">
+        <methods>
+          <include name="CollectMoneyVir"/>
+        </methods>
+      </class> <!-- mBankingTestPages.CollectMoneyTest -->
+      <class name="mBankingTestPages.SilentSMSTest">
+        <methods>
+          <include name="extentReportSetUp"/>
+        </methods>
+      </class> <!-- mBankingTestPages.SilentSMSTest -->
     </classes>
   </test> <!-- Login App(failed) -->
 </suite> <!-- Failed suite [Positive Transaction flow] -->

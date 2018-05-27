@@ -1,4 +1,4 @@
-package mBankingTestPages;
+package mBankingTestVIJ;
 
 import java.lang.invoke.MethodHandles;
 import org.apache.commons.logging.Log;
@@ -13,13 +13,13 @@ import mBankingBaseFactory.AppiumController;
 import mBankingBaseFactory.ObjectRepository;
 import mBankingPageObjectFactory.BasePage;
 
-public class MenuDrawerOptionsText extends AppiumController {
+public class MenuDrawerOptionsTest extends AppiumController {
 
 	protected BasePage basePage;
     AppiumDriver<MobileElement> driver;// = getDriver(); ;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void termsAndCondition()
 	{
 		log.info("**********Terms and conditions**********");
@@ -40,6 +40,7 @@ public class MenuDrawerOptionsText extends AppiumController {
 		log.info("***************End***************");
 	}
 	
+	@Test
 	public void reportSpamBlock()
 	{
 		log.info("**********Report Spam Block VPA**********");
@@ -49,10 +50,7 @@ public class MenuDrawerOptionsText extends AppiumController {
 		waitForEditText("VPA Name",30);
 		clickTextView("Block");
 		sendText("VPA Name","brantan@ubi");
-		if(loadButton().length==0)
-		{
 		back();
-		}
 		clickBtn("SUBMIT");
 		/**
 		 * Needs to be continued
@@ -60,7 +58,7 @@ public class MenuDrawerOptionsText extends AppiumController {
 		log.info("***************End***************");
 	}
 	
-	//@Test
+	@Test
 	public void reportSpamUnBlock()
 	{
 		log.info("**********Report Spam UnBlock VPA**********");
@@ -75,20 +73,8 @@ public class MenuDrawerOptionsText extends AppiumController {
 		log.info("***************End***************");
 	}
 	
-	//@Test
-	public void faq()
-	{
-		log.info("**********FAQ**********");
-		waitForElement(ObjectRepository.menuDrawer, 5);
-		click(ObjectRepository.menuDrawer);
-		clickTextView("FAQ");
-		/**
-		 * Needs to be continued
-		 */
-		log.info("***************End***************");
-	}
 	
-	//@Test
+	@Test
 	public void complaintStatus()
 	{
 		log.info("**********Complaint Status**********");
@@ -131,23 +117,7 @@ public class MenuDrawerOptionsText extends AppiumController {
 		log.info("***************End***************");
 	}
 	
-	@Test
-	public void deRegister()
-	{
-		log.info("**********De Register**********");
-		waitForElement(ObjectRepository.menuDrawer, 5);
-		click(ObjectRepository.menuDrawer);
-		clickTextView("De-Register");
-		clickBtn("YES");
-		waitForBtn("OK",30);
-		if("You have been deregistered from the app successfully.".equals(loadTextView()[0]))
-		{
-		     log.info("You have been deregistered from the app successfully.");
-		     clickBtn("OK");
-		     Assert.assertTrue(true);
-		}
-		log.info("***************End***************");
-	}
+	
 	
 	//@Test
 	public void changePassword()
@@ -205,7 +175,23 @@ public class MenuDrawerOptionsText extends AppiumController {
 		}
 	}
 	
-	
+	//@Test
+	public void deRegister()
+	{
+		log.info("**********De Register**********");
+		waitForElement(ObjectRepository.menuDrawer, 5);
+		click(ObjectRepository.menuDrawer);
+		clickTextView("De-Register");
+		clickBtn("YES");
+		waitForBtn("OK",30);
+		if("You have been deregistered from the app successfully.".equals(loadTextView()[0]))
+		{
+		     log.info("You have been deregistered from the app successfully.");
+		     clickBtn("OK");
+		     Assert.assertTrue(true);
+		}
+		log.info("***************End***************");
+	}
 	
 	
 	
