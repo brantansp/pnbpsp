@@ -13,7 +13,7 @@
           <include name="extentReportSetUp"/>
           <include name="extentbeforeMethod"/>
           <include name="tearDown"/>
-          <include name="AddBankAccNotExists"/>
+          <include name="AddbankOnly"/>
           <include name="extentGetResult"/>
           <include name="AddBankAlreadyAdded"/>
           <include name="AddBankCreateVpaSetPin"/>

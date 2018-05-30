@@ -137,12 +137,12 @@ public class Driver {
 			String remoteUrl = "http://" + getHost() + ":" + getPort()
 					+ "/wd/hub";
 			if ("Android".equalsIgnoreCase(platform)) {
-				log.info("The platform is : Android platform");
+				log.info("The platform is : Android platform\n");
 				driver = new AndroidDriver<MobileElement>(new URL(remoteUrl),
 						Driver.generateDesiredCapabilities());
                 return driver;
 			} else if ("IOS".equalsIgnoreCase(platform)) {
-				log.info("The platform is : i-OS platform");
+				log.info("The platform is : i-OS platform\n");
 				driver = new IOSDriver<MobileElement>(new URL(remoteUrl),
 						Driver.generateDesiredCapabilities());
 				return driver;
@@ -197,7 +197,7 @@ public class Driver {
 		capabilities.setCapability(MobileCapability.UDID, getMobileUDID());
 		capabilities.setCapability(MobileCapability.APP_PACKAGE, getAppPackageName());
 		capabilities.setCapability(MobileCapability.APP_ACTIVITY, getAppActivity());
-		capabilities.setCapability(MobileCapability.NO_RESET, getNoReset());
+		capabilities.setCapability(MobileCapability.NO_RESET, true);
 		capabilities.setCapability(MobileCapability.ORIENTATION, getOrientation());
 		capabilities.setCapability(MobileCapability.NEW_COMMAND_TIMEOUT, 9000);
 		capabilities.setCapability("ignoreUnimportantViews", true);

@@ -15,7 +15,7 @@ public class CollectMoneyTest extends AppiumController {
     AppiumDriver<MobileElement> driver;// = getDriver(); 
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	@Test(priority = 1)
+	@Test
 	public void CollectMoneyVir() throws InterruptedException
 	{
 		log.info("**********Collect Money using Virtual Address**********");

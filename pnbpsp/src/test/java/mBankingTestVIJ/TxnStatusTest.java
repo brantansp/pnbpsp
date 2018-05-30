@@ -4,6 +4,8 @@ import java.lang.invoke.MethodHandles;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.testng.annotations.Test;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import mBankingBaseFactory.AppiumController;
@@ -16,7 +18,7 @@ public class TxnStatusTest extends AppiumController{
     AppiumDriver<MobileElement> driver;// = getDriver(); ;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	
-	//@Test
+	@Test
 	public void txnStatus()
 	{
 		log.info("**********Complaint Status**********");

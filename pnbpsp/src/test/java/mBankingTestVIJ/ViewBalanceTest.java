@@ -15,7 +15,7 @@ public class ViewBalanceTest extends AppiumController {
     AppiumDriver<MobileElement> driver;// = getDriver(); 
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	@Test(priority = 1)
+	@Test
 	public void BalanceEnquiryValid() throws InterruptedException
 	{
 		log.info("**********Balance Enquiry Valid**********");
@@ -24,7 +24,7 @@ public class ViewBalanceTest extends AppiumController {
 		waitForTextView("View Balance");
 		clickTextView("View Balance");
 		waitForTextView("BALANCE ENQUIRY");
-		clickTextView("XXXXXXXXXXX"+"4402");
+		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankAccNo"));
 		waitForTextView("UPI PIN");
 		sendText("****","1234");
 		clickBtn("SUBMIT");

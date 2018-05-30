@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,17 +49,17 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\brantansp\AppData\Local\Temp\testng-eclipse--1606906725\testng-customsuite.xml</span>
+                    <span>C:\Users\brantansp\AppData\Local\Temp\testng-eclipse-581275868\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 3 failed,   </span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,20 +102,39 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="mBankingTestVIJ.AddBankTest" hash-for-method="AddBankAccNotExists">AddBankAccNotExists</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="mBankingTestVIJ.AddBankTest" hash-for-method="AddBankAlreadyAdded">AddBankAlreadyAdded</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="mBankingTestVIJ.AddBankTest" hash-for-method="AddBankCreateVpaSetPin">AddBankCreateVpaSetPin</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="mBankingTestVIJ.AddBankTest" hash-for-method="AddbankOnly">AddbankOnly</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="mBankingTestVIJ.AddBankTest" hash-for-method="AddBankAccNotExists">AddBankAccNotExists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="mBankingTestVIJ.AddBankTest" hash-for-method="AddBankCreateVpaSetPin">AddBankCreateVpaSetPin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="mBankingTestVIJ.AddBankTest" hash-for-method="AddbankCreateVpaOnly">AddbankCreateVpaOnly</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -135,73 +154,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AddBankAccNotExists">
-                  </a> <!-- AddBankAccNotExists -->
-                  <span class="method-name">AddBankAccNotExists</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.15 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;brantansp-PC&apos;, ip: &apos;192.168.222.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
-*** Element info: {Using=xpath, value=//android.widget.TextView[@text=&apos;Add Bank A/C&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:611)
-	at mBankingTestVIJ.AddBankTest.AddBankAccNotExists(AddBankTest.java:149)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="AddBankAlreadyAdded">
                   </a> <!-- AddBankAlreadyAdded -->
                   <span class="method-name">AddBankAlreadyAdded</span>
@@ -209,15 +161,15 @@ Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
 Command duration or timeout: 1.15 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;brantansp-PC&apos;, ip: &apos;192.168.222.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_60&apos;
+System info: host: &apos;FSSCHND13937&apos;, ip: &apos;10.44.71.115&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
-*** Element info: {Using=xpath, value=//android.widget.TextView[@text=&apos;ADD BANK ACCOUNT&apos;]}
+Session ID: b5394cf6-02a2-4598-9696-4b7ad3959419
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text=&apos;Add Bank A/C&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
@@ -237,12 +189,12 @@ Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:611)
-	at mBankingTestVIJ.AddBankTest.AddBankAlreadyAdded(AddBankTest.java:108)
+	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:588)
+	at mBankingTestVIJ.AddBankTest.AddBankAlreadyAdded(AddBankTest.java:216)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
@@ -269,47 +221,15 @@ Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="AddBankCreateVpaSetPin">
-                  </a> <!-- AddBankCreateVpaSetPin -->
-                  <span class="method-name">AddBankCreateVpaSetPin</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.15 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;brantansp-PC&apos;, ip: &apos;192.168.222.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
-*** Element info: {Using=xpath, value=//android.widget.TextView[@text=&apos;ADD BANK ACCOUNT&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:611)
-	at mBankingTestVIJ.AddBankTest.AddBankCreateVpaSetPin(AddBankTest.java:35)
+                  <a name="AddbankOnly">
+                  </a> <!-- AddbankOnly -->
+                  <span class="method-name">AddbankOnly</span>
+                  <div class="stack-trace">java.lang.ArrayIndexOutOfBoundsException: 1
+	at mBankingTestVIJ.AddBankTest.AddbankOnly(AddBankTest.java:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
@@ -336,10 +256,39 @@ Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">mBankingTestVIJ.AddBankTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddBankAccNotExists">
+                  </a> <!-- AddBankAccNotExists -->
+                  <span class="method-name">AddBankAccNotExists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddBankCreateVpaSetPin">
+                  </a> <!-- AddBankCreateVpaSetPin -->
+                  <span class="method-name">AddBankCreateVpaSetPin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddbankCreateVpaOnly">
+                  </a> <!-- AddbankCreateVpaOnly -->
+                  <span class="method-name">AddbankCreateVpaOnly</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\brantansp\AppData\Local\Temp\testng-eclipse--1606906725\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\brantansp\AppData\Local\Temp\testng-eclipse-581275868\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -351,21 +300,6 @@ Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
       &lt;class name=&quot;mBankingTestVIJ.AddBankTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
-  &lt;test name=&quot;Default test(failed)&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;mBankingTestVIJ.AddBankTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;extentReportSetUp&quot;/&gt;
-          &lt;include name=&quot;extentbeforeMethod&quot;/&gt;
-          &lt;include name=&quot;tearDown&quot;/&gt;
-          &lt;include name=&quot;AddBankAccNotExists&quot;/&gt;
-          &lt;include name=&quot;extentGetResult&quot;/&gt;
-          &lt;include name=&quot;AddBankAlreadyAdded&quot;/&gt;
-          &lt;include name=&quot;AddBankCreateVpaSetPin&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- mBankingTestVIJ.AddBankTest --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -379,9 +313,6 @@ Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
               <li>
                 <span class="test-name">Default test (1 class)</span>
               </li>
-              <li>
-                <span class="test-name">Default test(failed) (1 class)</span>
-              </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -390,6 +321,34 @@ Session ID: 07c7392a-10b1-48e1-bb79-5cc4916a9a4f
             <span class="header-content">Groups for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">negative</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">AddBankAccNotExists</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">AddBankAlreadyAdded</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">positive</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">AddBankCreateVpaSetPin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">AddbankCreateVpaOnly</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">AddbankOnly</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Default_suite" class="panel">
@@ -406,24 +365,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'AddBankCreateVpaSetPin')
 data.setCell(0, 2, 'mBankingTestVIJ.AddBankTest')
-data.setCell(0, 3, 3496);
+data.setCell(0, 3, 115754);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'AddBankAlreadyAdded')
+data.setCell(1, 1, 'AddbankCreateVpaOnly')
 data.setCell(1, 2, 'mBankingTestVIJ.AddBankTest')
-data.setCell(1, 3, 3413);
+data.setCell(1, 3, 55101);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'AddBankAccNotExists')
+data.setCell(2, 1, 'AddbankOnly')
 data.setCell(2, 2, 'mBankingTestVIJ.AddBankTest')
-data.setCell(2, 3, 1153);
+data.setCell(2, 3, 19916);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'AddBankAccNotExists')
+data.setCell(3, 2, 'mBankingTestVIJ.AddBankTest')
+data.setCell(3, 3, 18745);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'AddBankAlreadyAdded')
+data.setCell(4, 2, 'mBankingTestVIJ.AddBankTest')
+data.setCell(4, 3, 1158);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -455,50 +422,72 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJ.AddBankTest.AddBankAccNotExists() throws java.lang.InterruptedException)</span>
+                <span class="method-start">25791 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddBankAccNotExists</span>
+                <span class="method-start">36553 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">extentGetResult([TestResult name=AddBankAccNotExists status=SUCCESS method=AddBankTest.AddBankAccNotExists()[pri:0, ...)</span>
+                <span class="method-start">55299 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
                 <span class="method-name">extentbeforeMethod(public void mBankingTestVIJ.AddBankTest.AddBankCreateVpaSetPin() throws java.lang.InterruptedExcepti...)</span>
-                <span class="method-start">24490 ms</span>
+                <span class="method-start">55301 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddBankCreateVpaSetPin</span>
+                <span class="method-start">66084 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">extentGetResult([TestResult name=AddBankCreateVpaSetPin status=SUCCESS method=AddBankTest.AddBankCreateVpaSetPin()[p...)</span>
+                <span class="method-start">181840 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJ.AddBankTest.AddbankCreateVpaOnly())</span>
+                <span class="method-start">181840 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddbankCreateVpaOnly</span>
+                <span class="method-start">192615 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">extentGetResult([TestResult name=AddbankCreateVpaOnly status=SUCCESS method=AddBankTest.AddbankCreateVpaOnly()[pri:0...)</span>
+                <span class="method-start">247718 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJ.AddBankTest.AddbankOnly())</span>
+                <span class="method-start">247720 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">AddBankCreateVpaSetPin</span>
-                <span class="method-start">35188 ms</span>
+                <span class="method-name">AddbankOnly</span>
+                <span class="method-start">258525 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">extentGetResult([TestResult name=AddBankCreateVpaSetPin status=FAILURE method=AddBankTest.AddBankCreateVpaSetPin()[p...)</span>
-                <span class="method-start">38699 ms</span>
+                <span class="method-name">extentGetResult([TestResult name=AddbankOnly status=FAILURE method=AddBankTest.AddbankOnly()[pri:0, instance:mBankin...)</span>
+                <span class="method-start">278443 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">extentbeforeMethod(public void mBankingTestVIJ.AddBankTest.AddBankAlreadyAdded() throws java.lang.InterruptedException)</span>
-                <span class="method-start">43550 ms</span>
+                <span class="method-start">281520 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">AddBankAlreadyAdded</span>
-                <span class="method-start">54674 ms</span>
+                <span class="method-start">292586 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">extentGetResult([TestResult name=AddBankAlreadyAdded status=FAILURE method=AddBankTest.AddBankAlreadyAdded()[pri:2, ...)</span>
-                <span class="method-start">58103 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJ.AddBankTest.AddBankAccNotExists() throws java.lang.InterruptedException)</span>
-                <span class="method-start">62949 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">AddBankAccNotExists</span>
-                <span class="method-start">73558 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">extentGetResult([TestResult name=AddBankAccNotExists status=FAILURE method=AddBankTest.AddBankAccNotExists()[pri:3, ...)</span>
-                <span class="method-start">74719 ms</span>
+                <span class="method-name">extentGetResult([TestResult name=AddBankAlreadyAdded status=FAILURE method=AddBankTest.AddBankAlreadyAdded()[pri:0, ...)</span>
+                <span class="method-start">293754 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">80724 ms</span>
+                <span class="method-start">297671 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

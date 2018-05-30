@@ -20,7 +20,7 @@ public class ManageAcTest extends AppiumController {
     AppiumDriver<MobileElement> driver;// = getDriver(); ;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	
-	@Test(priority = 1)
+	@Test
 	public void generateQRforVirAdd()
 	{
 		log.info("**********Generate QR for Virtual Address**********");
@@ -45,7 +45,7 @@ public class ManageAcTest extends AppiumController {
          log.info("***************End***************");
 	}
 	
-	@Test(priority = 2)
+	@Test
 	public void editVirAddress()
 	{
 		log.info("**********Edit Virtual Address valid**********");
@@ -74,7 +74,7 @@ public class ManageAcTest extends AppiumController {
          log.info("***************End***************");
 	}
 	
-	@Test(priority = 3)
+	@Test
 	public void deleteVirAddress()
 	{
 		log.info("**********Delete Virtual Address valid**********");
@@ -96,7 +96,7 @@ public class ManageAcTest extends AppiumController {
           log.info("***************End***************");
 	}
 	
-	@Test(priority = 4)
+	@Test
 	public void deleteBankAccount()
 	{
 		log.info("**********Delete Bank Account valid**********");

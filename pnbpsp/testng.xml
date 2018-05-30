@@ -2,40 +2,40 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name = "Positive Transaction flow"  preserve-order="true" >
-<!-- <listeners>
+ <listeners>
 <listener class-name="mBankingUtilityCenter.AnotationListner"/>
 <listener class-name="mBankingUtilityCenter.PriorityInterceptor"/>
-</listeners> -->
+</listeners>
 
 
 <test name = "Login App" preserve-order = "true">
       <classes>
-          <class name= "mBankingTestPages.SilentSMSTest"/>
-          <class name = "mBankingTestPages.AddBankTest"/>
-          <class name = "mBankingTestPages.AddVirtualAddrTest"/>
-          <class name = "mBankingTestPages.ChangePinTest"/>
-          <class name = "mBankingTestPages.CollectMoneyTest"/>
-          <!-- <class name = "mBankingTestPages.LoginPageTest"/> -->
-          <class name = "mBankingTestPages.ManageAcTest"/>
-          <class name = "mBankingTestPages.ParticipantsTest"/>
-          <class name= "mBankingTestPages.PayMoneyTest"/>
-          <class name= "mBankingTestPages.PendingApprovalTest"/>
-          <class name = "mBankingTestPages.SetUPIPINTest"/>
-          <class name= "mBankingTestPages.TxnStatusTest"/>
-          <class name = "mBankingTestPages.ViewBalanceTest"/>
-          <class name = "mBankingTestPages.MenuDrawerOptionsTest"/>                             
+ <!--          <class name= "mBankingTestVIJ.SilentSMSTest"/> -->
+          <class name = "mBankingTestVIJ.AddBankTest"/>
+          <class name = "mBankingTestVIJ.AddVirtualAddrTest"/>
+          <class name = "mBankingTestVIJ.ChangePinTest"/>
+          <class name = "mBankingTestVIJ.CollectMoneyTest"/>
+          <!-- <class name = "mBankingTestVIJ.LoginPageTest"/> -->
+          <class name = "mBankingTestVIJ.ManageAcTest"/>
+          <class name = "mBankingTestVIJ.ParticipantsTest"/>
+          <class name= "mBankingTestVIJ.PayMoneyTest"/>
+          <class name= "mBankingTestVIJ.PendingApprovalTest"/>
+          <class name = "mBankingTestVIJ.SetUPIPINTest"/>
+          <class name= "mBankingTestVIJ.TxnStatusTest"/>
+          <class name = "mBankingTestVIJ.ViewBalanceTest"/>
+          <class name = "mBankingTestVIJ.MenuDrawerOptionsTest"/>                             
       </classes>        
  </test>
   
 <!--  <test name = "Add Bank">
       <classes>
-          <class name = "mBankingTestPages.AddBankTest"/>
+          <class name = "mBankingTestVIJ.AddBankTest"/>
       </classes>        
  </test> 
  
 <test name = "Set UPI PIN">
       <classes>
-          <class name = "mBankingTestPages.SetUPIPINTest"/>
+          <class name = "mBankingTestVIJ.SetUPIPINTest"/>
       </classes>        
  </test>  -->
  

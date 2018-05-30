@@ -20,7 +20,7 @@ public class PayMoneyTest extends AppiumController {
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
 	
-	@Test(priority = 1)
+	@Test
 	public void PayMoneyVir() throws InterruptedException
 	{
 		log.info("**********Pay Money using Virtual Address**********");
@@ -29,7 +29,7 @@ public class PayMoneyTest extends AppiumController {
 		waitForTextView("Pay");
 		clickTextView("Pay");
 		waitForTextView("SEND MONEY");
-		clickTextView("XXXXXXXXXXX"+"4129");
+		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankAccNo"));
 		waitForTextView("VIRTUAL ADDRESS LIST");
 		clickTextView("usb@vijb");
 		waitForTextView("SEND MONEY");
@@ -59,7 +59,7 @@ public class PayMoneyTest extends AppiumController {
         log.info("***************End***************");
 	}
 
-	@Test(priority = 2)
+	@Test
 	public void PayMoneyIFSC() throws InterruptedException
 	{
 		log.info("**********Pay Money using Account & IFSC**********");
@@ -68,7 +68,7 @@ public class PayMoneyTest extends AppiumController {
 		waitForTextView("Pay");
 		clickTextView("Pay");
 		waitForTextView("SEND MONEY");
-		clickTextView("XXXXXXXXXXX"+"4129");
+		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankAccNo"));
 		waitForTextView("VIRTUAL ADDRESS LIST");
 		clickTextView("usb@vijb");
 		waitForTextView("SEND MONEY");
@@ -101,7 +101,7 @@ public class PayMoneyTest extends AppiumController {
         log.info("***************End***************");
 	}
 	
-	@Test(priority = 3)
+	@Test
 	public void PayMoneyAad() throws InterruptedException
 	{
 		log.info("**********Pay Money using Aadhar number**********");
@@ -110,7 +110,7 @@ public class PayMoneyTest extends AppiumController {
 		waitForTextView("Pay");
 		clickTextView("Pay");
 		waitForTextView("SEND MONEY");
-		clickTextView("XXXXXXXXXXX"+"4129");
+		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankAccNo"));
 		waitForTextView("VIRTUAL ADDRESS LIST");
 		clickTextView("usb@vijb");
 		waitForTextView("SEND MONEY");

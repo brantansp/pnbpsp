@@ -1,8 +1,11 @@
 package mBankingTestVIJ;
 
 import java.lang.invoke.MethodHandles;
+import java.util.Random;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumDriver;
@@ -16,32 +19,55 @@ public class AddVirtualAddrTest extends AppiumController {
     AppiumDriver<MobileElement> driver;// = getDriver(); ;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	
-	//@Test(priority = 1)
+	@Test
 	public void addVirAddressValid()
 	{
 	log.info("**********Add Virtual Address valid**********");
 	basePage = new BasePage(driver);
+	
+	clickTextView("Add Bank A/C");
+	waitForTextView("ADD BANK ACCOUNT", 50);
+	sendText("Search/Select your bank", prop.getProperty("addBankValid"));
+	int[] coords = getxyEditBox();
+	TapinBankName(coords, 100, 100);
+	waitForTextView("Select Your Account", 30);
+	clickTextView("Select Your Account");
+	String[] accounts = loadTextView();
+	clickTextView(accounts[1]);
+	prop.setProperty("addBankOnlyAccNo", accounts[1].substring(16, 20));
+	clickBtn("SUBMIT");
+	String[] status = loadTextView();
+	if ("Your bank account has been registered successfully. Please create a virtual address before performing any transactions."
+			.equals(status[1])) {
+		log.info(status[1]);
+		clickBtn("OK");
+		back();
+		back();
+	}
+	
 	waitForTextView("Add Virtual Address",30);
 	basePage.clickTextView("Add Virtual Address");
 	waitForTextView("Select an account to create virtual address");
-	clickTextView("XXXXXXXXXXX4258");
+	clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankOnlyAccNo"));
 	clickRadioBtn("Single use");
 	basePage.selectVirTimeLimit("2018","25","May");
 	basePage.setVirAmtLimit("1000");
 		back();
-	sendText("Virtual Id", prop.getProperty("addVirValid"));
+		Random random=new Random();
+	sendText("Virtual Id", prop.getProperty("addVirValid")+random.nextInt(90) + 10);
 	click(ObjectRepository.submit);
-	String [] status=loadTextView();
-	if("Virtual Address Created Successfully".equals(status[0]))
+	String [] status1=loadTextView();
+	if("Virtual Address Created Successfully".equals(status1[0]))
 	{
 		clickBtn("OK");
 		Assert.assertTrue(true);
 	}
+	
 	log.info("***************End***************");
 	//The virtual Address bran10@vijb is already available and is currently active. Enter a new virtual address.
 }
 
-	@Test(priority = 2)
+	@Test (dependsOnMethods = "addVirAddressValid")
 	public void addAlreadyAddedVirAddress()
 	{
 	log.info("**********Adding already added Virtual Address **********");
@@ -49,7 +75,7 @@ public class AddVirtualAddrTest extends AppiumController {
 	waitForTextView("Add Virtual Address",30);
 	basePage.clickTextView("Add Virtual Address");
 	waitForTextView("Select an account to create virtual address");
-	clickTextView("XXXXXXXXXXX4258");
+	clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankOnlyAccNo"));
 	clickRadioBtn("Single use");
 	basePage.selectVirTimeLimit("2018","25","May");
 	basePage.setVirAmtLimit("1000");
@@ -62,7 +88,30 @@ public class AddVirtualAddrTest extends AppiumController {
 	{
 		clickBtn("OK");
 		Assert.assertTrue(true);
+		back();
+		back();
 	}
+	else if ("Virtual address provided is already in use. Please enter a different virtual address.".equals(status[0]))
+	{
+		clickBtn("OK");
+		Assert.assertTrue(true);
+		back();
+		back();
+	}
+	
+    waitForTextView("Manage A/C",30);
+    clickTextView("Manage A/C");
+    waitForTextView("VIEW BANK ACCOUNTS",10);
+    clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankOnlyAccNo"));
+    waitForTextView("ADDED VIRTUAL ADDRESS LIST",10);     
+    click(ObjectRepository.viewEditProfile);
+	String [] status2=loadTextView();
+	if("Are you sure want to delete the Regd Acc No?".equals(status2[0]))
+	{
+         clickBtn("YES");
+        clickBtn("OK");
+	}
+	
 	log.info("***************End***************");
 }
 

@@ -19,7 +19,7 @@ public class MenuDrawerOptionsTest extends AppiumController {
     AppiumDriver<MobileElement> driver;// = getDriver(); ;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
-	@Test(priority=1)
+	@Test
 	public void termsAndCondition()
 	{
 		log.info("**********Terms and conditions**********");
