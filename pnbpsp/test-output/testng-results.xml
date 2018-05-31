@@ -1,222 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="5" passed="3">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="271856" started-at="2018-05-30T13:14:28Z" finished-at="2018-05-30T13:19:00Z">
+  <suite name="Default suite" duration-ms="71788" started-at="2018-05-31T13:28:36Z" finished-at="2018-05-31T13:29:48Z">
     <groups>
-      <group name="negative">
-        <method signature="AddBankTest.AddBankAccNotExists()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddBankAccNotExists" class="mBankingTestVIJ.AddBankTest"/>
-        <method signature="AddBankTest.AddBankAlreadyAdded()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddBankAlreadyAdded" class="mBankingTestVIJ.AddBankTest"/>
-      </group> <!-- negative -->
-      <group name="positive">
-        <method signature="AddBankTest.AddBankCreateVpaSetPin()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddBankCreateVpaSetPin" class="mBankingTestVIJ.AddBankTest"/>
-        <method signature="AddBankTest.AddbankCreateVpaOnly()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddbankCreateVpaOnly" class="mBankingTestVIJ.AddBankTest"/>
-        <method signature="AddBankTest.AddbankOnly()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddbankOnly" class="mBankingTestVIJ.AddBankTest"/>
-      </group> <!-- positive -->
     </groups>
-    <test name="Default test" duration-ms="271856" started-at="2018-05-30T13:14:28Z" finished-at="2018-05-30T13:19:00Z">
-      <class name="mBankingTestVIJ.AddBankTest">
-        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentReportSetUp" is-config="true" duration-ms="25778" started-at="2018-05-30T18:44:02Z" finished-at="2018-05-30T18:44:28Z">
+    <test name="Default test" duration-ms="71788" started-at="2018-05-31T13:28:36Z" finished-at="2018-05-31T13:29:48Z">
+      <class name="mBankingTestVIJ.CollectMoneyTest">
+        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="extentReportSetUp" is-config="true" duration-ms="24919" started-at="2018-05-31T18:58:11Z" finished-at="2018-05-31T18:58:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentReportSetUp -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentbeforeMethod" is-config="true" duration-ms="10762" started-at="2018-05-30T18:44:28Z" finished-at="2018-05-30T18:44:39Z">
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="extentbeforeMethod" is-config="true" duration-ms="10706" started-at="2018-05-31T18:58:36Z" finished-at="2018-05-31T18:58:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void mBankingTestVIJ.AddBankTest.AddBankAccNotExists() throws java.lang.InterruptedException]]>
+                <![CDATA[public void mBankingTestVIJ.CollectMoneyTest.CollectMoneyVir() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentbeforeMethod -->
-        <test-method status="PASS" signature="AddBankAccNotExists()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddBankAccNotExists" duration-ms="18745" started-at="2018-05-30T18:44:39Z" finished-at="2018-05-30T18:44:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddBankAccNotExists -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentGetResult" is-config="true" duration-ms="2" started-at="2018-05-30T18:44:57Z" finished-at="2018-05-30T18:44:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AddBankAccNotExists status=SUCCESS method=AddBankTest.AddBankAccNotExists()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentbeforeMethod" is-config="true" duration-ms="10783" started-at="2018-05-30T18:44:57Z" finished-at="2018-05-30T18:45:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJ.AddBankTest.AddBankCreateVpaSetPin() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="PASS" signature="AddBankCreateVpaSetPin()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddBankCreateVpaSetPin" duration-ms="115754" started-at="2018-05-30T18:45:08Z" finished-at="2018-05-30T18:47:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddBankCreateVpaSetPin -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentbeforeMethod" is-config="true" duration-ms="10775" started-at="2018-05-30T18:47:04Z" finished-at="2018-05-30T18:47:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJ.AddBankTest.AddbankCreateVpaOnly()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-05-30T18:47:04Z" finished-at="2018-05-30T18:47:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AddBankCreateVpaSetPin status=SUCCESS method=AddBankTest.AddBankCreateVpaSetPin()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="AddbankCreateVpaOnly()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddbankCreateVpaOnly" duration-ms="55101" started-at="2018-05-30T18:47:15Z" finished-at="2018-05-30T18:48:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddbankCreateVpaOnly -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentGetResult" is-config="true" duration-ms="1" started-at="2018-05-30T18:48:10Z" finished-at="2018-05-30T18:48:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AddbankCreateVpaOnly status=SUCCESS method=AddBankTest.AddbankCreateVpaOnly()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentbeforeMethod" is-config="true" duration-ms="10805" started-at="2018-05-30T18:48:10Z" finished-at="2018-05-30T18:48:21Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJ.AddBankTest.AddbankOnly()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="FAIL" signature="AddbankOnly()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddbankOnly" duration-ms="19916" started-at="2018-05-30T18:48:21Z" finished-at="2018-05-30T18:48:40Z">
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
-            <message>
-              <![CDATA[1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: 1
-	at mBankingTestVIJ.AddBankTest.AddbankOnly(AddBankTest.java:46)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddbankOnly -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentGetResult" is-config="true" duration-ms="3064" started-at="2018-05-30T18:48:40Z" finished-at="2018-05-30T18:48:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AddbankOnly status=FAILURE method=AddBankTest.AddbankOnly()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentbeforeMethod" is-config="true" duration-ms="11066" started-at="2018-05-30T18:48:44Z" finished-at="2018-05-30T18:48:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJ.AddBankTest.AddBankAlreadyAdded() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="FAIL" signature="AddBankAlreadyAdded()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="AddBankAlreadyAdded" duration-ms="1158" started-at="2018-05-30T18:48:55Z" depends-on-methods="mBankingTestVIJ.AddBankTest.AddBankCreateVpaSetPin" finished-at="2018-05-30T18:48:56Z">
+        <test-method status="FAIL" signature="CollectMoneyVir()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="CollectMoneyVir" duration-ms="57793" started-at="2018-05-31T18:58:47Z" finished-at="2018-05-31T18:59:45Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.15 seconds
+              <![CDATA[Can't locate an element by this strategy: Locator map: 
+- native content: "By.id: com.fss.vijayapsp:id/button_no" 
+- html content: "by id or name "noBtn""
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: b5394cf6-02a2-4598-9696-4b7ad3959419
-*** Element info: {Using=xpath, value=//android.widget.TextView[@text='Add Bank A/C']}]]>
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.15 seconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
+- native content: "By.id: com.fss.vijayapsp:id/button_no" 
+- html content: "by id or name "noBtn""
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: b5394cf6-02a2-4598-9696-4b7ad3959419
-*** Element info: {Using=xpath, value=//android.widget.TextView[@text='Add Bank A/C']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:588)
-	at mBankingTestVIJ.AddBankTest.AddBankAlreadyAdded(AddBankTest.java:216)
+Driver info: driver.version: unknown
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.isDisplayed(<generated>)
+	at mBankingBaseFactory.AppiumController.isDisplayed(AppiumController.java:628)
+	at mBankingPageObjectFactory.BasePage.exitapp(BasePage.java:77)
+	at mBankingTestVIJ.CollectMoneyTest.CollectMoneyVir(CollectMoneyTest.java:24)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -246,23 +76,23 @@ Session ID: b5394cf6-02a2-4598-9696-4b7ad3959419
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddBankAlreadyAdded -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="extentGetResult" is-config="true" duration-ms="3880" started-at="2018-05-30T18:48:56Z" finished-at="2018-05-30T18:49:00Z">
+        </test-method> <!-- CollectMoneyVir -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="extentGetResult" is-config="true" duration-ms="3211" started-at="2018-05-31T18:59:45Z" finished-at="2018-05-31T18:59:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AddBankAlreadyAdded status=FAILURE method=AddBankTest.AddBankAlreadyAdded()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e] output={null}]]]>
+                <![CDATA[[TestResult name=CollectMoneyVir status=FAILURE method=CollectMoneyTest.CollectMoneyVir()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestVIJ.AddBankTest@15cd85e]" name="tearDown" is-config="true" duration-ms="250" started-at="2018-05-30T18:49:00Z" finished-at="2018-05-30T18:49:00Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="tearDown" is-config="true" duration-ms="425" started-at="2018-05-31T18:59:48Z" finished-at="2018-05-31T18:59:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mBankingTestVIJ.AddBankTest -->
+      </class> <!-- mBankingTestVIJ.CollectMoneyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -22,6 +22,12 @@ public class ChangePinTest extends AppiumController {
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	String vpa;
 	
+	/**
+	 * change pin without add bank
+	 * @throws InterruptedException
+	 */
+	//Transactions cannot be performed without registering your bank account to the app. Please register your bank account to perform transactions.
+	
 	@Test(priority = 0)
 	public void ChangePINValid() throws InterruptedException {
 		log.info("**********Change Pin With out Creating Virtual Address**********");

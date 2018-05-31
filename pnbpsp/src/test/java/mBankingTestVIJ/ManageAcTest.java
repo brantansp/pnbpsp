@@ -20,6 +20,11 @@ public class ManageAcTest extends AppiumController {
     AppiumDriver<MobileElement> driver;// = getDriver(); ;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	
+	/**
+	 * Manage acc without add bank
+	 */
+	//Transactions cannot be performed without registering your bank account to the app. Please register your bank account to perform transactions.
+	
 	@Test
 	public void generateQRforVirAdd()
 	{

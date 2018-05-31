@@ -3,22 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="mBankingTestVIJ.AddBankTest"/>
+      <class name="mBankingTestVIJ.CollectMoneyTest"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="mBankingTestVIJ.AddBankTest">
+      <class name="mBankingTestVIJ.CollectMoneyTest">
         <methods>
           <include name="extentReportSetUp"/>
           <include name="extentbeforeMethod"/>
           <include name="tearDown"/>
-          <include name="AddbankOnly"/>
+          <include name="CollectMoneyVir"/>
           <include name="extentGetResult"/>
-          <include name="AddBankAlreadyAdded"/>
-          <include name="AddBankCreateVpaSetPin"/>
         </methods>
-      </class> <!-- mBankingTestVIJ.AddBankTest -->
+      </class> <!-- mBankingTestVIJ.CollectMoneyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

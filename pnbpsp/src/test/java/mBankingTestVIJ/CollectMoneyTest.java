@@ -20,10 +20,13 @@ public class CollectMoneyTest extends AppiumController {
 	{
 		log.info("**********Collect Money using Virtual Address**********");
 		loginPage = new BasePage(driver);
-		loginPage.loginApp("111111");
         loginPage.CollectMoney("brantan@pnb", "100", "20", "9", "30", "AM", "Collect money");
         loginPage.exitapp();
         log.info("***************End***************");
 	}
 	
+	/*
+	 * collect money without bank acc
+	 */
+//Transactions cannot be performed without registering your bank account to the app. Please register your bank account to perform transactions.
 }

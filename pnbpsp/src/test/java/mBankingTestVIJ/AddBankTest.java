@@ -212,10 +212,10 @@ public class AddBankTest extends AppiumController {
 	@Test(dependsOnMethods = "AddBankCreateVpaSetPin", groups = { "negative" })
 	public void AddBankAlreadyAdded() throws InterruptedException {
 		log.info("**********Add Bank Already Added**********");
-		basePage = new BasePage(driver);
-		waitForTextView("Add Bank A/C", 30);
+		basePage = new BasePage(getDriver());
+		// waitForTextView ("Add Bank A/C" , 30);
 		clickTextView("Add Bank A/C");
-		waitForTextView("ADD BANK ACCOUNT", 30);
+		waitForTextView("ADD BANK ACCOUNT", 50);
 		sendText("Search/Select your bank", prop.getProperty("addBankValid"));
 		int[] coords = getxyEditBox();
 		TapinBankName(coords, 100, 100);
@@ -270,9 +270,10 @@ public class AddBankTest extends AppiumController {
 	@Test(groups = { "negative" })
 	public void AddBankAccNotExists() throws InterruptedException {
 		log.info("**********Add Bank Acc Not Exists**********");
-		waitForTextView("Add Bank A/C", 30);
+		basePage = new BasePage(getDriver());
+		// waitForTextView ("Add Bank A/C" , 30);
 		clickTextView("Add Bank A/C");
-		waitForTextView("ADD BANK ACCOUNT", 30);
+		waitForTextView("ADD BANK ACCOUNT", 50);
 		sendText("Search/Select your bank", "Aditya Birla Idea");
 		int[] coords = getxyEditBox();
 		TapinBankName(coords, 100, 100);
