@@ -34,9 +34,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -109,12 +112,9 @@ public class AppiumController {
 		extent.loadConfig(new File(System.getProperty("user.dir") + "\\extent-config.xml"));
 		setDriver(Driver.instantiateDriver("android"));
 
-		  wait = new FluentWait<WebDriver>(getDriver()) .withTimeout(30,
-		  TimeUnit.SECONDS) .pollingEvery(2,
-		  TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
-
-		 getDriver().manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
+		wait = new FluentWait<WebDriver>(getDriver()).withTimeout(30, TimeUnit.SECONDS)
+				.pollingEvery(2, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
+		getDriver().manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 	}
 
 	@BeforeMethod
@@ -145,20 +145,18 @@ public class AppiumController {
 		log.info("@AfterMethod");
 		if (result.getStatus() == ITestResult.FAILURE) {
 			String screenShotPath = AppiumController.takeScreenShot();
-			log.info(result.getName() +" : Test Case Failed");
+			log.info(result.getName() + " : Test Case Failed");
 			extentLogger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
 			extentLogger.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
 			extentLogger.log(LogStatus.FAIL, "Snapshot below: " + extentLogger.addScreenCapture(screenShotPath));
 		} else if (result.getStatus() == ITestResult.SKIP) {
-			log.info(result.getName()+ " : Test Case Skipped");
+			log.info(result.getName() + " : Test Case Skipped");
 			extentLogger.log(LogStatus.SKIP, "Test Case Skipped is " + result.getName());
-		}
-		else
-		{
-			log.info(result.getName()+ " : Test Case Passed");
+		} else {
+			log.info(result.getName() + " : Test Case Passed");
 		}
 		extent.endTest(extentLogger);
-		//driver.closeApp();
+		// driver.closeApp();
 		log.info("***************Application Closed***************\n");
 		/*
 		 * try { ExcelWriter.writeTestResult(TestCaseNum , result.getStatus());
@@ -904,6 +902,7 @@ public class AppiumController {
 
 	// clickText
 	public void clickBtn(String text) {
+		waitForBtn(text, 50);
 		try {
 			getDriver().findElement(By.xpath(("//*[@class='android.widget.Button'][@text='" + text + "']"))).click();
 			log.info("Click on element : " + text);
@@ -946,6 +945,17 @@ public class AppiumController {
 		}
 	}
 
+	public void clickTextViewContains(String text)
+	{
+		List<MobileElement> elementList = ((AndroidDriver<MobileElement>) getDriver())
+				.findElements(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"" + text + "\")"));
+		try {
+			click(elementList.get(0));
+		} catch (Exception e) {
+			log.info("Element with partial text :" + text + " is not found.");
+		}
+	}
+	
 	// clickText
 	public void clickTextView(String text) {
 		try {
@@ -963,14 +973,39 @@ public class AppiumController {
 		}
 	}
 
-	public void clickTextViewContains(String text) {
-		try {
-			log.info("Click on element : " + text);
-			getDriver().findElement(By.xpath(("//android.widget.TextView[contains(@text,‘" + text + "’)]"))).click();
-		} catch (Exception e) {
-			// report an error
-			System.out.println(e);
+
+	public Map<String, String> getCurrTime() {
+		String hour = getDriver().findElement(By.id("android:id/hours")).getAttribute("text");
+		String minute = getDriver().findElement(By.id("android:id/minutes")).getAttribute("text");
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("hour", hour);
+		map.put("minute", minute);
+		Set<?> set = map.entrySet();
+		Iterator<?> itr = set.iterator();
+		while (itr.hasNext()) {
+			Map.Entry<String, String> mp = (Map.Entry<String, String>) itr.next();
+			log.info("Current " + mp.getKey() + " is : " + mp.getKey());
 		}
+		return map;
+	}
+
+	public Map<String, String> getCurrDate() {
+		String year = getDriver().findElement(By.id("android:id/date_picker_header_year")).getAttribute("text"); // 2018
+		String day = getDriver().findElement(By.id("android:id/date_picker_header_date")).getAttribute("text"); // Fri,
+																												// Jun
+																												// 1
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("year", year);
+		map.put("month", day.substring(5, 8));
+		map.put("day", day.substring(0, 3));
+		map.put("date", day.substring(9, day.length()));
+		Set<?> set = map.entrySet();
+		Iterator<?> itr = set.iterator();
+		while (itr.hasNext()) {
+			Map.Entry<String, String> mp = (Map.Entry<String, String>) itr.next();
+			log.info("Current " + mp.getKey() + " is : " + mp.getKey());
+		}
+		return map;
 	}
 
 	public String getText(MobileElement elm) {

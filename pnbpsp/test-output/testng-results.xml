@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="71788" started-at="2018-05-31T13:28:36Z" finished-at="2018-05-31T13:29:48Z">
+  <suite name="Default suite" duration-ms="125433" started-at="2018-06-01T11:07:09Z" finished-at="2018-06-01T11:09:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="71788" started-at="2018-05-31T13:28:36Z" finished-at="2018-05-31T13:29:48Z">
+    <test name="Default test" duration-ms="125433" started-at="2018-06-01T11:07:09Z" finished-at="2018-06-01T11:09:15Z">
       <class name="mBankingTestVIJ.CollectMoneyTest">
-        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="extentReportSetUp" is-config="true" duration-ms="24919" started-at="2018-05-31T18:58:11Z" finished-at="2018-05-31T18:58:36Z">
+        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="extentReportSetUp" is-config="true" duration-ms="26421" started-at="2018-06-01T16:36:43Z" finished-at="2018-06-01T16:37:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentReportSetUp -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="extentbeforeMethod" is-config="true" duration-ms="10706" started-at="2018-05-31T18:58:36Z" finished-at="2018-05-31T18:58:47Z">
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="extentbeforeMethod" is-config="true" duration-ms="10782" started-at="2018-06-01T16:37:09Z" finished-at="2018-06-01T16:37:20Z">
           <params>
             <param index="0">
               <value>
@@ -22,31 +22,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentbeforeMethod -->
-        <test-method status="FAIL" signature="CollectMoneyVir()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="CollectMoneyVir" duration-ms="57793" started-at="2018-05-31T18:58:47Z" finished-at="2018-05-31T18:59:45Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="CollectMoneyVir()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="CollectMoneyVir" duration-ms="112022" started-at="2018-06-01T16:37:20Z" finished-at="2018-06-01T16:39:12Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Can't locate an element by this strategy: Locator map: 
-- native content: "By.id: com.fss.vijayapsp:id/button_no" 
-- html content: "by id or name "noBtn""
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[Timed out after 50 seconds waiting for visibility of element located by By.xpath: //android.Widget.TextView[@text='SET UPI PIN']
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: driver.version: unknown]]>
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: 0759282c-5c08-4238-8afe-39256621141f]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
-- native content: "By.id: com.fss.vijayapsp:id/button_no" 
-- html content: "by id or name "noBtn""
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 50 seconds waiting for visibility of element located by By.xpath: //android.Widget.TextView[@text='SET UPI PIN']
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: driver.version: unknown
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.isDisplayed(<generated>)
-	at mBankingBaseFactory.AppiumController.isDisplayed(AppiumController.java:628)
-	at mBankingPageObjectFactory.BasePage.exitapp(BasePage.java:77)
-	at mBankingTestVIJ.CollectMoneyTest.CollectMoneyVir(CollectMoneyTest.java:24)
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: 0759282c-5c08-4238-8afe-39256621141f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at mBankingTestVIJ.CollectMoneyTest.CollectMoneyVir(CollectMoneyTest.java:132)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -71,13 +66,50 @@ Driver info: driver.version: unknown
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.18 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: 0759282c-5c08-4238-8afe-39256621141f
+*** Element info: {Using=xpath, value=//android.Widget.TextView[@text='SET UPI PIN']}
+	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CollectMoneyVir -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="extentGetResult" is-config="true" duration-ms="3211" started-at="2018-05-31T18:59:45Z" finished-at="2018-05-31T18:59:48Z">
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="extentGetResult" is-config="true" duration-ms="2607" started-at="2018-06-01T16:39:12Z" finished-at="2018-06-01T16:39:15Z">
           <params>
             <param index="0">
               <value>
@@ -88,7 +120,7 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="tearDown" is-config="true" duration-ms="425" started-at="2018-05-31T18:59:48Z" finished-at="2018-05-31T18:59:48Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@15cd85e]" name="tearDown" is-config="true" duration-ms="205" started-at="2018-06-01T16:39:15Z" finished-at="2018-06-01T16:39:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
