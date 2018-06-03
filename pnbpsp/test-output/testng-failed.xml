@@ -3,20 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="mBankingTestVIJ.CollectMoneyTest"/>
+      <class name="test.Test2"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="mBankingTestVIJ.CollectMoneyTest">
+      <class name="test.Test2">
         <methods>
-          <include name="extentReportSetUp"/>
-          <include name="extentbeforeMethod"/>
+          <include name="beginTest"/>
+          <include name="setup"/>
           <include name="tearDown"/>
-          <include name="CollectMoneyVir"/>
-          <include name="extentGetResult"/>
         </methods>
-      </class> <!-- mBankingTestVIJ.CollectMoneyTest -->
+      </class> <!-- test.Test2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
