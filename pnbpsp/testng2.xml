@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "Positive Transaction flow"  preserve-order="true" >
+ <listeners>
+<listener class-name="mBankingUtilityCenter.AnotationListner"/>
+<listener class-name="mBankingUtilityCenter.PriorityInterceptor"/>
+</listeners>
+
+
+<test name = "Login App" preserve-order = "true">
+      <classes>
+          <class name = "test.Test2"/>   
+      </classes>        
+ </test>
+</suite>

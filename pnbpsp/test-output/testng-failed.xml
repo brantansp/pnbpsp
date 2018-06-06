@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
+  <listeners>
+    <listener class-name="mBankingUtilityCenter.AnotationListner"/>
+    <listener class-name="mBankingUtilityCenter.PriorityInterceptor"/>
+  </listeners>
+  <test name="Login App">
     <classes>
       <class name="test.Test2"/>
     </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
+  </test> <!-- Login App -->
+  <test name="Login App(failed)">
     <classes>
       <class name="test.Test2">
         <methods>
-          <include name="beginTest"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
+          <include name="check"/>
         </methods>
       </class> <!-- test.Test2 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Login App(failed) -->
+</suite> <!-- Failed suite [Positive Transaction flow] -->

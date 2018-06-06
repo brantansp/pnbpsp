@@ -10,24 +10,19 @@ import org.apache.commons.logging.LogFactory;
 import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
 
-
 public class AnotationListner implements IAnnotationTransformer {
 
 	public List<String> testsEnabled = new ArrayList();
 	public static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
-	
+
 	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-   		//System.out.println("Transformer running for " + testMethod.getName());
-		testsEnabled=ExcelReader.getEnabledTests("Data","Test_Cases_Flag");
-		if(testsEnabled.contains(testMethod.getName()))
-			{
-				annotation.setEnabled(false);
-			}		
-		
-		if("silentSMS".equals(testMethod.getName()))
-		{
-			//beforeClass()
+		testsEnabled = ExcelReader.getEnabledTests("Data", "Test_Cases_Flag");
+		annotation.setRetryAnalyzer(RetryAnalyzer.class);
+		if (testsEnabled.contains(testMethod.getName())) {
 			annotation.setEnabled(false);
-		}	
+		}
+		if ("silentSMS".equals(testMethod.getName())) {
+			annotation.setEnabled(false);
+		}
 	}
 }

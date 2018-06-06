@@ -7,119 +7,16 @@
   </listeners>
   <test name="Login App">
     <classes>
-      <class name="mBankingTestVIJ.AddBankTest"/>
-      <class name="mBankingTestVIJ.AddVirtualAddrTest"/>
-      <class name="mBankingTestVIJ.ChangePinTest"/>
-      <class name="mBankingTestVIJ.CollectMoneyTest"/>
-      <class name="mBankingTestVIJ.ManageAcTest"/>
-      <class name="mBankingTestVIJ.ParticipantsTest"/>
-      <class name="mBankingTestVIJ.PayMoneyTest"/>
-      <class name="mBankingTestVIJ.PendingApprovalTest"/>
-      <class name="mBankingTestVIJ.SetUPIPINTest"/>
-      <class name="mBankingTestVIJ.TxnStatusTest"/>
-      <class name="mBankingTestVIJ.ViewBalanceTest"/>
-      <class name="mBankingTestVIJ.MenuDrawerOptionsTest"/>
+      <class name="test.Test2"/>
     </classes>
   </test> <!-- Login App -->
   <test name="Login App(failed)">
     <classes>
-      <class name="mBankingTestVIJ.ViewBalanceTest">
+      <class name="test.Test2">
         <methods>
-          <include name="extentbeforeMethod"/>
-          <include name="BalanceEnquiryValid"/>
-          <include name="extentGetResult"/>
+          <include name="check"/>
         </methods>
-      </class> <!-- mBankingTestVIJ.ViewBalanceTest -->
-      <class name="mBankingTestVIJ.AddVirtualAddrTest">
-        <methods>
-          <include name="addAlreadyAddedVirAddress"/>
-          <include name="addVirAddressValid"/>
-          <include name="extentbeforeMethod"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.AddVirtualAddrTest -->
-      <class name="mBankingTestVIJ.ChangePinTest">
-        <methods>
-          <include name="ChangePinWhenUPIPinNotAvailable"/>
-          <include name="ChangePinWithoutCreatingVirAddr"/>
-          <include name="extentbeforeMethod"/>
-          <include name="extentGetResult"/>
-          <include name="ChangePINValid"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.ChangePinTest -->
-      <class name="mBankingTestVIJ.ParticipantsTest">
-        <methods>
-          <include name="viewParticipantsAadNum"/>
-          <include name="addParticipantsVirNo"/>
-          <include name="extentbeforeMethod"/>
-          <include name="addParticipantsAccNo"/>
-          <include name="extentGetResult"/>
-          <include name="addParticipantsAadNo"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.ParticipantsTest -->
-      <class name="mBankingTestVIJ.PayMoneyTest">
-        <methods>
-          <include name="PayMoneyAad"/>
-          <include name="extentbeforeMethod"/>
-          <include name="PayMoneyIFSC"/>
-          <include name="extentGetResult"/>
-          <include name="PayMoneyVir"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.PayMoneyTest -->
-      <class name="mBankingTestVIJ.MenuDrawerOptionsTest">
-        <methods>
-          <include name="extentbeforeMethod"/>
-          <include name="termsAndCondition"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.MenuDrawerOptionsTest -->
-      <class name="mBankingTestVIJ.SetUPIPINTest">
-        <methods>
-          <include name="extentbeforeMethod"/>
-          <include name="setUPIPIN"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.SetUPIPINTest -->
-      <class name="mBankingTestVIJ.PendingApprovalTest">
-        <methods>
-          <include name="pendingApprovalDefer"/>
-          <include name="extentbeforeMethod"/>
-          <include name="extentGetResult"/>
-          <include name="pendingApprovalApprove"/>
-          <include name="pendingApprovalDecline"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.PendingApprovalTest -->
-      <class name="mBankingTestVIJ.TxnStatusTest">
-        <methods>
-          <include name="extentbeforeMethod"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.TxnStatusTest -->
-      <class name="mBankingTestVIJ.CollectMoneyTest">
-        <methods>
-          <include name="extentbeforeMethod"/>
-          <include name="CollectMoneyVir"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.CollectMoneyTest -->
-      <class name="mBankingTestVIJ.AddBankTest">
-        <methods>
-          <include name="extentReportSetUp"/>
-          <include name="AddbankCreateVpaOnly"/>
-          <include name="extentbeforeMethod"/>
-          <include name="tearDown"/>
-          <include name="extentGetResult"/>
-          <include name="AddBankAlreadyAdded"/>
-          <include name="AddBankCreateVpaSetPin"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.AddBankTest -->
-      <class name="mBankingTestVIJ.ManageAcTest">
-        <methods>
-          <include name="deleteBankAccount"/>
-          <include name="extentbeforeMethod"/>
-          <include name="extentGetResult"/>
-        </methods>
-      </class> <!-- mBankingTestVIJ.ManageAcTest -->
+      </class> <!-- test.Test2 -->
     </classes>
   </test> <!-- Login App(failed) -->
 </suite> <!-- Failed suite [Positive Transaction flow] -->
