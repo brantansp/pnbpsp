@@ -143,11 +143,10 @@ public class AddBankTest extends AppiumController {
 					sleep(30000);
 					// waitForElement (ObjectRepository.otpTickImg, 50 );
 					Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-					NPCIEnterText("1234");
+					NPCIEnterText(prop.getProperty("NPCIPin"));
 					Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-					NPCIEnterText("1234");
+					NPCIEnterText(prop.getProperty("NPCIPin"));
 					Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-					prop.setProperty("addBankCrVpaSePinNPCIPIN", "1234");
 				} catch (Exception e) {
 					log.info(e);
 					Assert.assertTrue(false);
@@ -195,9 +194,9 @@ public class AddBankTest extends AppiumController {
 			basePage.selectVirTimeLimit("2019", "25", "Jun");
 			basePage.setVirAmtLimit("1000");
 			back();
-			Random random = new Random();
-			vpa = prop.getProperty("addAcVirValid") + random.nextInt(90) + 10;
-			sendText("Virtual Id", vpa);
+			//Random random = new Random();
+			//vpa = prop.getProperty("addAcVirValid") + random.nextInt(90) + 10;
+			sendText("Virtual Id", prop.getProperty("addBankCrVpaSePinAccNo"));
 			click(ObjectRepository.submit);
 			waitForBtn("OK", 30);
 			status = loadTextView();

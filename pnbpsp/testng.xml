@@ -10,9 +10,9 @@
 
 <test name = "Login App" preserve-order = "true">
       <classes>
- <!--          <class name= "mBankingTestVIJ.SilentSMSTest"/> -->
+          <class name= "mBankingTestVIJ.SilentSMSTest"/>
           <class name = "mBankingTestVIJComplete.AddBankTest"/>
-         <!--  <class name = "mBankingTestVIJ.AddVirtualAddrTest"/>
+          <class name = "mBankingTestVIJ.AddVirtualAddrTest"/>
           <class name = "mBankingTestVIJ.ChangePinTest"/>
           <class name = "mBankingTestVIJ.CollectMoneyTest"/>
           <class name = "mBankingTestVIJ.LoginPageTest"/>
@@ -23,7 +23,7 @@
           <class name = "mBankingTestVIJ.SetUPIPINTest"/>
           <class name= "mBankingTestVIJ.TxnStatusTest"/>
           <class name = "mBankingTestVIJ.ViewBalanceTest"/>
-          <class name = "mBankingTestVIJ.MenuDrawerOptionsTest"/>                 -->             
+          <class name = "mBankingTestVIJ.MenuDrawerOptionsTest"/>                             
       </classes>        
  </test>
   

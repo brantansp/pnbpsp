@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="5" failed="1" total="6" passed="0">
+<testng-results skipped="0" failed="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Positive Transaction flow" duration-ms="37" started-at="2018-06-06T04:48:01Z" finished-at="2018-06-06T04:48:01Z">
+  <suite name="Default suite" duration-ms="97470" started-at="2018-06-07T11:27:08Z" finished-at="2018-06-07T11:28:45Z">
     <groups>
     </groups>
-    <test name="Login App" duration-ms="37" started-at="2018-06-06T04:48:01Z" finished-at="2018-06-06T04:48:01Z">
-      <class name="test.Test2">
-        <test-method status="SKIP" signature="check()[pri:0, instance:test.Test2@1119efb]" name="check" duration-ms="12" started-at="2018-06-06T10:18:01Z" finished-at="2018-06-06T10:18:01Z">
-          <exception class="java.lang.AssertionError">
+    <test name="Default test" duration-ms="97470" started-at="2018-06-07T11:27:08Z" finished-at="2018-06-07T11:28:45Z">
+      <class name="mBankingTestVIJComplete.ChangePinTest">
+        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentReportSetUp" is-config="true" duration-ms="31760" started-at="2018-06-07T16:56:36Z" finished-at="2018-06-07T16:57:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReportSetUp -->
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="10963" started-at="2018-06-07T16:57:08Z" finished-at="2018-06-07T16:57:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingTestVIJComplete.ChangePinTest.ChangePINValid() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="FAIL" signature="ChangePINValid()[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="ChangePINValid" duration-ms="14557" started-at="2018-06-07T16:57:19Z" finished-at="2018-06-07T16:57:33Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.27 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
+*** Element info: {Using=xpath, value=//android.widget.Button[@text='OK']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at test.Test2.check(Test2.java:54)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.27 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
+*** Element info: {Using=xpath, value=//android.widget.Button[@text='OK']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at mBankingBaseFactory.AppiumController.waitForBtn(AppiumController.java:559)
+	at mBankingTestVIJComplete.ChangePinTest.ChangePINValid(ChangePinTest.java:52)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -45,30 +96,114 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check -->
-        <test-method status="SKIP" signature="check()[pri:0, instance:test.Test2@1119efb]" name="check" duration-ms="1" started-at="2018-06-06T10:18:01Z" finished-at="2018-06-06T10:18:01Z">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- ChangePINValid -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="2946" started-at="2018-06-07T16:57:33Z" finished-at="2018-06-07T16:57:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ChangePINValid status=FAILURE method=ChangePinTest.ChangePINValid()[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="10903" started-at="2018-06-07T16:57:36Z" finished-at="2018-06-07T16:57:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingTestVIJComplete.ChangePinTest.ChangePINInNPCIValid() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="PASS" signature="ChangePINInNPCIValid()[pri:1, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="ChangePINInNPCIValid" duration-ms="17614" started-at="2018-06-07T16:57:47Z" finished-at="2018-06-07T16:58:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePINInNPCIValid -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="3" started-at="2018-06-07T16:58:05Z" finished-at="2018-06-07T16:58:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ChangePINInNPCIValid status=SUCCESS method=ChangePinTest.ChangePINInNPCIValid()[pri:1, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="10906" started-at="2018-06-07T16:58:05Z" finished-at="2018-06-07T16:58:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingTestVIJComplete.ChangePinTest.ChangePinWhenUPIPinNotAvailable() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="FAIL" signature="ChangePinWhenUPIPinNotAvailable()[pri:2, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="ChangePinWhenUPIPinNotAvailable" duration-ms="3628" started-at="2018-06-07T16:58:16Z" finished-at="2018-06-07T16:58:19Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text='ADD BANK ACCOUNT']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at test.Test2.check(Test2.java:54)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text='ADD BANK ACCOUNT']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:586)
+	at mBankingTestVIJComplete.ChangePinTest.ChangePinWhenUPIPinNotAvailable(ChangePinTest.java:131)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:967)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1146)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
 	at org.testng.TestRunner.privateRun(TestRunner.java:782)
@@ -87,30 +222,88 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check -->
-        <test-method status="SKIP" signature="check()[pri:0, instance:test.Test2@1119efb]" name="check" duration-ms="1" started-at="2018-06-06T10:18:01Z" finished-at="2018-06-06T10:18:01Z">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- ChangePinWhenUPIPinNotAvailable -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="3017" started-at="2018-06-07T16:58:19Z" finished-at="2018-06-07T16:58:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ChangePinWhenUPIPinNotAvailable status=FAILURE method=ChangePinTest.ChangePinWhenUPIPinNotAvailable()[pri:2, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="13437" started-at="2018-06-07T16:58:22Z" finished-at="2018-06-07T16:58:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingTestVIJComplete.ChangePinTest.ChangePinWithoutCreatingVirAddr() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="FAIL" signature="ChangePinWithoutCreatingVirAddr()[pri:2, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="ChangePinWithoutCreatingVirAddr" duration-ms="6543" started-at="2018-06-07T16:58:36Z" finished-at="2018-06-07T16:58:42Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.59 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text='XXXXXXXXXXXnull']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at test.Test2.check(Test2.java:54)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.59 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text='XXXXXXXXXXXnull']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:586)
+	at mBankingTestVIJComplete.ChangePinTest.ChangePinWithoutCreatingVirAddr(ChangePinTest.java:104)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:967)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1146)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
 	at org.testng.TestRunner.privateRun(TestRunner.java:782)
@@ -129,137 +322,26 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check -->
-        <test-method status="SKIP" signature="check()[pri:0, instance:test.Test2@1119efb]" name="check" duration-ms="0" started-at="2018-06-06T10:18:01Z" finished-at="2018-06-06T10:18:01Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at test.Test2.check(Test2.java:54)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:967)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- ChangePinWithoutCreatingVirAddr -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="2889" started-at="2018-06-07T16:58:42Z" finished-at="2018-06-07T16:58:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ChangePinWithoutCreatingVirAddr status=FAILURE method=ChangePinTest.ChangePinWithoutCreatingVirAddr()[pri:2, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check -->
-        <test-method status="SKIP" signature="check()[pri:0, instance:test.Test2@1119efb]" name="check" duration-ms="1" started-at="2018-06-06T10:18:01Z" finished-at="2018-06-06T10:18:01Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at test.Test2.check(Test2.java:54)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:967)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- extentGetResult -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="tearDown" is-config="true" duration-ms="190" started-at="2018-06-07T16:58:45Z" finished-at="2018-06-07T16:58:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check -->
-        <test-method status="FAIL" signature="check()[pri:0, instance:test.Test2@1119efb]" name="check" duration-ms="1" started-at="2018-06-06T10:18:01Z" finished-at="2018-06-06T10:18:01Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at test.Test2.check(Test2.java:54)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:967)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check -->
-      </class> <!-- test.Test2 -->
-    </test> <!-- Login App -->
-  </suite> <!-- Positive Transaction flow -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- mBankingTestVIJComplete.ChangePinTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

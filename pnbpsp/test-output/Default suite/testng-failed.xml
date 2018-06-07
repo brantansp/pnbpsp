@@ -3,18 +3,22 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="test.Test2"/>
+      <class name="mBankingTestVIJComplete.ChangePinTest"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="test.Test2">
+      <class name="mBankingTestVIJComplete.ChangePinTest">
         <methods>
-          <include name="beginTest"/>
-          <include name="setup"/>
+          <include name="ChangePinWhenUPIPinNotAvailable"/>
+          <include name="ChangePinWithoutCreatingVirAddr"/>
+          <include name="extentReportSetUp"/>
+          <include name="extentbeforeMethod"/>
           <include name="tearDown"/>
+          <include name="ChangePINValid"/>
+          <include name="extentGetResult"/>
         </methods>
-      </class> <!-- test.Test2 -->
+      </class> <!-- mBankingTestVIJComplete.ChangePinTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
