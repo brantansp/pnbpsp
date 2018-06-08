@@ -1,347 +1,565 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" total="4" passed="1">
+<testng-results skipped="36" failed="0" total="36" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="97470" started-at="2018-06-07T11:27:08Z" finished-at="2018-06-07T11:28:45Z">
+  <suite name="Positive Transaction flow" duration-ms="37943" started-at="2018-06-08T13:25:12Z" finished-at="2018-06-08T13:25:50Z">
     <groups>
+      <group name="negative">
+        <method signature="AddBankTest.AddBankAccNotExists()[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="AddBankAccNotExists" class="mBankingTestVIJComplete.AddBankTest"/>
+      </group> <!-- negative -->
+      <group name="positive">
+        <method signature="AddBankTest.AddBankCreateVpaSetPin()[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="AddBankCreateVpaSetPin" class="mBankingTestVIJComplete.AddBankTest"/>
+        <method signature="AddBankTest.AddbankCreateVpaOnly()[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="AddbankCreateVpaOnly" class="mBankingTestVIJComplete.AddBankTest"/>
+        <method signature="AddBankTest.AddbankOnly()[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="AddbankOnly" class="mBankingTestVIJComplete.AddBankTest"/>
+      </group> <!-- positive -->
     </groups>
-    <test name="Default test" duration-ms="97470" started-at="2018-06-07T11:27:08Z" finished-at="2018-06-07T11:28:45Z">
-      <class name="mBankingTestVIJComplete.ChangePinTest">
-        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentReportSetUp" is-config="true" duration-ms="31760" started-at="2018-06-07T16:56:36Z" finished-at="2018-06-07T16:57:08Z">
+    <test name="Login App" duration-ms="37943" started-at="2018-06-08T13:25:12Z" finished-at="2018-06-08T13:25:50Z">
+      <class name="mBankingTestVIJ.SilentSMSTest">
+        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestVIJ.SilentSMSTest@189dd52]" name="extentReportSetUp" is-config="true" duration-ms="30121" started-at="2018-06-08T18:54:42Z" finished-at="2018-06-08T18:55:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentReportSetUp -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="10963" started-at="2018-06-07T16:57:08Z" finished-at="2018-06-07T16:57:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJComplete.ChangePinTest.ChangePINValid() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="FAIL" signature="ChangePINValid()[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="ChangePINValid" duration-ms="14557" started-at="2018-06-07T16:57:19Z" finished-at="2018-06-07T16:57:33Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.27 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
-*** Element info: {Using=xpath, value=//android.widget.Button[@text='OK']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.27 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
-*** Element info: {Using=xpath, value=//android.widget.Button[@text='OK']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at mBankingBaseFactory.AppiumController.waitForBtn(AppiumController.java:559)
-	at mBankingTestVIJComplete.ChangePinTest.ChangePINValid(ChangePinTest.java:52)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangePINValid -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="2946" started-at="2018-06-07T16:57:33Z" finished-at="2018-06-07T16:57:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ChangePINValid status=FAILURE method=ChangePinTest.ChangePINValid()[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="10903" started-at="2018-06-07T16:57:36Z" finished-at="2018-06-07T16:57:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJComplete.ChangePinTest.ChangePINInNPCIValid() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="PASS" signature="ChangePINInNPCIValid()[pri:1, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="ChangePINInNPCIValid" duration-ms="17614" started-at="2018-06-07T16:57:47Z" finished-at="2018-06-07T16:58:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangePINInNPCIValid -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="3" started-at="2018-06-07T16:58:05Z" finished-at="2018-06-07T16:58:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ChangePINInNPCIValid status=SUCCESS method=ChangePinTest.ChangePINInNPCIValid()[pri:1, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="10906" started-at="2018-06-07T16:58:05Z" finished-at="2018-06-07T16:58:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJComplete.ChangePinTest.ChangePinWhenUPIPinNotAvailable() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="FAIL" signature="ChangePinWhenUPIPinNotAvailable()[pri:2, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="ChangePinWhenUPIPinNotAvailable" duration-ms="3628" started-at="2018-06-07T16:58:16Z" finished-at="2018-06-07T16:58:19Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.14 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
-*** Element info: {Using=xpath, value=//android.widget.TextView[@text='ADD BANK ACCOUNT']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.14 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
-*** Element info: {Using=xpath, value=//android.widget.TextView[@text='ADD BANK ACCOUNT']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:586)
-	at mBankingTestVIJComplete.ChangePinTest.ChangePinWhenUPIPinNotAvailable(ChangePinTest.java:131)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangePinWhenUPIPinNotAvailable -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="3017" started-at="2018-06-07T16:58:19Z" finished-at="2018-06-07T16:58:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ChangePinWhenUPIPinNotAvailable status=FAILURE method=ChangePinTest.ChangePinWhenUPIPinNotAvailable()[pri:2, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="13437" started-at="2018-06-07T16:58:22Z" finished-at="2018-06-07T16:58:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJComplete.ChangePinTest.ChangePinWithoutCreatingVirAddr() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="FAIL" signature="ChangePinWithoutCreatingVirAddr()[pri:2, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="ChangePinWithoutCreatingVirAddr" duration-ms="6543" started-at="2018-06-07T16:58:36Z" finished-at="2018-06-07T16:58:42Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.59 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
-*** Element info: {Using=xpath, value=//android.widget.TextView[@text='XXXXXXXXXXXnull']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.59 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: e0a956ed-ea5b-475e-9518-78451bd77e37
-*** Element info: {Using=xpath, value=//android.widget.TextView[@text='XXXXXXXXXXXnull']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:586)
-	at mBankingTestVIJComplete.ChangePinTest.ChangePinWithoutCreatingVirAddr(ChangePinTest.java:104)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangePinWithoutCreatingVirAddr -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="2889" started-at="2018-06-07T16:58:42Z" finished-at="2018-06-07T16:58:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ChangePinWithoutCreatingVirAddr status=FAILURE method=ChangePinTest.ChangePinWithoutCreatingVirAddr()[pri:2, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestVIJComplete.ChangePinTest@2bba4f]" name="tearDown" is-config="true" duration-ms="190" started-at="2018-06-07T16:58:45Z" finished-at="2018-06-07T16:58:45Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:mBankingTestVIJ.SilentSMSTest@189dd52]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mBankingTestVIJComplete.ChangePinTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- mBankingTestVIJ.SilentSMSTest -->
+      <class name="mBankingTestVIJ.ChangePinTest">
+        <test-method status="SKIP" signature="ChangePINWhenVPANotCreated()[pri:0, instance:mBankingTestVIJ.ChangePinTest@1ec71f8]" name="ChangePINWhenVPANotCreated" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePINWhenVPANotCreated -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ChangePinTest@1ec71f8]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="ChangePinWithoutCreatingVirAddr()[pri:1, instance:mBankingTestVIJ.ChangePinTest@1ec71f8]" name="ChangePinWithoutCreatingVirAddr" duration-ms="1" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePinWithoutCreatingVirAddr -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ChangePinTest@1ec71f8]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ChangePinTest@1ec71f8]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ChangePinTest@1ec71f8]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ChangePinTest@1ec71f8]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="ChangePinWhenUPIPinNotAvailable()[pri:2, instance:mBankingTestVIJ.ChangePinTest@1ec71f8]" name="ChangePinWhenUPIPinNotAvailable" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePinWhenUPIPinNotAvailable -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ChangePinTest@1ec71f8]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJ.ChangePinTest -->
+      <class name="mBankingTestVIJ.PendingApprovalTest">
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="pendingApprovalApprove()[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="pendingApprovalApprove" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pendingApprovalApprove -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="pendingApprovalDecline()[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="pendingApprovalDecline" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pendingApprovalDecline -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="pendingApprovalDefer()[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="pendingApprovalDefer" duration-ms="1" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pendingApprovalDefer -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="pendingApprovalBlock()[pri:0, instance:mBankingTestVIJ.PendingApprovalTest@fe5c40]" name="pendingApprovalBlock" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pendingApprovalBlock -->
+      </class> <!-- mBankingTestVIJ.PendingApprovalTest -->
+      <class name="mBankingTestVIJ.CollectMoneyTest">
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@12adfbe]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@12adfbe]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="CollectMoneyVir()[pri:0, instance:mBankingTestVIJ.CollectMoneyTest@12adfbe]" name="CollectMoneyVir" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollectMoneyVir -->
+      </class> <!-- mBankingTestVIJ.CollectMoneyTest -->
+      <class name="mBankingTestVIJComplete.AddBankTest">
+        <test-method status="FAIL" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:12Z" finished-at="2018-06-08T18:55:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mBankingTestVIJComplete.AddBankTest.AddbankOnly()]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Can't locate an element by this strategy: Locator map: 
+- native content: "By.xpath: //*[@class='android.widget.EditText']" 
+- html content: "by id or name "loginBox""
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
+- native content: "By.xpath: //*[@class='android.widget.EditText']" 
+- html content: "by id or name "loginBox""
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: driver.version: unknown
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.sendKeys(<generated>)
+	at mBankingBaseFactory.AppiumController.sendText(AppiumController.java:1092)
+	at mBankingPageObjectFactory.BasePage.loginApp(BasePage.java:38)
+	at mBankingBaseFactory.AppiumController.extentbeforeMethod(AppiumController.java:129)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="AddbankOnly()[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="AddbankOnly" duration-ms="1" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddbankOnly -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="AddbankCreateVpaOnly()[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="AddbankCreateVpaOnly" duration-ms="1" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddbankCreateVpaOnly -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="AddBankCreateVpaSetPin()[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="AddBankCreateVpaSetPin" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddBankCreateVpaSetPin -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="AddBankAccNotExists()[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="AddBankAccNotExists" duration-ms="1" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddBankAccNotExists -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.AddBankTest@bc55de]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJComplete.AddBankTest -->
+      <class name="mBankingTestVIJ.SetUPIPINTest">
+        <test-method status="SKIP" signature="setUPIPIN()[pri:0, instance:mBankingTestVIJ.SetUPIPINTest@1ebb011]" name="setUPIPIN" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUPIPIN -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.SetUPIPINTest@1ebb011]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.SetUPIPINTest@1ebb011]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJ.SetUPIPINTest -->
+      <class name="mBankingTestVIJ.ManageAcTest">
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="generateQRforVirAdd()[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="generateQRforVirAdd" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateQRforVirAdd -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="editVirAddress()[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="editVirAddress" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editVirAddress -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="deleteVirAddress()[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="deleteVirAddress" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteVirAddress -->
+        <test-method status="SKIP" signature="deleteBankAccount()[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="deleteBankAccount" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBankAccount -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ManageAcTest@3d2c72]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJ.ManageAcTest -->
+      <class name="mBankingTestVIJ.MenuDrawerOptionsTest">
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="termsAndCondition()[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="termsAndCondition" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- termsAndCondition -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="reportSpamBlock()[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="reportSpamBlock" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportSpamBlock -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="reportSpamUnBlock()[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="reportSpamUnBlock" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportSpamUnBlock -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="complaintStatus()[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="complaintStatus" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- complaintStatus -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.MenuDrawerOptionsTest@18d2680]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJ.MenuDrawerOptionsTest -->
+      <class name="mBankingTestVIJ.PayMoneyTest">
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.PayMoneyTest@16813f3]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.PayMoneyTest@16813f3]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="PayMoneyVir()[pri:0, instance:mBankingTestVIJ.PayMoneyTest@16813f3]" name="PayMoneyVir" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PayMoneyVir -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.PayMoneyTest@16813f3]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="PayMoneyIFSC()[pri:0, instance:mBankingTestVIJ.PayMoneyTest@16813f3]" name="PayMoneyIFSC" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PayMoneyIFSC -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.PayMoneyTest@16813f3]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.PayMoneyTest@16813f3]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="PayMoneyAad()[pri:0, instance:mBankingTestVIJ.PayMoneyTest@16813f3]" name="PayMoneyAad" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PayMoneyAad -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.PayMoneyTest@16813f3]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJ.PayMoneyTest -->
+      <class name="mBankingTestVIJ.LoginPageTest">
+        <test-method status="SKIP" signature="AppLogin()[pri:0, instance:mBankingTestVIJ.LoginPageTest@902638]" name="AppLogin" duration-ms="1" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppLogin -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.LoginPageTest@902638]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.LoginPageTest@902638]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.LoginPageTest@902638]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="AppExit()[pri:0, instance:mBankingTestVIJ.LoginPageTest@902638]" name="AppExit" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppExit -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.LoginPageTest@902638]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJ.LoginPageTest -->
+      <class name="mBankingTestVIJ.ParticipantsTest">
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="viewParticipantsVirAdd()[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="viewParticipantsVirAdd" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewParticipantsVirAdd -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="viewParticipantsAcIfsc()[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="viewParticipantsAcIfsc" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewParticipantsAcIfsc -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="viewParticipantsAadNum()[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="viewParticipantsAadNum" duration-ms="1" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewParticipantsAadNum -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="addParticipantsVirNo()[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="addParticipantsVirNo" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addParticipantsVirNo -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="addParticipantsAccNo()[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="addParticipantsAccNo" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addParticipantsAccNo -->
+        <test-method status="SKIP" signature="addParticipantsAadNo()[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="addParticipantsAadNo" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addParticipantsAadNo -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ParticipantsTest@f4ea7c]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJ.ParticipantsTest -->
+      <class name="mBankingTestVIJ.AddVirtualAddrTest">
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.AddVirtualAddrTest@4fabc8]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="addVirAddressValid()[pri:0, instance:mBankingTestVIJ.AddVirtualAddrTest@4fabc8]" name="addVirAddressValid" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addVirAddressValid -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.AddVirtualAddrTest@4fabc8]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+        <test-method status="SKIP" signature="addAlreadyAddedVirAddress()[pri:0, instance:mBankingTestVIJ.AddVirtualAddrTest@4fabc8]" name="addAlreadyAddedVirAddress" duration-ms="0" started-at="2018-06-08T18:55:50Z" depends-on-methods="mBankingTestVIJ.AddVirtualAddrTest.addVirAddressValid" finished-at="2018-06-08T18:55:50Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method AddVirtualAddrTest.addAlreadyAddedVirAddress()[pri:0, instance:mBankingTestVIJ.AddVirtualAddrTest@4fabc8] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method AddVirtualAddrTest.addAlreadyAddedVirAddress()[pri:0, instance:mBankingTestVIJ.AddVirtualAddrTest@4fabc8] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1037)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAlreadyAddedVirAddress -->
+      </class> <!-- mBankingTestVIJ.AddVirtualAddrTest -->
+      <class name="mBankingTestVIJ.ViewBalanceTest">
+        <test-method status="SKIP" signature="BalanceEnquiryValid()[pri:0, instance:mBankingTestVIJ.ViewBalanceTest@11774fe]" name="BalanceEnquiryValid" duration-ms="1" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BalanceEnquiryValid -->
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.ViewBalanceTest@11774fe]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.ViewBalanceTest@11774fe]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJ.ViewBalanceTest -->
+      <class name="mBankingTestVIJ.TxnStatusTest">
+        <test-method status="SKIP" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJ.TxnStatusTest@e31a9a]" name="extentbeforeMethod" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentbeforeMethod -->
+        <test-method status="SKIP" signature="txnStatus()[pri:0, instance:mBankingTestVIJ.TxnStatusTest@e31a9a]" name="txnStatus" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- txnStatus -->
+        <test-method status="SKIP" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJ.TxnStatusTest@e31a9a]" name="extentGetResult" is-config="true" duration-ms="0" started-at="2018-06-08T18:55:50Z" finished-at="2018-06-08T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentGetResult -->
+      </class> <!-- mBankingTestVIJ.TxnStatusTest -->
+    </test> <!-- Login App -->
+  </suite> <!-- Positive Transaction flow -->
 </testng-results>

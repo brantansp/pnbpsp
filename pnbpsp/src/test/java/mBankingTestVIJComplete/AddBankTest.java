@@ -28,6 +28,7 @@ public class AddBankTest extends AppiumController {
 	@Test(groups = { "positive" })
 	public void AddbankOnly() {
 		log.info("**********Add Bank only Transaction**********");
+		log.info("Test Case ID : "+TCID);
 		basePage = new BasePage(getDriver());
 		clickTextView("Add Bank A/C");
 		waitForTextView("ADD BANK ACCOUNT", 50);
@@ -55,7 +56,7 @@ public class AddBankTest extends AppiumController {
 
 	@Test(groups = { "positive" })
 	public void AddbankCreateVpaOnly() {
-		log.info("**********Add Bank Create VPA Set Pin in Add bank**********");
+		log.info("**********Add Bank Create VPA Only**********");
 		basePage = new BasePage(getDriver());
 		// waitForTextView ("Add Bank A/C" , 30);
 		clickTextView("Add Bank A/C");
@@ -170,7 +171,7 @@ public class AddBankTest extends AppiumController {
 		log.info("***************End***************");
 	}
 
-	@Test(dependsOnMethods = "AddBankCreateVpaSetPin", groups = { "negative" })
+	//@Test(dependsOnMethods = "AddBankCreateVpaSetPin", groups = { "negative" }) //cannot be tested in Simulator
 	public void AddBankAlreadyAdded() throws InterruptedException {
 		log.info("**********Add Bank Already Added**********");
 		basePage = new BasePage(getDriver());

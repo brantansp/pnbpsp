@@ -25,26 +25,6 @@ public class AddVirtualAddrTest extends AppiumController {
 	log.info("**********Add Virtual Address valid**********");
 	basePage = new BasePage(driver);
 	
-	clickTextView("Add Bank A/C");
-	waitForTextView("ADD BANK ACCOUNT", 50);
-	sendText("Search/Select your bank", prop.getProperty("addBankValid"));
-	int[] coords = getxyEditBox();
-	TapinBankName(coords, 100, 100);
-	waitForTextView("Select Your Account", 30);
-	clickTextView("Select Your Account");
-	String[] accounts = loadTextView();
-	clickTextView(accounts[1]);
-	prop.setProperty("addBankOnlyAccNo", accounts[1].substring(16, 20));
-	clickBtn("SUBMIT");
-	String[] status = loadTextView();
-	if ("Your bank account has been registered successfully. Please create a virtual address before performing any transactions."
-			.equals(status[1])) {
-		log.info(status[1]);
-		clickBtn("OK");
-		back();
-		back();
-	}
-	
 	waitForTextView("Add Virtual Address",30);
 	basePage.clickTextView("Add Virtual Address");
 	waitForTextView("Select an account to create virtual address");
@@ -54,7 +34,9 @@ public class AddVirtualAddrTest extends AppiumController {
 	basePage.setVirAmtLimit("1000");
 		back();
 		Random random=new Random();
-	sendText("Virtual Id", prop.getProperty("addVirValid")+random.nextInt(90) + 10);
+		String vpa = prop.getProperty("virtualAddress")+random.nextInt(90) + 10;
+		prop.setProperty("addVirAddValidVIR", vpa);
+	sendText("Virtual Id", vpa);
 	click(ObjectRepository.submit);
 	String [] status1=loadTextView();
 	if("Virtual Address Created Successfully".equals(status1[0]))
@@ -80,10 +62,10 @@ public class AddVirtualAddrTest extends AppiumController {
 	basePage.selectVirTimeLimit("2018","25","May");
 	basePage.setVirAmtLimit("1000");
 		back();
-	sendText("Virtual Id", prop.getProperty("addVirValid"));
+	sendText("Virtual Id", prop.getProperty("addVirAddValidVIR"));
 	click(ObjectRepository.submit);
 	String [] status=loadTextView();
-	String text= "The virtual Address "+prop.getProperty("addVirValid")+"@"+prop.getProperty("psphandle")+" is already available and is currently active. Enter a new virtual address.";
+	String text= "The virtual Address "+prop.getProperty("addVirAddValidVIR")+"@"+prop.getProperty("psphandle")+" is already available and is currently active. Enter a new virtual address.";
 	if(text.equals(status[0]))
 	{
 		clickBtn("OK");
@@ -97,19 +79,6 @@ public class AddVirtualAddrTest extends AppiumController {
 		Assert.assertTrue(true);
 		back();
 		back();
-	}
-	
-    waitForTextView("Manage A/C",30);
-    clickTextView("Manage A/C");
-    waitForTextView("VIEW BANK ACCOUNTS",10);
-    clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankOnlyAccNo"));
-    waitForTextView("ADDED VIRTUAL ADDRESS LIST",10);     
-    click(ObjectRepository.viewEditProfile);
-	String [] status2=loadTextView();
-	if("Are you sure want to delete the Regd Acc No?".equals(status2[0]))
-	{
-         clickBtn("YES");
-        clickBtn("OK");
 	}
 	
 	log.info("***************End***************");

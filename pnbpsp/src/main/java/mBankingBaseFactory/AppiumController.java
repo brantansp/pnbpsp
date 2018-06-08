@@ -94,6 +94,8 @@ public class AppiumController {
 	static SimpleDateFormat timeFormatter = new SimpleDateFormat("HHmmss");
 	static Date date = new Date();
 	static String reportPath;
+	static int TestCaseNum =1;
+	public static String TCID;
 	//
 	// =====================================================================================
 
@@ -118,9 +120,10 @@ public class AppiumController {
 	}
 
 	@BeforeMethod
-	public static void extentbeforeMethod(Method method) {
+	public void extentbeforeMethod(Method method) {
 		getDriver().launchApp();
 		log.info("**********Login to Application**********");
+		TCID = "TC_"+this.getClass().getSimpleName()+"_"+TestCaseNum;
 		BasePage loginPage = new BasePage(driver);
 		try {
 			loginPage.loginApp(prop.getProperty("loginPin"));
@@ -131,8 +134,7 @@ public class AppiumController {
 
 		log.info("@BeforeMethod : " + "ThreadName: " + Thread.currentThread().getName()
 				+ Thread.currentThread().getStackTrace()[1].getClassName());
-		extentLogger = extent.startTest(
-				(MethodHandles.lookup().lookupClass().getSimpleName() + " :: " + method.getName()), method.getName());
+		extentLogger = extent.startTest(TCID+ " :: " +method.getName(), method.getName());
 		extentLogger.assignAuthor("Brantansp");
 		extentLogger.assignCategory("Appium Automation Testing");
 		extentLogger.log(LogStatus.PASS, " : Test started Successfully");
@@ -156,6 +158,7 @@ public class AppiumController {
 			log.info(result.getName() + " : Test Case Passed");
 		}
 		extent.endTest(extentLogger);
+		TestCaseNum++;
 		// driver.closeApp();
 		log.info("***************Application Closed***************\n");
 		/*

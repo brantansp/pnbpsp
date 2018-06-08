@@ -1,5 +1,4 @@
 package mBankingTestVIJComplete;
-
 import java.lang.invoke.MethodHandles;
 import java.util.Random;
 
@@ -18,7 +17,7 @@ import mBankingPageObjectFactory.BasePage;
 public class ChangePinTest extends AppiumController {
 
 	protected BasePage basePage;
-	AppiumDriver<MobileElement> driver;// = getDriver();
+	AppiumDriver<MobileElement> driver;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	String vpa;
 	
@@ -29,20 +28,14 @@ public class ChangePinTest extends AppiumController {
 	//Transactions cannot be performed without registering your bank account to the app. Please register your bank account to perform transactions.
 	
 	@Test(priority = 0)
-	public void ChangePINValid() throws InterruptedException {
-		log.info("**********Change Pin Valid**********");
+	public void ChangePINWhenVPANotCreated() throws InterruptedException {
+		log.info("**********Change PIN When VPA Not Created**********");
 		basePage = new BasePage(driver);
 		Dimension windowSize = getDriver().manage().window().getSize();
 		clickTextView("Change UPI PIN");
-		
-		prop.setProperty("addBankCrVpaSePinAccNo", "6803"); //remove this
-		
 		clickTextView("XXXXXXXXXXX" + prop.getProperty("addBankCrVpaSePinAccNo"));
 		waitForTextView("XXXXXXXXXXX" + prop.getProperty("addBankCrVpaSePinAccNo"));
 		windowSize = getDriver().manage().window().getSize();
-		
-		prop.setProperty("NPCIPin", "2345");  //remove this
-		
 		NPCIEnterText(prop.getProperty("NPCIPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
 		NPCIEnterText(prop.getProperty("NPCINewPin"));
@@ -50,11 +43,9 @@ public class ChangePinTest extends AppiumController {
 		NPCIEnterText(prop.getProperty("NPCINewPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
 		waitForBtn("OK", 50);
-		if ("UPI PIN has been updated successfully."
+		if ("You cannot perform transactions as a virtual address has not been created for the selected account. Create a virtual address for the account to proceed further."
 				.equals(loadTextView()[0])) {
-			prop.setProperty("changedNPCIPin", prop.getProperty("NPCINewPin"));
 			log.info(loadTextView()[0]);
-			clickBtn("OK");
 			Assert.assertTrue(true);
 		} else {
 			Assert.assertTrue(false);
@@ -63,42 +54,10 @@ public class ChangePinTest extends AppiumController {
 }
 		
 	@Test(priority = 1)
-	public void ChangePINInNPCIValid() throws InterruptedException {
-		log.info("**********Change Pin Valid**********");
-		basePage = new BasePage(driver);
-		Dimension windowSize = getDriver().manage().window().getSize();
-		clickTextView("Change UPI PIN");
-		
-		prop.setProperty("addBankCrVpaSePinAccNo", "6803"); //remove this
-		
-		clickTextView("XXXXXXXXXXX" + prop.getProperty("addBankCrVpaSePinAccNo"));
-		waitForTextView("XXXXXXXXXXX" + prop.getProperty("addBankCrVpaSePinAccNo"));
-		windowSize = getDriver().manage().window().getSize();
-		
-		prop.setProperty("NPCIPin", "1234"); //remove this
-		
-		NPCIEnterText(prop.getProperty("NPCIPin"));
-		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-		NPCIEnterText(prop.getProperty("NPCINewPin"));
-		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-		NPCIEnterText(prop.getProperty("NPCINewPin"));
-		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-		waitForBtn("OK", 50);
-		if ("INVALID UPI PIN"
-				.equals(loadTextView()[0])) {
-			log.info(loadTextView()[0]);
-			clickBtn("OK");
-			Assert.assertTrue(true);
-		} else {
-			Assert.assertTrue(false);
-		}
-		log.info("***************End***************");
-}
-	
-	@Test(priority = 2)
 	public void ChangePinWithoutCreatingVirAddr() throws InterruptedException {
 		log.info("**********Change Pin With out Creating Virtual Address**********");
-		basePage = new BasePage(driver);	
+		basePage = new BasePage(driver);
+				
 		clickTextView("Change UPI PIN");
 		clickTextView("XXXXXXXXXXX" + prop.getProperty("addBankOnlyAccNo"));
 		waitForTextView("XXXXXXXXXXX" + prop.getProperty("addBankOnlyAccNo"));

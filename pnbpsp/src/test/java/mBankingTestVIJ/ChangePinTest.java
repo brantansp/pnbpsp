@@ -18,7 +18,7 @@ import mBankingPageObjectFactory.BasePage;
 public class ChangePinTest extends AppiumController {
 
 	protected BasePage basePage;
-	AppiumDriver<MobileElement> driver;// = getDriver();
+	AppiumDriver<MobileElement> driver;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 	String vpa;
 	
@@ -29,75 +29,19 @@ public class ChangePinTest extends AppiumController {
 	//Transactions cannot be performed without registering your bank account to the app. Please register your bank account to perform transactions.
 	
 	@Test(priority = 0)
-	public void ChangePINValid() throws InterruptedException {
-		log.info("**********Change Pin With out Creating Virtual Address**********");
+	public void ChangePINWhenVPANotCreated() throws InterruptedException {
+		log.info("**********Change PIN When VPA Not Created**********");
 		basePage = new BasePage(driver);
-		clickTextView("Add Bank A/C");
-		waitForTextView("ADD BANK ACCOUNT", 50);
-		sendText("Search/Select your bank", prop.getProperty("addBankValid"));
-		int[] coords = getxyEditBox();
-		TapinBankName(coords, 100, 100);
-		waitForTextView("Select Your Account", 30);
-		clickTextView("Select Your Account");
-		String[] accounts = loadTextView();
-		clickTextView(accounts[1]);
-		prop.setProperty("addBankAccNo", accounts[1].substring(16, 20));
-		clickBtn("SUBMIT");
-		String[] status = loadTextView();
-
-		if ("Your bank account has been registered successfully. Please create a virtual address before performing any transactions."
-				.equals(status[1])) {
-			log.info("Your bank account has been registered successfully");
-			clickBtn("OK");
-			clickRadioBtn("Single use");
-			basePage.selectVirTimeLimit("2019", "25", "Jul");
-			basePage.setVirAmtLimit("1000");
-			back();
-			Random random = new Random();
-			vpa = prop.getProperty("addAcVirValid") + random.nextInt(90) + 10;
-			sendText("Virtual Id", vpa);
-			click(ObjectRepository.submit);
-			status = loadTextView();
-			if ("Virtual Address Created Successfully".equals(status[0])) {
-				clickBtn("YES");
-				waitForTextView(accounts[1].substring(5, accounts[1].length()), 30);
-				clickTextView(accounts[1].substring(5, accounts[1].length()));
-				waitForTextView("MOBILE BANKING REGISTRATION / GENERATE PIN", 30);
-				sendText("xxxxxx", "123569");
-				clickTextView("mm/yy");
-				basePage.selectExpDate("2020", "Jul");
-				clickBtn("SUBMIT");
-				waitForTextView("ENTER OTP", 30);
-				Dimension windowSize = getDriver().manage().window().getSize();
-				try {
-					sleep(30000);
-					// waitForElement (ObjectRepository.otpTickImg, 50 );
-					Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-					NPCIEnterText("1234");
-					Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-					NPCIEnterText("1234");
-					Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-				} catch (Exception e) {
-					log.info(e);
-				}
-				waitForBtn("OK", 30);
-				status = loadTextView();
-				if ("UPI PIN created successfully.".equals(status[0])) {
-					log.info("UPI PIN created successfully.");
-					clickBtn("OK");
-					Assert.assertTrue(true);
-				}
-				
-		
+		Dimension windowSize = getDriver().manage().window().getSize();
 		clickTextView("Change UPI PIN");
-		clickTextView("XXXXXXXXXXX" + prop.getProperty("addBankAccNo"));
-		waitForTextView("XXXXXXXXXXX" + prop.getProperty("addBankAccNo"));
+		clickTextView("XXXXXXXXXXX" + prop.getProperty("addBankCrVpaSePinAccNo"));
+		waitForTextView("XXXXXXXXXXX" + prop.getProperty("addBankCrVpaSePinAccNo"));
 		windowSize = getDriver().manage().window().getSize();
-		NPCIEnterText(prop.getProperty("loginPin"));
+		NPCIEnterText(prop.getProperty("NPCIPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-		NPCIEnterText(prop.getProperty("loginNewPin"));
+		NPCIEnterText(prop.getProperty("NPCINewPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-		NPCIEnterText(prop.getProperty("loginConfPin"));
+		NPCIEnterText(prop.getProperty("NPCINewPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
 		waitForBtn("OK", 50);
 		if ("You cannot perform transactions as a virtual address has not been created for the selected account. Create a virtual address for the account to proceed further."
@@ -107,49 +51,14 @@ public class ChangePinTest extends AppiumController {
 		} else {
 			Assert.assertTrue(false);
 		}
-		
-        waitForTextView("Manage A/C",30);
-        clickTextView("Manage A/C");
-        waitForTextView("VIEW BANK ACCOUNTS",10);
-        click(getDriver().findElement(By.xpath("//android.widget.LinearLayout[@index='0']")));
-        clickTextView("XXXXXXXXXXX"+ prop.getProperty("addBankAccNo"));
-        waitForTextView("ADDED VIRTUAL ADDRESS LIST",10);     
-        click(ObjectRepository.viewEditProfile);
-		String [] status1=loadTextView();
-		if("Are you sure want to delete the Regd Acc No?".equals(status1[0]))
-		{
-	         clickBtn("YES");
-	        clickBtn("OK");
-		}
 		log.info("***************End***************");
-	}
-  }
 }
 		
 	@Test(priority = 1)
 	public void ChangePinWithoutCreatingVirAddr() throws InterruptedException {
 		log.info("**********Change Pin With out Creating Virtual Address**********");
 		basePage = new BasePage(driver);
-		clickTextView("Add Bank A/C");
-		waitForTextView("ADD BANK ACCOUNT", 50);
-		sendText("Search/Select your bank", prop.getProperty("addBankValid"));
-		int[] coords = getxyEditBox();
-		TapinBankName(coords, 100, 100);
-		waitForTextView("Select Your Account", 30);
-		clickTextView("Select Your Account");
-		String[] accounts = loadTextView();
-		clickTextView(accounts[1]);
-		prop.setProperty("addBankOnlyAccNo", accounts[1].substring(16, 20));
-		clickBtn("SUBMIT");
-		String[] status = loadTextView();
-		if ("Your bank account has been registered successfully. Please create a virtual address before performing any transactions."
-				.equals(status[1])) {
-			log.info(status[1]);
-			clickBtn("OK");
-			back();
-			back();
-		}
-		
+				
 		clickTextView("Change UPI PIN");
 		clickTextView("XXXXXXXXXXX" + prop.getProperty("addBankOnlyAccNo"));
 		waitForTextView("XXXXXXXXXXX" + prop.getProperty("addBankOnlyAccNo"));
@@ -170,19 +79,6 @@ public class ChangePinTest extends AppiumController {
 			Assert.assertTrue(false);
 		}
 		
-        waitForTextView("Manage A/C",30);
-        clickTextView("Manage A/C");
-        waitForTextView("VIEW BANK ACCOUNTS",10);
-        click(getDriver().findElement(By.xpath("//android.widget.LinearLayout[@index='0']")));
-        clickTextView("XXXXXXXXXXX"+accounts[1].substring(16, 20));
-        waitForTextView("ADDED VIRTUAL ADDRESS LIST",10);     
-        click(ObjectRepository.viewEditProfile);
-		String [] status1=loadTextView();
-		if("Are you sure want to delete the Regd Acc No?".equals(status1[0]))
-		{
-	         clickBtn("YES");
-	        clickBtn("OK");
-		}
 		log.info("***************End***************");
 	}
 
