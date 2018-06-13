@@ -127,7 +127,8 @@ public class AddBankTest extends AppiumController {
 			vpa = prop.getProperty("addAcVirValid") + random.nextInt(90) + 10;
 			prop.setProperty("addBankCrVpaSePinVPA", vpa);
 			sendText("Virtual Id", vpa);
-			click(ObjectRepository.submit);
+			//click(ObjectRepository.submit);
+			clickBtn("SUBMIT");
 			status = loadTextView();
 			if ("Virtual Address Created Successfully".equals(status[0])) {
 				clickBtn("YES");
@@ -141,7 +142,7 @@ public class AddBankTest extends AppiumController {
 				waitForTextView("ENTER OTP", 30);
 				Dimension windowSize = getDriver().manage().window().getSize();
 				try {
-					sleep(30000);
+			        waitForBtnToInvisible("Detecting OTP",50);
 					// waitForElement (ObjectRepository.otpTickImg, 50 );
 					Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
 					NPCIEnterText(prop.getProperty("NPCIPin"));
@@ -198,7 +199,8 @@ public class AddBankTest extends AppiumController {
 			//Random random = new Random();
 			//vpa = prop.getProperty("addAcVirValid") + random.nextInt(90) + 10;
 			sendText("Virtual Id", prop.getProperty("addBankCrVpaSePinAccNo"));
-			click(ObjectRepository.submit);
+			//click(ObjectRepository.submit);
+			clickBtn("SUBMIT");
 			waitForBtn("OK", 30);
 			status = loadTextView();
 			if ("Virtual address provided is already in use. Please enter a different virtual address."
@@ -220,7 +222,7 @@ public class AddBankTest extends AppiumController {
 		basePage = new BasePage(getDriver());
 		clickTextView("Add Bank A/C");
 		waitForTextView("ADD BANK ACCOUNT", 50);
-		sendText("Search/Select your bank", "Aditya Birla Idea");
+		sendText("Search/Select your bank", "Union Bank of India");
 		int[] coords = getxyEditBox();
 		TapinBankName(coords, 100, 100);
 		sleep(5000);
@@ -230,6 +232,48 @@ public class AddBankTest extends AppiumController {
 			clickBtn("OK");
 			back();
 			Assert.assertTrue(true);
+		}
+		log.info("***************End***************");
+	}
+	
+	@Test(groups = { "positive" })
+	public void AddbankCreateVpaOnlyOtherBank() {
+		log.info("**********Add Bank Create VPA Only Other bank**********");
+		basePage = new BasePage(getDriver());
+		// waitForTextView ("Add Bank A/C" , 30);
+		clickTextView("Add Bank A/C");
+		waitForTextView("ADD BANK ACCOUNT", 50);
+		sendText("Search/Select your bank", prop.getProperty("addBankValidOther"));
+		int[] coords = getxyEditBox();
+		TapinBankName(coords, 100, 100);
+		clickTextView("Select Your Account");
+		String[] accounts = loadTextView();
+		clickTextView(accounts[1]);
+		prop.setProperty("addbankCreateVpaOnlyAccNoOther", accounts[1].substring(16, 20));
+		clickBtn("SUBMIT");
+		String[] status = loadTextView();
+
+		if ("Your bank account has been registered successfully. Please create a virtual address before performing any transactions."
+				.equals(status[1])) {
+			log.info(status[1]);
+			clickBtn("OK");
+			clickRadioBtn("Single use");
+			basePage.selectVirTimeLimit("2019", "25", "Jun");
+			basePage.setVirAmtLimit("1000");
+			back();
+			Random random = new Random();
+			vpa = prop.getProperty("addAcVirValid") + random.nextInt(90) + 10;
+			prop.setProperty("addbankCreateVpaOnlyVPAOther", vpa);
+			sendText("Virtual Id", vpa);
+			//click(ObjectRepository.submit);
+			clickBtn("SUBMIT");
+			status = loadTextView();
+			if ("Virtual Address Created Successfully".equals(status[0])) {
+				clickBtn("NO");
+				Assert.assertTrue(true);
+			} else {
+				Assert.assertTrue(false);
+			}
 		}
 		log.info("***************End***************");
 	}

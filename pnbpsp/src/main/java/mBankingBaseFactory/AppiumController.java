@@ -75,6 +75,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.google.common.base.Predicate;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -124,11 +125,12 @@ public class AppiumController {
 		getDriver().launchApp();
 		log.info("**********Login to Application**********");
 		TCID = "TC_"+this.getClass().getSimpleName()+"_"+TestCaseNum;
-		BasePage loginPage = new BasePage(driver);
 		try {
-			loginPage.loginApp(prop.getProperty("loginPin"));
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+			sendText("******", prop.getProperty("loginPin"));
+			driver.findElement(By.xpath("//android.widget.Button")).click();
+		} catch (Exception e) {
+			log.info("Login Failed. Aborting test...");
+			System.exit(0);
 			e.printStackTrace();
 		}
 
@@ -553,13 +555,10 @@ public class AppiumController {
 	}
 
 	public static boolean waitForBtn(String btnText, Integer... timeout) {
-		log.info("Entered Wait for Element");
+		log.info("Entered Wait for Button : " + btnText);
 		try {
-			// waitForCondition(ExpectedConditions.visibilityOf((WebElement)
-			// locator), (timeout.length > 0 ? timeout[0] : null));
 			waitForCondition(
-					ExpectedConditions.visibilityOf(
-							getDriver().findElement(By.xpath("//android.widget.Button[@text='" + btnText + "']"))),
+					ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.Button[@text='" + btnText + "']")),
 					(timeout.length > 0 ? timeout[0] : null));
 		} catch (org.openqa.selenium.TimeoutException exception) {
 			log.info("Element not found");
@@ -570,6 +569,19 @@ public class AppiumController {
 		return true;
 	}
 
+	public static boolean waitForBtnToInvisible(String btnText, Integer... timeout) {
+		log.info("Entered Wait for Button to disappear : " + btnText);
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+					wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//android.widget.Button[@text='" + btnText + "']")));
+		} catch (org.openqa.selenium.TimeoutException exception) {
+			log.info("Element not found");
+			return false;
+		}
+		log.info("Element has disappeared : " );
+		return true;
+	}
+	
 	public static boolean waitForElement(MobileElement locator, Integer... timeout) {
 		log.info("Entered Wait for Element");
 		try {
@@ -586,10 +598,9 @@ public class AppiumController {
 	}
 
 	public static boolean waitForTextView(String text, Integer... timeout) {
-		MobileElement locator = getDriver().findElement(By.xpath("//android.widget.TextView[@text='" + text + "']"));
 		log.info("Entered Wait : " + text);
 		try {
-			waitForCondition(ExpectedConditions.visibilityOf((WebElement) locator),
+			waitForCondition(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text='" + text + "']")),
 					(timeout.length > 0 ? timeout[0] : null));
 		} catch (org.openqa.selenium.TimeoutException exception) {
 			log.info("Element not found");
@@ -599,12 +610,24 @@ public class AppiumController {
 		return true;
 	}
 
+	public static boolean waitForImageView(String text, Integer... timeout) {
+		log.info("Entered Wait : " + text);
+		try {
+			waitForCondition(ExpectedConditions.presenceOfElementLocated(By.id(text)),
+					(timeout.length > 0 ? timeout[0] : null));
+		} catch (org.openqa.selenium.TimeoutException exception) {
+			log.info("Element not found");
+			return false;
+		}
+		log.info("Element found : " + text);
+		return true;
+	}
+	
 	public static boolean waitForEditText(String text, Integer... timeout) {
 		log.info("Entered Wait : " + text);
 		try {
 			waitForCondition(
-					ExpectedConditions.visibilityOf((WebElement) getDriver()
-							.findElement(By.xpath(("//*[@class='android.widget.EditText'][@text='" + text + "']")))),
+					ExpectedConditions.visibilityOfElementLocated(By.xpath(("//*[@class='android.widget.EditText'][@text='" + text + "']"))),
 					(timeout.length > 0 ? timeout[0] : null));
 		} catch (org.openqa.selenium.TimeoutException exception) {
 			log.info("Element not found");
@@ -907,7 +930,7 @@ public class AppiumController {
 	public void clickBtn(String text) {
 		waitForBtn(text, 50);
 		try {
-			getDriver().findElement(By.xpath(("//*[@class='android.widget.Button'][@text='" + text + "']"))).click();
+			driver.findElement(By.xpath(("//*[@class='android.widget.Button'][@text='" + text + "']"))).click();
 			log.info("Click on element : " + text);
 		} catch (Exception e) {
 			// report an error

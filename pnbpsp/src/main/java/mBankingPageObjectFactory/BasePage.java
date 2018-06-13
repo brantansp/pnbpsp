@@ -35,10 +35,11 @@ public class BasePage extends ObjectRepository {
 		} catch (Exception e) {
 			log.info(e);
 		}
-		sendText(loginBox, pin);
+		//sendText(loginBox, pin);
+		sendText("******", pin);
 		log.info("Login Pin send  : " + pin);
 
-		boolean flag = true;
+/*		boolean flag = true;
 		while (flag) {
 			try {
 				waitForElement(submit, 30);
@@ -46,8 +47,8 @@ public class BasePage extends ObjectRepository {
 			} catch (Exception e) {
 				back();
 			}
-		}
-		click(submit);
+		}*/
+		driver.findElement(By.xpath("//android.widget.Button")).click();
 	}
 
 	public void exitApp() throws InterruptedException {

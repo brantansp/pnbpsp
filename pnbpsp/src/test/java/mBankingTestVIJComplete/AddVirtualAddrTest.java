@@ -37,14 +37,19 @@ public class AddVirtualAddrTest extends AppiumController {
 		String vpa = prop.getProperty("virtualAddress")+random.nextInt(90) + 10;
 		prop.setProperty("addVirAddValidVIR", vpa);
 	sendText("Virtual Id", vpa);
-	click(ObjectRepository.submit);
+	//click(ObjectRepository.submit);
+	clickBtn("SUBMIT");
+	waitForBtn("OK");
 	String [] status1=loadTextView();
 	if("Virtual Address Created Successfully".equals(status1[0]))
 	{
 		clickBtn("OK");
 		Assert.assertTrue(true);
 	}
-	
+	else
+	{
+		Assert.assertTrue(false);
+	}
 	log.info("***************End***************");
 	//The virtual Address bran10@vijb is already available and is currently active. Enter a new virtual address.
 }
@@ -63,7 +68,8 @@ public class AddVirtualAddrTest extends AppiumController {
 	basePage.setVirAmtLimit("1000");
 		back();
 		sendText("Virtual Id", prop.getProperty("addVirAddValidVIR"));
-		click(ObjectRepository.submit);
+		//click(ObjectRepository.submit);
+		clickBtn("SUBMIT");
 		String [] status=loadTextView();
 		String text= "The virtual Address "+prop.getProperty("addVirAddValidVIR")+"@"+prop.getProperty("psphandle")+" is already available and is currently active. Enter a new virtual address.";
 	if(text.equals(status[0]))

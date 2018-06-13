@@ -64,11 +64,11 @@ public class ChangePinTest extends AppiumController {
 		waitForTextView("XXXXXXXXXXX" + prop.getProperty("addBankOnlyAccNo"));
 
 		Dimension windowSize = getDriver().manage().window().getSize();
-		NPCIEnterText(prop.getProperty("loginPin"));
+		NPCIEnterText(prop.getProperty("NPCIPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-		NPCIEnterText(prop.getProperty("loginNewPin"));
+		NPCIEnterText(prop.getProperty("NPCINewPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-		NPCIEnterText(prop.getProperty("loginConfPin"));
+		NPCIEnterText(prop.getProperty("NPCINewPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
 		waitForBtn("OK", 50);
 		if ("You cannot perform transactions as a virtual address has not been created for the selected account. Create a virtual address for the account to proceed further."
@@ -123,11 +123,11 @@ public class ChangePinTest extends AppiumController {
 		waitForTextView("XXXXXXXXXXX"+prop.getProperty("addBankAccNo"));
 
 		Dimension windowSize = getDriver().manage().window().getSize();
-		NPCIEnterText(prop.getProperty("loginPin"));
+		NPCIEnterText(prop.getProperty("NPCIPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-		NPCIEnterText(prop.getProperty("loginNewPin"));
+		NPCIEnterText(prop.getProperty("NPCINewPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
-		NPCIEnterText(prop.getProperty("loginConfPin"));
+		NPCIEnterText(prop.getProperty("NPCINewPin"));
 		Tap(windowSize.getWidth() - 100, windowSize.getHeight() - 100);
 		waitForBtn("OK", 50);
 		if ("UPI PIN not available for the selected account.".equals(loadTextView()[0])) {

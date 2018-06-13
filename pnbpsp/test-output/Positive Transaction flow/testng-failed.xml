@@ -115,8 +115,8 @@
           <include name="AddBankAccNotExists"/>
           <include name="AddbankOnly"/>
           <include name="AddBankCreateVpaSetPin"/>
-          <include name="extentbeforeMethod"/>
           <include name="AddbankCreateVpaOnly"/>
+          <include name="AddbankCreateVpaOnlyOtherBank"/>
         </methods>
       </class> <!-- mBankingTestVIJComplete.AddBankTest -->
     </classes>
