@@ -82,9 +82,18 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import java.lang.reflect.Field;
 
+/**
+ * Pre-Condition
+ * Action and Verification
+ * Post-Condition
+ * 
+ * @author brantansp
+ *
+ */
+
 public class AppiumController {
 
-	protected static AppiumDriver<MobileElement> driver;
+	public static AppiumDriver<MobileElement> driver;
 	public static URL serverAddress;
 	private static WebDriverWait driverWait;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());

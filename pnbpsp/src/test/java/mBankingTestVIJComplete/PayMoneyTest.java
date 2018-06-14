@@ -1,10 +1,13 @@
 package mBankingTestVIJComplete;
 
 import java.lang.invoke.MethodHandles;
+import java.util.List;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.touch.TouchActions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,40 +19,31 @@ import mBankingPageObjectFactory.BasePage;
 public class PayMoneyTest extends AppiumController {
 
 	protected BasePage loginPage;
-    AppiumDriver<MobileElement> driver;// = getDriver(); 
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
 	
-	@Test
+	//@Test (priority = 0)
 	public void PayMoneyVir() throws InterruptedException
 	{
 		log.info("**********Pay Money using Virtual Address**********");
-		loginPage = new BasePage(driver);
-        //loginPage.PayMoneyVir("brantan@ybl", "100", "Sanity test");
-		waitForTextView("Pay");
 		clickTextView("Pay");
-		waitForTextView("SEND MONEY");
-		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankAccNo"));
-		waitForTextView("VIRTUAL ADDRESS LIST");
-		clickTextView("usb@vijb");
-		waitForTextView("SEND MONEY");
+		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankCrVpaSePinAccNo"));
+		clickTextViewContains(prop.getProperty("addBankCrVpaSePinVPA"));
 		clickTextView("- Select -");
 		clickTextView("Virtual Address");   //Account Number + IFSC  //Aadhaar Number
-		waitForEditText("Enter Virtual Addr");
-		sendText("Enter Virtual Addr", "bran@punbupi");
-		sendText("Enter Amount", "100");
+		sendText("Enter Virtual Addr", prop.getProperty("addbankCreateVpaOnlyVPAOther")+"@vijb");
 		back();
-		sendText("UPI", "Remark Pay Vir Add");
+		sendText("Enter Amount", prop.getProperty("pMnyAmt"));
+		back();
+		/*sendText("UPI", "Remark Pay Vir Add");*/
 		clickBtn("SUBMIT");
 		waitForBtn("CONFIRM");
-		loadTextView();
+		//loadTextView();
 		clickBtn("CONFIRM");
-		waitForEditText("****");
-		sendText("****","1234");
-		back();
+		sendText("****", prop.getProperty("NPCIPin"));
 		clickBtn("SEND MONEY");
-		waitForBtn("ok");
-		if("Your transaction has been complted successfully.".equals(loadTextView()[0]))
+		waitForBtn("OK");
+		if("Your transaction has been completed successfully.".equals(loadTextView()[0]))
 		{
 			clickBtn("OK");
 			Assert.assertTrue(true);
@@ -59,38 +53,26 @@ public class PayMoneyTest extends AppiumController {
         log.info("***************End***************");
 	}
 
-	@Test
+	//@Test(priority = 1)
 	public void PayMoneyIFSC() throws InterruptedException
 	{
 		log.info("**********Pay Money using Account & IFSC**********");
-		loginPage = new BasePage(driver);
-       // loginPage.PayMoneyIFSC("789452136521", "HDFC0000001", "100", "Sanity test");
-		waitForTextView("Pay");
 		clickTextView("Pay");
-		waitForTextView("SEND MONEY");
-		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankAccNo"));
-		waitForTextView("VIRTUAL ADDRESS LIST");
-		clickTextView("usb@vijb");
-		waitForTextView("SEND MONEY");
+		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankCrVpaSePinAccNo"));
+		clickTextViewContains(prop.getProperty("addBankCrVpaSePinVPA"));
 		clickTextView("- Select -");
-		clickTextView("Account Number + IFSC");   //  //Aadhaar Number
-		waitForEditText("Enter Acc No");
-		sendText("Enter Acc No", "133101021000828");
-		back();
-		sendText("IFSC", "VIJB0001331");
-		back();
-		sendText("Enter Amount", "100");
-		back();
-		sendText("UPI", "Remark Pay Vir Add");
-		clickBtn("SUBMIT");
-		waitForBtn("CONFIRM");
-		loadTextView();
+		clickTextView("Account Number + IFSC");   //Account Number + IFSC  //Aadhaar Number
+        sendText("Enter Acc No", prop.getProperty("pMnyOtrAccNo"));
+        back();
+        sendText("IFSC",prop.getProperty("pMnyOtrIfsc"));
+        back();
+        sendText("Enter Amount", prop.getProperty("pMnyAmt"));
+        back();
+        clickBtn("SUBMIT");
 		clickBtn("CONFIRM");
-		waitForEditText("****");
-		sendText("****","1234");
-		back();
+		sendText("****", prop.getProperty("NPCIPin"));
 		clickBtn("SEND MONEY");
-		waitForBtn("ok");
+		waitForBtn("OK");
 		if("Your transaction has been complted successfully.".equals(loadTextView()[0]))
 		{
 			clickBtn("OK");
@@ -101,33 +83,36 @@ public class PayMoneyTest extends AppiumController {
         log.info("***************End***************");
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void PayMoneyAad() throws InterruptedException
 	{
 		log.info("**********Pay Money using Aadhar number**********");
-		loginPage = new BasePage(driver);
-        //loginPage.PayMoneyAad("789546321452", "100", "Sanity test");
-		waitForTextView("Pay");
 		clickTextView("Pay");
-		waitForTextView("SEND MONEY");
-		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankAccNo"));
-		waitForTextView("VIRTUAL ADDRESS LIST");
-		clickTextView("usb@vijb");
-		waitForTextView("SEND MONEY");
+		clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankCrVpaSePinAccNo"));
+		clickTextViewContains(prop.getProperty("addBankCrVpaSePinVPA"));
 		clickTextView("- Select -");
-		clickTextView("Aadhaar Number");   // 
-		waitForEditText("Enter Aadhar No");
-		sendText("Enter Aadhar No", "704535226825");
+		clickTextView("Aadhaar Number");   //Account Number + IFSC  //Aadhaar Number
+		//sleep(2000);
+		sendText("Enter Aadhaar No", "704535226825");
 		back();
 		clickTextView("BankName");
-		boolean flag= true;
+
 		String bankName="Yes Bank";
-		TouchActions action = new TouchActions(getDriver());
-		flag = scrollToElement("//android.widget.EditText[@text='"+bankName+"'","");
-        if(flag)
-        {
-    		clickTextView("Yes Bank");
-        }
+			do {
+			try {
+			getDriver().findElement(By.xpath("//android.widget.EditText[@text='"+bankName+"'")).click();
+			break;
+					} catch (Exception NoSuchElementException) {
+						log.info("Scrolling");
+						Dimension dimensions = driver.manage().window().getSize();
+						Double screenHeightStart = dimensions.getHeight() * 0.5;
+						int scrollStart = screenHeightStart.intValue();
+						Double screenHeightEnd = dimensions.getHeight() * 0.2;
+						int scrollEnd = screenHeightEnd.intValue();
+						driver.swipe(0, scrollStart, 0, scrollEnd, 2000);	
+					}
+				} while (true);
+			
 		sendText("Enter Amount", "100");
 		back();
 		sendText("UPI", "Remark Pay Vir Add");
@@ -136,8 +121,7 @@ public class PayMoneyTest extends AppiumController {
 		loadTextView();
 		clickBtn("CONFIRM");
 		waitForEditText("****");
-		sendText("****","1234");
-		back();
+		sendText("****", prop.getProperty("NPCIPin"));
 		clickBtn("SEND MONEY");
 		waitForBtn("ok");
 		if("Your transaction has been complted successfully.".equals(loadTextView()[0]))

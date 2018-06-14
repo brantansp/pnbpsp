@@ -1,102 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="3" passed="2">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="474760" started-at="2018-06-13T13:00:54Z" finished-at="2018-06-13T13:08:49Z">
+  <suite name="Default suite" duration-ms="37735" started-at="2018-06-14T12:54:18Z" finished-at="2018-06-14T12:54:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="474760" started-at="2018-06-13T13:00:54Z" finished-at="2018-06-13T13:08:49Z">
-      <class name="mBankingTestVIJComplete.PendingApprovalTest">
-        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="extentReportSetUp" is-config="true" duration-ms="29126" started-at="2018-06-13T18:30:25Z" finished-at="2018-06-13T18:30:54Z">
+    <test name="Default test" duration-ms="37735" started-at="2018-06-14T12:54:18Z" finished-at="2018-06-14T12:54:55Z">
+      <class name="mBankingTestVIJComplete.PayMoneyTest">
+        <test-method status="PASS" signature="extentReportSetUp()[pri:0, instance:mBankingTestVIJComplete.PayMoneyTest@2bba4f]" name="extentReportSetUp" is-config="true" duration-ms="29535" started-at="2018-06-14T18:23:48Z" finished-at="2018-06-14T18:24:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentReportSetUp -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="10548" started-at="2018-06-13T18:30:54Z" finished-at="2018-06-13T18:31:05Z">
+        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.PayMoneyTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="12416" started-at="2018-06-14T18:24:18Z" finished-at="2018-06-14T18:24:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void mBankingTestVIJComplete.PendingApprovalTest.pendingApprovalDefer()]]>
+                <![CDATA[public void mBankingTestVIJComplete.PayMoneyTest.PayMoneyAad() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentbeforeMethod -->
-        <test-method status="PASS" signature="pendingApprovalDefer()[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="pendingApprovalDefer" duration-ms="244418" started-at="2018-06-13T18:31:05Z" finished-at="2018-06-13T18:35:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pendingApprovalDefer -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="5" started-at="2018-06-13T18:35:09Z" finished-at="2018-06-13T18:35:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=pendingApprovalDefer status=SUCCESS method=PendingApprovalTest.pendingApprovalDefer()[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="10663" started-at="2018-06-13T18:35:09Z" finished-at="2018-06-13T18:35:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJComplete.PendingApprovalTest.pendingApprovalDecline()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="PASS" signature="pendingApprovalDecline()[pri:1, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="pendingApprovalDecline" duration-ms="8998" started-at="2018-06-13T18:35:20Z" finished-at="2018-06-13T18:35:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pendingApprovalDecline -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="1" started-at="2018-06-13T18:35:29Z" finished-at="2018-06-13T18:35:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=pendingApprovalDecline status=SUCCESS method=PendingApprovalTest.pendingApprovalDecline()[pri:1, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="extentbeforeMethod(java.lang.reflect.Method)[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="extentbeforeMethod" is-config="true" duration-ms="10643" started-at="2018-06-13T18:35:29Z" finished-at="2018-06-13T18:35:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void mBankingTestVIJComplete.PendingApprovalTest.pendingApprovalApprove()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extentbeforeMethod -->
-        <test-method status="FAIL" signature="pendingApprovalApprove()[pri:2, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="pendingApprovalApprove" duration-ms="186696" started-at="2018-06-13T18:35:40Z" finished-at="2018-06-13T18:38:46Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="PayMoneyAad()[pri:2, instance:mBankingTestVIJComplete.PayMoneyTest@2bba4f]" name="PayMoneyAad" duration-ms="22266" started-at="2018-06-14T18:24:30Z" finished-at="2018-06-14T18:24:52Z">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
             <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 60.52 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[Argument was an invalid selector (e.g. XPath/CSS). (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: d8941b49-4634-4801-aca7-ddb3f3832faa
-*** Element info: {Using=xpath, value=//android.widget.EditText[@text='****']}]]>
+Session ID: 07841103-7fa6-4356-8331-3a36b111d1b1
+*** Element info: {Using=xpath, value=//android.widget.EditText[@text='Yes Bank'}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 60.52 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: Argument was an invalid selector (e.g. XPath/CSS). (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'FSSCHND13937', ip: '10.44.71.115', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
-Session ID: d8941b49-4634-4801-aca7-ddb3f3832faa
-*** Element info: {Using=xpath, value=//android.widget.EditText[@text='****']}
+Session ID: 07841103-7fa6-4356-8331-3a36b111d1b1
+*** Element info: {Using=xpath, value=//android.widget.EditText[@text='Yes Bank'}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -120,8 +68,7 @@ Session ID: d8941b49-4634-4801-aca7-ddb3f3832faa
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at mBankingBaseFactory.AppiumController.sendText(AppiumController.java:1126)
-	at mBankingTestVIJComplete.PendingApprovalTest.pendingApprovalApprove(PendingApprovalTest.java:71)
+	at mBankingTestVIJComplete.PayMoneyTest.PayMoneyAad(PayMoneyTest.java:101)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -148,26 +95,26 @@ Session ID: d8941b49-4634-4801-aca7-ddb3f3832faa
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pendingApprovalApprove -->
-        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="2757" started-at="2018-06-13T18:38:46Z" finished-at="2018-06-13T18:38:49Z">
+        </test-method> <!-- PayMoneyAad -->
+        <test-method status="PASS" signature="extentGetResult(org.testng.ITestResult)[pri:0, instance:mBankingTestVIJComplete.PayMoneyTest@2bba4f]" name="extentGetResult" is-config="true" duration-ms="3016" started-at="2018-06-14T18:24:52Z" finished-at="2018-06-14T18:24:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=pendingApprovalApprove status=FAILURE method=PendingApprovalTest.pendingApprovalApprove()[pri:2, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f] output={null}]]]>
+                <![CDATA[[TestResult name=PayMoneyAad status=FAILURE method=PayMoneyTest.PayMoneyAad()[pri:2, instance:mBankingTestVIJComplete.PayMoneyTest@2bba4f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentGetResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestVIJComplete.PendingApprovalTest@2bba4f]" name="tearDown" is-config="true" duration-ms="191" started-at="2018-06-13T18:38:49Z" finished-at="2018-06-13T18:38:49Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mBankingTestVIJComplete.PayMoneyTest@2bba4f]" name="tearDown" is-config="true" duration-ms="192" started-at="2018-06-14T18:24:55Z" finished-at="2018-06-14T18:24:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mBankingTestVIJComplete.PendingApprovalTest -->
+      </class> <!-- mBankingTestVIJComplete.PayMoneyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
