@@ -20,6 +20,10 @@ import mBankingPageObjectFactory.BasePage;
 
 public class AddBankTest extends AppiumController {
 
+	/*
+	 * getSize() - Dimension (Width,Height)
+	 * getLocation() - Point (x,y)
+	 */
 	protected BasePage basePage;
 	AppiumDriver<MobileElement> driver;// = getDriver(); ;
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
@@ -44,12 +48,14 @@ public class AddBankTest extends AppiumController {
 		String[] status = loadTextView();
 		if ("Your bank account has been registered successfully. Please create a virtual address before performing any transactions."
 				.equals(status[1])) {
-			log.info(status[1]);
+			log.info("Test case passed : "+status[1]);
 			clickBtn("OK");
 			back();
 			back();
 			Assert.assertTrue(true);
 		} else {
+			log.info("Expected is : Your bank account has been registered successfully. Please create a virtual address before performing any transactions.");
+			log.info("Actual is : "+status[1]); 
 			Assert.assertTrue(false);
 		}
 	}
@@ -88,9 +94,11 @@ public class AddBankTest extends AppiumController {
 			status = loadTextView();
 			if ("Virtual Address Created Successfully".equals(status[0])) {
 				clickBtn("NO");
+				log.info("Test case passed : "+status[0]);
 				Assert.assertTrue(true);
-
 			} else {
+				log.info("Expected is : Virtual Address Created Successfully");
+				log.info("Actual is : "+status[0]);
 				Assert.assertTrue(false);
 			}
 		}

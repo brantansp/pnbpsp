@@ -8,6 +8,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -20,6 +21,9 @@ import mBankingPageObjectFactory.BasePage;
 
 public class CollectMoneyTest extends AppiumController {
 
+	/*
+	 * ObjectRepository.expDate.sendKeys(Keys.chord(Keys.SHIFT,""));
+	 */
 	protected BasePage basePage;
 	AppiumDriver<MobileElement> driver;// = getDriver();
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
@@ -53,7 +57,9 @@ public class CollectMoneyTest extends AppiumController {
 		//pickDate(map.get("minute"));
 		clickRadioBtn("AM");
 		clickBtn("OK");
+		clearText(ObjectRepository.payremark);
 		sendText(ObjectRepository.payremark, "UPICOLMNYAPPR");
+		back();
 		clickBtn("SUBMIT");
 		loadTextView();
 		clickBtn("CONFIRM");
@@ -102,7 +108,9 @@ public class CollectMoneyTest extends AppiumController {
 		//pickDate(map.get("minute"));
 		clickRadioBtn("AM");
 		clickBtn("OK");
+		clearText(ObjectRepository.payremark);
 		sendText(ObjectRepository.payremark, "UPICOLMNYDECL");  /* replace here  */
+		back();
 		clickBtn("SUBMIT");
 		loadTextView();
 		clickBtn("CONFIRM");
@@ -151,7 +159,9 @@ public class CollectMoneyTest extends AppiumController {
 		//pickDate(map.get("minute"));
 		clickRadioBtn("AM");
 		clickBtn("OK");
+		clearText(ObjectRepository.payremark);
 		sendText(ObjectRepository.payremark, "UPICOLMNYDEFR");  /* replace here  */
+		back();
 		clickBtn("SUBMIT");
 		loadTextView();
 		clickBtn("CONFIRM");

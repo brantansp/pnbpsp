@@ -1,22 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Positive Transaction flow]">
+  <listeners>
+    <listener class-name="mBankingUtilityCenter.AnotationListner"/>
+    <listener class-name="mBankingUtilityCenter.PriorityInterceptor"/>
+  </listeners>
+  <test name="Login App">
     <classes>
+      <class name="mBankingTestVIJComplete.AddBankTest"/>
+      <class name="mBankingTestVIJComplete.AddVirtualAddrTest"/>
+      <class name="mBankingTestVIJComplete.ViewBalanceTest"/>
+      <class name="mBankingTestVIJComplete.CollectMoneyTest"/>
+      <class name="mBankingTestVIJComplete.PendingApprovalTest"/>
       <class name="mBankingTestVIJComplete.PayMoneyTest"/>
+      <class name="mBankingTestVIJComplete.ParticipantsTest"/>
+      <class name="mBankingTestVIJComplete.MenuDrawerOptionsTest"/>
+      <class name="mBankingTestVIJComplete.TxnStatusTest"/>
+      <class name="mBankingTestVIJComplete.SetUPIPINTest"/>
+      <class name="mBankingTestVIJComplete.ChangePinTest"/>
+      <class name="mBankingTestVIJComplete.ManageAcTest"/>
     </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
+  </test> <!-- Login App -->
+  <test name="Login App(failed)">
     <classes>
+      <class name="mBankingTestVIJComplete.ChangePinTest">
+        <methods>
+          <include name="ChangePINWhenVPANotCreated"/>
+          <include name="ChangePinWhenUPIPinNotAvailable"/>
+          <include name="ChangePinInvalidNPCIPIN"/>
+          <include name="ChangePinValid"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.ChangePinTest -->
+      <class name="mBankingTestVIJComplete.AddVirtualAddrTest">
+        <methods>
+          <include name="addAlreadyAddedVirAddress"/>
+          <include name="addVirAddressValid"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.AddVirtualAddrTest -->
+      <class name="mBankingTestVIJComplete.ViewBalanceTest">
+        <methods>
+          <include name="BalanceEnquiryInValidNPCIPin"/>
+          <include name="BalanceEnquiryPinNotConfigured"/>
+          <include name="BalanceEnquiryValid"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.ViewBalanceTest -->
+      <class name="mBankingTestVIJComplete.ParticipantsTest">
+        <methods>
+          <include name="viewParticipantsAadNum"/>
+          <include name="addParticipantsAadNo"/>
+          <include name="addParticipantsVirNo"/>
+          <include name="viewParticipantsAcIfsc"/>
+          <include name="viewParticipantsVirAdd"/>
+          <include name="addParticipantsAccNo"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.ParticipantsTest -->
       <class name="mBankingTestVIJComplete.PayMoneyTest">
         <methods>
           <include name="PayMoneyAad"/>
-          <include name="extentReportSetUp"/>
-          <include name="extentbeforeMethod"/>
-          <include name="tearDown"/>
-          <include name="extentGetResult"/>
         </methods>
       </class> <!-- mBankingTestVIJComplete.PayMoneyTest -->
+      <class name="mBankingTestVIJComplete.ManageAcTest">
+        <methods>
+          <include name="deleteBankAccount"/>
+          <include name="editVirAddress"/>
+          <include name="generateQRforVirAdd"/>
+          <include name="deleteVirAddress"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.ManageAcTest -->
+      <class name="mBankingTestVIJComplete.TxnStatusTest">
+        <methods>
+          <include name="txnStatus"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.TxnStatusTest -->
+      <class name="mBankingTestVIJComplete.MenuDrawerOptionsTest">
+        <methods>
+          <include name="reportSpamUnBlock"/>
+          <include name="complaintStatus"/>
+          <include name="reportSpamBlock"/>
+          <include name="termsAndCondition"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.MenuDrawerOptionsTest -->
+      <class name="mBankingTestVIJComplete.SetUPIPINTest">
+        <methods>
+          <include name="setUPIPIN"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.SetUPIPINTest -->
+      <class name="mBankingTestVIJComplete.CollectMoneyTest">
+        <methods>
+          <include name="CollectMoneyVir3"/>
+          <include name="CollectMoneyVir1"/>
+          <include name="CollectMoneyVir2"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.CollectMoneyTest -->
+      <class name="mBankingTestVIJComplete.PendingApprovalTest">
+        <methods>
+          <include name="pendingApprovalDefer"/>
+          <include name="pendingApprovalDecline"/>
+          <include name="pendingApprovalApprove"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.PendingApprovalTest -->
+      <class name="mBankingTestVIJComplete.AddBankTest">
+        <methods>
+          <include name="AddBankAccNotExists"/>
+          <include name="AddbankOnly"/>
+          <include name="extentReportSetUp"/>
+          <include name="AddBankCreateVpaSetPin"/>
+          <include name="AddbankCreateVpaOnly"/>
+          <include name="AddbankCreateVpaOnlyOtherBank"/>
+        </methods>
+      </class> <!-- mBankingTestVIJComplete.AddBankTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Login App(failed) -->
+</suite> <!-- Failed suite [Positive Transaction flow] -->
