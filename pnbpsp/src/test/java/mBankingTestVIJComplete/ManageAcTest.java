@@ -89,7 +89,7 @@ public class ManageAcTest extends AppiumController {
          waitForTextView("VIEW BANK ACCOUNTS",10);
          click(getDriver().findElement(By.xpath("//android.widget.LinearLayout[@index='0']")));
          waitForTextView("ADDED VIRTUAL ADDRESS LIST",10);     
-         ArrayList <MobileElement> arr=(ArrayList<MobileElement>) getDriver().findElements(By.id(ObjectRepository.qrDeleteImage));
+         ArrayList <MobileElement> arr=(ArrayList<MobileElement>) getDriver().findElements(By.id(ObjectRepository.qrDeleteImageStr));
          click(arr.get(0));
          clickBtn("YES");
  		String [] status=loadTextView();

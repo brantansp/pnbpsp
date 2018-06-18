@@ -2,6 +2,7 @@ package mBankingTestVIJComplete;
 
 import java.lang.invoke.MethodHandles;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -12,7 +13,9 @@ import org.openqa.selenium.interactions.touch.TouchActions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import mBankingBaseFactory.AppiumController;
 import mBankingPageObjectFactory.BasePage;
 
@@ -22,7 +25,7 @@ public class PayMoneyTest extends AppiumController {
 	private static Log log = LogFactory.getLog(MethodHandles.lookup().lookupClass().getSimpleName());
 
 	
-	//@Test (priority = 0)
+	@Test (priority = 0)
 	public void PayMoneyVir() throws InterruptedException
 	{
 		log.info("**********Pay Money using Virtual Address**********");
@@ -53,7 +56,7 @@ public class PayMoneyTest extends AppiumController {
         log.info("***************End***************");
 	}
 
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void PayMoneyIFSC() throws InterruptedException
 	{
 		log.info("**********Pay Money using Account & IFSC**********");
@@ -96,13 +99,12 @@ public class PayMoneyTest extends AppiumController {
 		sendText("Enter Aadhaar No", "704535226825");
 		back();
 		clickTextView("BankName");
-
-		String bankName="Yes Bank";
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 			do {
 			try {
-			getDriver().findElement(By.xpath("//android.widget.EditText[@text='"+bankName+"'")).click();
+			driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty("pMnyOtrAadBank")+"']")).click();
 			break;
-					} catch (Exception NoSuchElementException) {
+					} catch (Exception e) {
 						log.info("Scrolling");
 						Dimension dimensions = driver.manage().window().getSize();
 						Double screenHeightStart = dimensions.getHeight() * 0.5;
@@ -112,7 +114,7 @@ public class PayMoneyTest extends AppiumController {
 						driver.swipe(0, scrollStart, 0, scrollEnd, 2000);	
 					}
 				} while (true);
-			
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 		sendText("Enter Amount", "100");
 		back();
 		sendText("UPI", "Remark Pay Vir Add");
@@ -123,12 +125,14 @@ public class PayMoneyTest extends AppiumController {
 		waitForEditText("****");
 		sendText("****", prop.getProperty("NPCIPin"));
 		clickBtn("SEND MONEY");
-		waitForBtn("ok");
+		waitForBtn("OK");
 		if("Your transaction has been complted successfully.".equals(loadTextView()[0]))
 		{
 			clickBtn("OK");
 			Assert.assertTrue(true);
 		}else{
+			log.info("Actual Response is : "+loadTextView()[0] );
+			log.info("Expected is : Your transaction has been complted successfully.");
 			Assert.assertTrue(false);
 		}
         log.info("***************End***************");

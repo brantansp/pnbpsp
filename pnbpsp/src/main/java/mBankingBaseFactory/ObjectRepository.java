@@ -314,11 +314,16 @@ public class ObjectRepository extends AppiumController {
 
 	public static String qrEditImage = packageName + ":id/imageView_edit";
 
-	public static String qrDeleteImage = packageName + ":id/imageView_delete";
+	@AndroidFindBy(id = packageName + ":id/imageView_delete")
+	public static MobileElement qrDeleteImage ;
+	
+	public static String qrDeleteImageStr = packageName + ":id/imageView_delete";
+	
+	public static String viewEditProfile = packageName + ":id/imageView_editprofile";
 
 	@AndroidFindBy(id = packageName + ":id/imageView_editprofile")
-	public static MobileElement viewEditProfile;
-
+	public static MobileElement viewEditProfileElm;
+	
 	@AndroidFindBy(id = packageName + ":id/editText_available_limit")
 	public static MobileElement qrVirAmtLimit;
 
@@ -359,12 +364,15 @@ public class ObjectRepository extends AppiumController {
 	 * Participants
 	 */
 
+	@AndroidFindBy(id=packageName + ":id/spinner_payee_address_type")
+	public static MobileElement paymntAddType;
+	
 	@AndroidFindBy(id = packageName + ":id/fab")
 	public static MobileElement addParticipant;
 
 	@AndroidFindBy(id = packageName + ":id/editText_VirAddress")
 	public static MobileElement addParticipantVirAdd;
-
+	
 	@AndroidFindBy(id = packageName + ":id/editText_PayeeNickName")
 	public static MobileElement addParticipantPayeeNickName;
 
@@ -375,3 +383,17 @@ public class ObjectRepository extends AppiumController {
 	public static MobileElement addParticipantIFSC_code;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

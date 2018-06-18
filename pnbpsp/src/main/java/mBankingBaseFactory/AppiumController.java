@@ -126,7 +126,7 @@ public class AppiumController {
 
 		wait = new FluentWait<WebDriver>(getDriver()).withTimeout(30, TimeUnit.SECONDS)
 				.pollingEvery(2, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
-		getDriver().manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@BeforeMethod
@@ -591,6 +591,21 @@ public class AppiumController {
 		return true;
 	}
 	
+	public static boolean waitForElementById(String locator, Integer... timeout) {
+		log.info("Entered Wait for Element");
+		try {
+			// waitForCondition(ExpectedConditions.visibilityOf((WebElement)
+			// locator), (timeout.length > 0 ? timeout[0] : null));
+			waitForCondition(ExpectedConditions.visibilityOfElementLocated(By.id(locator)),
+					(timeout.length > 0 ? timeout[0] : null));
+		} catch (org.openqa.selenium.TimeoutException exception) {
+			log.info("Element not found");
+			return false;
+		}
+		log.info("Element found : " + locator);
+		return true;
+	}
+	
 	public static boolean waitForElement(MobileElement locator, Integer... timeout) {
 		log.info("Entered Wait for Element");
 		try {
@@ -935,6 +950,16 @@ public class AppiumController {
 		}
 	}
 
+	public void clickById(String xpathKey) {
+		try {
+			getDriver().findElement(By.id((xpathKey))).click();
+			log.info("Click on element : " + xpathKey);
+		} catch (Exception e) {
+			// report an error
+			System.out.println(e);
+		}
+	}
+	
 	// clickText
 	public void clickBtn(String text) {
 		waitForBtn(text, 50);

@@ -147,7 +147,7 @@ public class MenuDrawerOptionsTest extends AppiumController {
 		waitForElement(ObjectRepository.menuDrawer, 5);
 		click(ObjectRepository.menuDrawer);
 		click(ObjectRepository.editProfile);
-		waitForElement(ObjectRepository.viewEditProfile, 30);
+		waitForElement(ObjectRepository.viewEditProfileElm, 30);
 		click(ObjectRepository.viewEditProfile);
 		clickBtn("YES");
 		clickBtn("UPDATE");
