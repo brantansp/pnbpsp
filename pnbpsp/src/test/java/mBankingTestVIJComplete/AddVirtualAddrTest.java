@@ -29,7 +29,7 @@ public class AddVirtualAddrTest extends AppiumController {
 	basePage.clickTextView("Add Virtual Address");
 	waitForTextView("Select an account to create virtual address");
 	clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankOnlyAccNo"));
-	clickRadioBtn("Single use");
+	//clickRadioBtn("Single use");
 	basePage.selectVirTimeLimit("2018","25","May");
 	basePage.setVirAmtLimit("1000");
 		back();
@@ -63,7 +63,7 @@ public class AddVirtualAddrTest extends AppiumController {
 	basePage.clickTextView("Add Virtual Address");
 	waitForTextView("Select an account to create virtual address");
 	clickTextView("XXXXXXXXXXX"+prop.getProperty("addBankOnlyAccNo"));
-	clickRadioBtn("Single use");
+	//clickRadioBtn("Single use");
 	basePage.selectVirTimeLimit("2018","25","May");
 	basePage.setVirAmtLimit("1000");
 		back();

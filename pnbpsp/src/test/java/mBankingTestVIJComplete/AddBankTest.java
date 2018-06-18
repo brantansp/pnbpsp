@@ -82,7 +82,7 @@ public class AddBankTest extends AppiumController {
 				.equals(status[1])) {
 			log.info(status[1]);
 			clickBtn("OK");
-			clickRadioBtn("Single use");
+			//clickRadioBtn("Single use");  //Multiple use
 			basePage.selectVirTimeLimit("2019", "25", "Jun");
 			basePage.setVirAmtLimit("1000");
 			back();
@@ -127,7 +127,7 @@ public class AddBankTest extends AppiumController {
 				.equals(status[1])) {
 			log.info("Your bank account has been registered successfully");
 			clickBtn("OK");
-			clickRadioBtn("Single use");
+			//clickRadioBtn("Single use");   //Multiple Use
 			basePage.selectVirTimeLimit("2019", "25", "Jun");
 			basePage.setVirAmtLimit("1000");
 			back();
@@ -200,7 +200,7 @@ public class AddBankTest extends AppiumController {
 				.equals(status[1])) {
 			log.info("Your bank account has been registered successfully");
 			clickBtn("OK");
-			clickRadioBtn("Single use");
+			//clickRadioBtn("Single use");  //Multiple Use
 			basePage.selectVirTimeLimit("2019", "25", "Jun");
 			basePage.setVirAmtLimit("1000");
 			back();
@@ -265,7 +265,7 @@ public class AddBankTest extends AppiumController {
 				.equals(status[1])) {
 			log.info(status[1]);
 			clickBtn("OK");
-			clickRadioBtn("Single use");
+			//clickRadioBtn("Single use");   //Multiple use
 			basePage.selectVirTimeLimit("2019", "25", "Jun");
 			basePage.setVirAmtLimit("1000");
 			back();

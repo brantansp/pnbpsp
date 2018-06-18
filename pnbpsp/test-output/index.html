@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Positive_Transaction_flow">
-              <span class="suite-name border-skipped">Positive Transaction flow</span>
+              <span class="suite-name border-failed">Positive Transaction flow</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Positive_Transaction_flow">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">37 methods,  37 skipped,  </span>
+                    <span class="method-stats">48 methods, 2 failed,  41 skipped,  5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Positive_Transaction_flow" class="hide-methods failed suite-Positive_Transaction_flow"> (hide)</a> <!-- hide-methods failed suite-Positive_Transaction_flow -->
+                      <a href="#" panel-name="suite-Positive_Transaction_flow" class="show-methods failed suite-Positive_Transaction_flow"> (show)</a> <!-- show-methods failed suite-Positive_Transaction_flow -->
+                    </span>
+                    <div class="method-list-content failed suite-Positive_Transaction_flow">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ViewBalanceTest" hash-for-method="BalanceEnquiryValid">BalanceEnquiryValid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddVirtualAddrTest" hash-for-method="addVirAddressValid">addVirAddressValid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Positive_Transaction_flow -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -102,42 +121,12 @@
                     <div class="method-list-content skipped suite-Positive_Transaction_flow">
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddBankAccNotExists">AddBankAccNotExists</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddBankCreateVpaSetPin">AddBankCreateVpaSetPin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddbankCreateVpaOnly">AddbankCreateVpaOnly</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddbankCreateVpaOnlyOtherBank">AddbankCreateVpaOnlyOtherBank</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddbankOnly">AddbankOnly</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ViewBalanceTest" hash-for-method="BalanceEnquiryInValidNPCIPin">BalanceEnquiryInValidNPCIPin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ViewBalanceTest" hash-for-method="BalanceEnquiryPinNotConfigured">BalanceEnquiryPinNotConfigured</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ViewBalanceTest" hash-for-method="BalanceEnquiryValid">BalanceEnquiryValid</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -182,6 +171,16 @@
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.PayMoneyTest" hash-for-method="PayMoneyIFSC">PayMoneyIFSC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.PayMoneyTest" hash-for-method="PayMoneyVir">PayMoneyVir</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddVirtualAddrTest" hash-for-method="addAlreadyAddedVirAddress">addAlreadyAddedVirAddress</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -192,7 +191,27 @@
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="addParticipantsAadNoAlreadyRegd">addParticipantsAadNoAlreadyRegd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="addParticipantsAadNoUsedNickName">addParticipantsAadNoUsedNickName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="addParticipantsAccNo">addParticipantsAccNo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="addParticipantsAccNoAlreadyRegd">addParticipantsAccNoAlreadyRegd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="addParticipantsAccNoUsedNickName">addParticipantsAccNoUsedNickName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -202,7 +221,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddVirtualAddrTest" hash-for-method="addVirAddressValid">addVirAddressValid</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="addParticipantsVirNoAlreadyRegd">addParticipantsVirNoAlreadyRegd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="addParticipantsVirNoUsedNickName">addParticipantsVirNoUsedNickName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -213,6 +237,21 @@
                       <span>
                         <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ManageAcTest" hash-for-method="deleteBankAccount">deleteBankAccount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="deleteParticipantsAadNo">deleteParticipantsAadNo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="deleteParticipantsAccNo">deleteParticipantsAccNo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="deleteParticipantsVirAdd">deleteParticipantsVirAdd</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -272,12 +311,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="viewParticipantsAadNum">viewParticipantsAadNum</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="viewParticipantsAadNo">viewParticipantsAadNo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="viewParticipantsAcIfsc">viewParticipantsAcIfsc</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.ParticipantsTest" hash-for-method="viewParticipantsAccNo">viewParticipantsAccNo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -286,6 +325,40 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Positive_Transaction_flow -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Positive_Transaction_flow" class="hide-methods passed suite-Positive_Transaction_flow"> (hide)</a> <!-- hide-methods passed suite-Positive_Transaction_flow -->
+                      <a href="#" panel-name="suite-Positive_Transaction_flow" class="show-methods passed suite-Positive_Transaction_flow"> (show)</a> <!-- show-methods passed suite-Positive_Transaction_flow -->
+                    </span>
+                    <div class="method-list-content passed suite-Positive_Transaction_flow">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddBankAccNotExists">AddBankAccNotExists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddBankCreateVpaSetPin">AddBankCreateVpaSetPin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddbankCreateVpaOnly">AddbankCreateVpaOnly</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddbankCreateVpaOnlyOtherBank">AddbankCreateVpaOnlyOtherBank</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Positive_Transaction_flow" title="mBankingTestVIJComplete.AddBankTest" hash-for-method="AddbankOnly">AddbankOnly</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Positive_Transaction_flow -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -297,96 +370,88 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Positive_Transaction_flow" class="panel Positive_Transaction_flow">
-          <div class="suite-Positive_Transaction_flow-class-skipped">
+          <div class="suite-Positive_Transaction_flow-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">mBankingTestVIJComplete.ViewBalanceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="BalanceEnquiryValid">
+                  </a> <!-- BalanceEnquiryValid -->
+                  <span class="method-name">BalanceEnquiryValid</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Android bootstrap socket crashed: Error: This socket has been ended by the other party (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.54 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;FSSCHND13937&apos;, ip: &apos;10.44.71.115&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.fss.vijayapsp, deviceScreenSize=1080x1920, networkConnectionEnabled=true, orientation=null, noReset=true, warnings={}, disableAndroidWatchers=true, databaseEnabled=false, deviceName=HKE7YGUA, ignoreUnimportantViews=true, platform=LINUX, deviceUDID=HKE7YGUA, appActivity=com.fss.controller.MainActivity, desired={appPackage=com.fss.vijayapsp, appActivity=com.fss.controller.MainActivity, orientation=null, noReset=true, newCommandTimeout=9000, platformVersion=7.1.2, disableAndroidWatchers=true, platformName=Android, udid=HKE7YGUA, deviceName=e3a9c5b6, ignoreUnimportantViews=true}, newCommandTimeout=9000, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Lenovo K8 Plus, platformName=Android, udid=HKE7YGUA, deviceManufacturer=LENOVO}]
+Session ID: 4d6eddc1-1a53-40a1-bc5c-b08b4cf7d1da
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text=&apos;View Balance&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at mBankingBaseFactory.AppiumController.waitForCondition(AppiumController.java:551)
+	at mBankingBaseFactory.AppiumController.waitForTextView(AppiumController.java:627)
+	at mBankingTestVIJComplete.ViewBalanceTest.BalanceEnquiryValid(ViewBalanceTest.java:23)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Transaction_flow-class-failed -->
+          <div class="suite-Positive_Transaction_flow-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">mBankingTestVIJComplete.AddVirtualAddrTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addAlreadyAddedVirAddress">
-                  </a> <!-- addAlreadyAddedVirAddress -->
-                  <span class="method-name">addAlreadyAddedVirAddress</span>
-                  <div class="stack-trace">java.lang.Throwable: Method AddVirtualAddrTest.addAlreadyAddedVirAddress()[pri:0, instance:mBankingTestVIJComplete.AddVirtualAddrTest@478190fc] depends on not successfully finished methods
-... Removed 17 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="addVirAddressValid">
                   </a> <!-- addVirAddressValid -->
                   <span class="method-name">addVirAddressValid</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: Locator map: 
+- native content: &quot;By.id: android:id/date_picker_header_date&quot; 
+- html content: &quot;by id or name &quot;pickedDate&quot;&quot;
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;FSSCHND13937&apos;, ip: &apos;10.44.71.115&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: driver.version: unknown
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:110)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.getAttribute(&lt;generated&gt;)
+	at mBankingBaseFactory.AppiumController.getText(AppiumController.java:1072)
+	at mBankingPageObjectFactory.BasePage.selectVirTimeLimit(BasePage.java:454)
+	at mBankingTestVIJComplete.AddVirtualAddrTest.addVirAddressValid(AddVirtualAddrTest.java:33)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
-          <div class="suite-Positive_Transaction_flow-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">mBankingTestVIJComplete.ParticipantsTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addParticipantsAadNo">
-                  </a> <!-- addParticipantsAadNo -->
-                  <span class="method-name">addParticipantsAadNo</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addParticipantsAccNo">
-                  </a> <!-- addParticipantsAccNo -->
-                  <span class="method-name">addParticipantsAccNo</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addParticipantsVirNo">
-                  </a> <!-- addParticipantsVirNo -->
-                  <span class="method-name">addParticipantsVirNo</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="viewParticipantsAadNum">
-                  </a> <!-- viewParticipantsAadNum -->
-                  <span class="method-name">viewParticipantsAadNum</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="viewParticipantsAcIfsc">
-                  </a> <!-- viewParticipantsAcIfsc -->
-                  <span class="method-name">viewParticipantsAcIfsc</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="viewParticipantsVirAdd">
-                  </a> <!-- viewParticipantsVirAdd -->
-                  <span class="method-name">viewParticipantsVirAdd</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
-          <div class="suite-Positive_Transaction_flow-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">mBankingTestVIJComplete.TxnStatusTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="txnStatus">
-                  </a> <!-- txnStatus -->
-                  <span class="method-name">txnStatus</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
+          </div> <!-- suite-Positive_Transaction_flow-class-failed -->
           <div class="suite-Positive_Transaction_flow-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -426,42 +491,50 @@
           <div class="suite-Positive_Transaction_flow-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">mBankingTestVIJComplete.AddBankTest</span>
+              <span class="class-name">mBankingTestVIJComplete.SetUPIPINTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AddBankAccNotExists">
-                  </a> <!-- AddBankAccNotExists -->
-                  <span class="method-name">AddBankAccNotExists</span>
+                  <a name="setUPIPIN">
+                  </a> <!-- setUPIPIN -->
+                  <span class="method-name">setUPIPIN</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
+          <div class="suite-Positive_Transaction_flow-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">mBankingTestVIJComplete.ManageAcTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteBankAccount">
+                  </a> <!-- deleteBankAccount -->
+                  <span class="method-name">deleteBankAccount</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="AddBankCreateVpaSetPin">
-                  </a> <!-- AddBankCreateVpaSetPin -->
-                  <span class="method-name">AddBankCreateVpaSetPin</span>
+                  <a name="deleteVirAddress">
+                  </a> <!-- deleteVirAddress -->
+                  <span class="method-name">deleteVirAddress</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="AddbankCreateVpaOnly">
-                  </a> <!-- AddbankCreateVpaOnly -->
-                  <span class="method-name">AddbankCreateVpaOnly</span>
+                  <a name="editVirAddress">
+                  </a> <!-- editVirAddress -->
+                  <span class="method-name">editVirAddress</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="AddbankCreateVpaOnlyOtherBank">
-                  </a> <!-- AddbankCreateVpaOnlyOtherBank -->
-                  <span class="method-name">AddbankCreateVpaOnlyOtherBank</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="AddbankOnly">
-                  </a> <!-- AddbankOnly -->
-                  <span class="method-name">AddbankOnly</span>
+                  <a name="generateQRforVirAdd">
+                  </a> <!-- generateQRforVirAdd -->
+                  <span class="method-name">generateQRforVirAdd</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -522,79 +595,6 @@
                   <span class="method-name">BalanceEnquiryPinNotConfigured</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="BalanceEnquiryValid">
-                  </a> <!-- BalanceEnquiryValid -->
-                  <span class="method-name">BalanceEnquiryValid</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
-          <div class="suite-Positive_Transaction_flow-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">mBankingTestVIJComplete.PayMoneyTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="PayMoneyAad">
-                  </a> <!-- PayMoneyAad -->
-                  <span class="method-name">PayMoneyAad</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
-          <div class="suite-Positive_Transaction_flow-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">mBankingTestVIJComplete.ManageAcTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="deleteBankAccount">
-                  </a> <!-- deleteBankAccount -->
-                  <span class="method-name">deleteBankAccount</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="deleteVirAddress">
-                  </a> <!-- deleteVirAddress -->
-                  <span class="method-name">deleteVirAddress</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="editVirAddress">
-                  </a> <!-- editVirAddress -->
-                  <span class="method-name">editVirAddress</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="generateQRforVirAdd">
-                  </a> <!-- generateQRforVirAdd -->
-                  <span class="method-name">generateQRforVirAdd</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
-          <div class="suite-Positive_Transaction_flow-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">mBankingTestVIJComplete.SetUPIPINTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="setUPIPIN">
-                  </a> <!-- setUPIPIN -->
-                  <span class="method-name">setUPIPIN</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
           <div class="suite-Positive_Transaction_flow-class-skipped">
@@ -629,6 +629,50 @@
           <div class="suite-Positive_Transaction_flow-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
+              <span class="class-name">mBankingTestVIJComplete.TxnStatusTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="txnStatus">
+                  </a> <!-- txnStatus -->
+                  <span class="method-name">txnStatus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
+          <div class="suite-Positive_Transaction_flow-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">mBankingTestVIJComplete.PayMoneyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="PayMoneyAad">
+                  </a> <!-- PayMoneyAad -->
+                  <span class="method-name">PayMoneyAad</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PayMoneyIFSC">
+                  </a> <!-- PayMoneyIFSC -->
+                  <span class="method-name">PayMoneyIFSC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PayMoneyVir">
+                  </a> <!-- PayMoneyVir -->
+                  <span class="method-name">PayMoneyVir</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
+          <div class="suite-Positive_Transaction_flow-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
               <span class="class-name">mBankingTestVIJComplete.PendingApprovalTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -655,6 +699,180 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
+          <div class="suite-Positive_Transaction_flow-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">mBankingTestVIJComplete.ParticipantsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addParticipantsAadNo">
+                  </a> <!-- addParticipantsAadNo -->
+                  <span class="method-name">addParticipantsAadNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addParticipantsAadNoAlreadyRegd">
+                  </a> <!-- addParticipantsAadNoAlreadyRegd -->
+                  <span class="method-name">addParticipantsAadNoAlreadyRegd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addParticipantsAadNoUsedNickName">
+                  </a> <!-- addParticipantsAadNoUsedNickName -->
+                  <span class="method-name">addParticipantsAadNoUsedNickName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addParticipantsAccNo">
+                  </a> <!-- addParticipantsAccNo -->
+                  <span class="method-name">addParticipantsAccNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addParticipantsAccNoAlreadyRegd">
+                  </a> <!-- addParticipantsAccNoAlreadyRegd -->
+                  <span class="method-name">addParticipantsAccNoAlreadyRegd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addParticipantsAccNoUsedNickName">
+                  </a> <!-- addParticipantsAccNoUsedNickName -->
+                  <span class="method-name">addParticipantsAccNoUsedNickName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addParticipantsVirNo">
+                  </a> <!-- addParticipantsVirNo -->
+                  <span class="method-name">addParticipantsVirNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addParticipantsVirNoAlreadyRegd">
+                  </a> <!-- addParticipantsVirNoAlreadyRegd -->
+                  <span class="method-name">addParticipantsVirNoAlreadyRegd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addParticipantsVirNoUsedNickName">
+                  </a> <!-- addParticipantsVirNoUsedNickName -->
+                  <span class="method-name">addParticipantsVirNoUsedNickName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteParticipantsAadNo">
+                  </a> <!-- deleteParticipantsAadNo -->
+                  <span class="method-name">deleteParticipantsAadNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteParticipantsAccNo">
+                  </a> <!-- deleteParticipantsAccNo -->
+                  <span class="method-name">deleteParticipantsAccNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteParticipantsVirAdd">
+                  </a> <!-- deleteParticipantsVirAdd -->
+                  <span class="method-name">deleteParticipantsVirAdd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="viewParticipantsAadNo">
+                  </a> <!-- viewParticipantsAadNo -->
+                  <span class="method-name">viewParticipantsAadNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="viewParticipantsAccNo">
+                  </a> <!-- viewParticipantsAccNo -->
+                  <span class="method-name">viewParticipantsAccNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="viewParticipantsVirAdd">
+                  </a> <!-- viewParticipantsVirAdd -->
+                  <span class="method-name">viewParticipantsVirAdd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
+          <div class="suite-Positive_Transaction_flow-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">mBankingTestVIJComplete.AddVirtualAddrTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addAlreadyAddedVirAddress">
+                  </a> <!-- addAlreadyAddedVirAddress -->
+                  <span class="method-name">addAlreadyAddedVirAddress</span>
+                  <div class="stack-trace">java.lang.Throwable: Method AddVirtualAddrTest.addAlreadyAddedVirAddress()[pri:0, instance:mBankingTestVIJComplete.AddVirtualAddrTest@1cabb2a] depends on not successfully finished methods
+... Removed 17 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Transaction_flow-class-skipped -->
+          <div class="suite-Positive_Transaction_flow-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">mBankingTestVIJComplete.AddBankTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddBankAccNotExists">
+                  </a> <!-- AddBankAccNotExists -->
+                  <span class="method-name">AddBankAccNotExists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddBankCreateVpaSetPin">
+                  </a> <!-- AddBankCreateVpaSetPin -->
+                  <span class="method-name">AddBankCreateVpaSetPin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddbankCreateVpaOnly">
+                  </a> <!-- AddbankCreateVpaOnly -->
+                  <span class="method-name">AddbankCreateVpaOnly</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddbankCreateVpaOnlyOtherBank">
+                  </a> <!-- AddbankCreateVpaOnlyOtherBank -->
+                  <span class="method-name">AddbankCreateVpaOnlyOtherBank</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddbankOnly">
+                  </a> <!-- AddbankOnly -->
+                  <span class="method-name">AddbankOnly</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Transaction_flow-class-passed -->
         </div> <!-- panel Positive_Transaction_flow -->
         <div panel-name="test-xml-Positive_Transaction_flow" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -685,6 +903,108 @@
       &lt;class name=&quot;mBankingTestVIJComplete.ManageAcTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Login App --&gt;
+  &lt;test name=&quot;Login App(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.MenuDrawerOptionsTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;reportSpamUnBlock&quot;/&gt;
+          &lt;include name=&quot;complaintStatus&quot;/&gt;
+          &lt;include name=&quot;reportSpamBlock&quot;/&gt;
+          &lt;include name=&quot;termsAndCondition&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.MenuDrawerOptionsTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.SetUPIPINTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;setUPIPIN&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.SetUPIPINTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.ManageAcTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;deleteBankAccount&quot;/&gt;
+          &lt;include name=&quot;editVirAddress&quot;/&gt;
+          &lt;include name=&quot;generateQRforVirAdd&quot;/&gt;
+          &lt;include name=&quot;deleteVirAddress&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.ManageAcTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.ChangePinTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;ChangePINWhenVPANotCreated&quot;/&gt;
+          &lt;include name=&quot;ChangePinWhenUPIPinNotAvailable&quot;/&gt;
+          &lt;include name=&quot;ChangePinInvalidNPCIPIN&quot;/&gt;
+          &lt;include name=&quot;ChangePinValid&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.ChangePinTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.CollectMoneyTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;CollectMoneyVir3&quot;/&gt;
+          &lt;include name=&quot;CollectMoneyVir1&quot;/&gt;
+          &lt;include name=&quot;CollectMoneyVir2&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.CollectMoneyTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.ViewBalanceTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;BalanceEnquiryInValidNPCIPin&quot;/&gt;
+          &lt;include name=&quot;BalanceEnquiryPinNotConfigured&quot;/&gt;
+          &lt;include name=&quot;extentbeforeMethod&quot;/&gt;
+          &lt;include name=&quot;extentGetResult&quot;/&gt;
+          &lt;include name=&quot;BalanceEnquiryValid&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.ViewBalanceTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.TxnStatusTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;txnStatus&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.TxnStatusTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.PayMoneyTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;PayMoneyAad&quot;/&gt;
+          &lt;include name=&quot;PayMoneyVir&quot;/&gt;
+          &lt;include name=&quot;PayMoneyIFSC&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.PayMoneyTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.PendingApprovalTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;pendingApprovalDefer&quot;/&gt;
+          &lt;include name=&quot;pendingApprovalDecline&quot;/&gt;
+          &lt;include name=&quot;pendingApprovalApprove&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.PendingApprovalTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.ParticipantsTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;addParticipantsAadNoAlreadyRegd&quot;/&gt;
+          &lt;include name=&quot;addParticipantsVirNoAlreadyRegd&quot;/&gt;
+          &lt;include name=&quot;addParticipantsAadNo&quot;/&gt;
+          &lt;include name=&quot;addParticipantsAadNoUsedNickName&quot;/&gt;
+          &lt;include name=&quot;viewParticipantsVirAdd&quot;/&gt;
+          &lt;include name=&quot;addParticipantsVirNoUsedNickName&quot;/&gt;
+          &lt;include name=&quot;addParticipantsAccNoUsedNickName&quot;/&gt;
+          &lt;include name=&quot;viewParticipantsAadNo&quot;/&gt;
+          &lt;include name=&quot;deleteParticipantsAccNo&quot;/&gt;
+          &lt;include name=&quot;deleteParticipantsVirAdd&quot;/&gt;
+          &lt;include name=&quot;addParticipantsAccNoAlreadyRegd&quot;/&gt;
+          &lt;include name=&quot;viewParticipantsAccNo&quot;/&gt;
+          &lt;include name=&quot;addParticipantsVirNo&quot;/&gt;
+          &lt;include name=&quot;addParticipantsAccNo&quot;/&gt;
+          &lt;include name=&quot;deleteParticipantsAadNo&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.ParticipantsTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.AddBankTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;extentReportSetUp&quot;/&gt;
+          &lt;include name=&quot;extentbeforeMethod&quot;/&gt;
+          &lt;include name=&quot;extentGetResult&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.AddBankTest --&gt;
+      &lt;class name=&quot;mBankingTestVIJComplete.AddVirtualAddrTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;extentbeforeMethod&quot;/&gt;
+          &lt;include name=&quot;addAlreadyAddedVirAddress&quot;/&gt;
+          &lt;include name=&quot;extentGetResult&quot;/&gt;
+          &lt;include name=&quot;addVirAddressValid&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mBankingTestVIJComplete.AddVirtualAddrTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login App(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Positive Transaction flow --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -697,6 +1017,9 @@
             <ul>
               <li>
                 <span class="test-name">Login App (12 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Login App(failed) (12 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -750,160 +1073,204 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(37);
+data.addRows(48);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ChangePinWhenUPIPinNotAvailable')
-data.setCell(0, 2, 'mBankingTestVIJComplete.ChangePinTest')
-data.setCell(0, 3, 6);
+data.setCell(0, 1, 'AddBankCreateVpaSetPin')
+data.setCell(0, 2, 'mBankingTestVIJComplete.AddBankTest')
+data.setCell(0, 3, 75099);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'viewParticipantsAcIfsc')
-data.setCell(1, 2, 'mBankingTestVIJComplete.ParticipantsTest')
-data.setCell(1, 3, 3);
+data.setCell(1, 1, 'AddbankCreateVpaOnlyOtherBank')
+data.setCell(1, 2, 'mBankingTestVIJComplete.AddBankTest')
+data.setCell(1, 3, 47656);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'ChangePinInvalidNPCIPIN')
-data.setCell(2, 2, 'mBankingTestVIJComplete.ChangePinTest')
-data.setCell(2, 3, 2);
+data.setCell(2, 1, 'AddbankCreateVpaOnly')
+data.setCell(2, 2, 'mBankingTestVIJComplete.AddBankTest')
+data.setCell(2, 3, 44983);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'AddbankCreateVpaOnlyOtherBank')
+data.setCell(3, 1, 'AddbankOnly')
 data.setCell(3, 2, 'mBankingTestVIJComplete.AddBankTest')
-data.setCell(3, 3, 2);
+data.setCell(3, 3, 19252);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'addParticipantsAadNo')
-data.setCell(4, 2, 'mBankingTestVIJComplete.ParticipantsTest')
-data.setCell(4, 3, 2);
+data.setCell(4, 1, 'addVirAddressValid')
+data.setCell(4, 2, 'mBankingTestVIJComplete.AddVirtualAddrTest')
+data.setCell(4, 3, 16486);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'reportSpamBlock')
-data.setCell(5, 2, 'mBankingTestVIJComplete.MenuDrawerOptionsTest')
-data.setCell(5, 3, 2);
+data.setCell(5, 1, 'AddBankAccNotExists')
+data.setCell(5, 2, 'mBankingTestVIJComplete.AddBankTest')
+data.setCell(5, 3, 14241);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'ChangePinValid')
-data.setCell(6, 2, 'mBankingTestVIJComplete.ChangePinTest')
-data.setCell(6, 3, 2);
+data.setCell(6, 1, 'BalanceEnquiryValid')
+data.setCell(6, 2, 'mBankingTestVIJComplete.ViewBalanceTest')
+data.setCell(6, 3, 5875);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'pendingApprovalDecline')
-data.setCell(7, 2, 'mBankingTestVIJComplete.PendingApprovalTest')
+data.setCell(7, 1, 'PayMoneyVir')
+data.setCell(7, 2, 'mBankingTestVIJComplete.PayMoneyTest')
 data.setCell(7, 3, 1);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'AddbankOnly')
-data.setCell(8, 2, 'mBankingTestVIJComplete.AddBankTest')
+data.setCell(8, 1, 'deleteParticipantsVirAdd')
+data.setCell(8, 2, 'mBankingTestVIJComplete.ParticipantsTest')
 data.setCell(8, 3, 1);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'CollectMoneyVir3')
-data.setCell(9, 2, 'mBankingTestVIJComplete.CollectMoneyTest')
+data.setCell(9, 1, 'viewParticipantsVirAdd')
+data.setCell(9, 2, 'mBankingTestVIJComplete.ParticipantsTest')
 data.setCell(9, 3, 1);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'generateQRforVirAdd')
-data.setCell(10, 2, 'mBankingTestVIJComplete.ManageAcTest')
+data.setCell(10, 1, 'BalanceEnquiryPinNotConfigured')
+data.setCell(10, 2, 'mBankingTestVIJComplete.ViewBalanceTest')
 data.setCell(10, 3, 1);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'reportSpamUnBlock')
+data.setCell(11, 1, 'complaintStatus')
 data.setCell(11, 2, 'mBankingTestVIJComplete.MenuDrawerOptionsTest')
 data.setCell(11, 3, 1);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'CollectMoneyVir1')
-data.setCell(12, 2, 'mBankingTestVIJComplete.CollectMoneyTest')
+data.setCell(12, 1, 'pendingApprovalDefer')
+data.setCell(12, 2, 'mBankingTestVIJComplete.PendingApprovalTest')
 data.setCell(12, 3, 1);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'viewParticipantsAadNum')
+data.setCell(13, 1, 'addParticipantsVirNoAlreadyRegd')
 data.setCell(13, 2, 'mBankingTestVIJComplete.ParticipantsTest')
 data.setCell(13, 3, 1);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'AddBankAccNotExists')
-data.setCell(14, 2, 'mBankingTestVIJComplete.AddBankTest')
+data.setCell(14, 1, 'reportSpamBlock')
+data.setCell(14, 2, 'mBankingTestVIJComplete.MenuDrawerOptionsTest')
 data.setCell(14, 3, 1);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'BalanceEnquiryValid')
-data.setCell(15, 2, 'mBankingTestVIJComplete.ViewBalanceTest')
+data.setCell(15, 1, 'addParticipantsAadNoAlreadyRegd')
+data.setCell(15, 2, 'mBankingTestVIJComplete.ParticipantsTest')
 data.setCell(15, 3, 1);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'deleteVirAddress')
-data.setCell(16, 2, 'mBankingTestVIJComplete.ManageAcTest')
+data.setCell(16, 1, 'PayMoneyIFSC')
+data.setCell(16, 2, 'mBankingTestVIJComplete.PayMoneyTest')
 data.setCell(16, 3, 1);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'deleteBankAccount')
-data.setCell(17, 2, 'mBankingTestVIJComplete.ManageAcTest')
-data.setCell(17, 3, 1);
+data.setCell(17, 1, 'viewParticipantsAccNo')
+data.setCell(17, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(17, 3, 0);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'CollectMoneyVir2')
-data.setCell(18, 2, 'mBankingTestVIJComplete.CollectMoneyTest')
-data.setCell(18, 3, 1);
+data.setCell(18, 1, 'ChangePinInvalidNPCIPIN')
+data.setCell(18, 2, 'mBankingTestVIJComplete.ChangePinTest')
+data.setCell(18, 3, 0);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'PayMoneyAad')
-data.setCell(19, 2, 'mBankingTestVIJComplete.PayMoneyTest')
-data.setCell(19, 3, 1);
+data.setCell(19, 1, 'addParticipantsVirNo')
+data.setCell(19, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(19, 3, 0);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'pendingApprovalApprove')
-data.setCell(20, 2, 'mBankingTestVIJComplete.PendingApprovalTest')
-data.setCell(20, 3, 1);
+data.setCell(20, 1, 'addParticipantsAadNo')
+data.setCell(20, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(20, 3, 0);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'complaintStatus')
-data.setCell(21, 2, 'mBankingTestVIJComplete.MenuDrawerOptionsTest')
-data.setCell(21, 3, 1);
+data.setCell(21, 1, 'deleteBankAccount')
+data.setCell(21, 2, 'mBankingTestVIJComplete.ManageAcTest')
+data.setCell(21, 3, 0);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'setUPIPIN')
-data.setCell(22, 2, 'mBankingTestVIJComplete.SetUPIPINTest')
-data.setCell(22, 3, 1);
+data.setCell(22, 1, 'PayMoneyAad')
+data.setCell(22, 2, 'mBankingTestVIJComplete.PayMoneyTest')
+data.setCell(22, 3, 0);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'txnStatus')
-data.setCell(23, 2, 'mBankingTestVIJComplete.TxnStatusTest')
-data.setCell(23, 3, 1);
+data.setCell(23, 1, 'BalanceEnquiryInValidNPCIPin')
+data.setCell(23, 2, 'mBankingTestVIJComplete.ViewBalanceTest')
+data.setCell(23, 3, 0);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'editVirAddress')
-data.setCell(24, 2, 'mBankingTestVIJComplete.ManageAcTest')
-data.setCell(24, 3, 1);
+data.setCell(24, 1, 'addParticipantsAadNoUsedNickName')
+data.setCell(24, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(24, 3, 0);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'BalanceEnquiryInValidNPCIPin')
-data.setCell(25, 2, 'mBankingTestVIJComplete.ViewBalanceTest')
-data.setCell(25, 3, 1);
+data.setCell(25, 1, 'ChangePinValid')
+data.setCell(25, 2, 'mBankingTestVIJComplete.ChangePinTest')
+data.setCell(25, 3, 0);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'BalanceEnquiryPinNotConfigured')
-data.setCell(26, 2, 'mBankingTestVIJComplete.ViewBalanceTest')
-data.setCell(26, 3, 1);
+data.setCell(26, 1, 'ChangePinWhenUPIPinNotAvailable')
+data.setCell(26, 2, 'mBankingTestVIJComplete.ChangePinTest')
+data.setCell(26, 3, 0);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'addVirAddressValid')
-data.setCell(27, 2, 'mBankingTestVIJComplete.AddVirtualAddrTest')
-data.setCell(27, 3, 1);
+data.setCell(27, 1, 'deleteParticipantsAadNo')
+data.setCell(27, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(27, 3, 0);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'AddBankCreateVpaSetPin')
-data.setCell(28, 2, 'mBankingTestVIJComplete.AddBankTest')
-data.setCell(28, 3, 1);
+data.setCell(28, 1, 'viewParticipantsAadNo')
+data.setCell(28, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(28, 3, 0);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'AddbankCreateVpaOnly')
-data.setCell(29, 2, 'mBankingTestVIJComplete.AddBankTest')
-data.setCell(29, 3, 1);
+data.setCell(29, 1, 'pendingApprovalApprove')
+data.setCell(29, 2, 'mBankingTestVIJComplete.PendingApprovalTest')
+data.setCell(29, 3, 0);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'pendingApprovalDefer')
+data.setCell(30, 1, 'pendingApprovalDecline')
 data.setCell(30, 2, 'mBankingTestVIJComplete.PendingApprovalTest')
-data.setCell(30, 3, 1);
+data.setCell(30, 3, 0);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'ChangePINWhenVPANotCreated')
-data.setCell(31, 2, 'mBankingTestVIJComplete.ChangePinTest')
-data.setCell(31, 3, 1);
+data.setCell(31, 1, 'termsAndCondition')
+data.setCell(31, 2, 'mBankingTestVIJComplete.MenuDrawerOptionsTest')
+data.setCell(31, 3, 0);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'addParticipantsVirNo')
-data.setCell(32, 2, 'mBankingTestVIJComplete.ParticipantsTest')
-data.setCell(32, 3, 1);
+data.setCell(32, 1, 'deleteVirAddress')
+data.setCell(32, 2, 'mBankingTestVIJComplete.ManageAcTest')
+data.setCell(32, 3, 0);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'termsAndCondition')
-data.setCell(33, 2, 'mBankingTestVIJComplete.MenuDrawerOptionsTest')
-data.setCell(33, 3, 1);
+data.setCell(33, 1, 'editVirAddress')
+data.setCell(33, 2, 'mBankingTestVIJComplete.ManageAcTest')
+data.setCell(33, 3, 0);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'viewParticipantsVirAdd')
-data.setCell(34, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(34, 1, 'CollectMoneyVir3')
+data.setCell(34, 2, 'mBankingTestVIJComplete.CollectMoneyTest')
 data.setCell(34, 3, 0);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'addAlreadyAddedVirAddress')
-data.setCell(35, 2, 'mBankingTestVIJComplete.AddVirtualAddrTest')
+data.setCell(35, 1, 'txnStatus')
+data.setCell(35, 2, 'mBankingTestVIJComplete.TxnStatusTest')
 data.setCell(35, 3, 0);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'addParticipantsAccNo')
-data.setCell(36, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(36, 1, 'ChangePINWhenVPANotCreated')
+data.setCell(36, 2, 'mBankingTestVIJComplete.ChangePinTest')
 data.setCell(36, 3, 0);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'CollectMoneyVir1')
+data.setCell(37, 2, 'mBankingTestVIJComplete.CollectMoneyTest')
+data.setCell(37, 3, 0);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'addParticipantsVirNoUsedNickName')
+data.setCell(38, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(38, 3, 0);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'generateQRforVirAdd')
+data.setCell(39, 2, 'mBankingTestVIJComplete.ManageAcTest')
+data.setCell(39, 3, 0);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'addParticipantsAccNoAlreadyRegd')
+data.setCell(40, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(40, 3, 0);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'addParticipantsAccNo')
+data.setCell(41, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(41, 3, 0);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'addParticipantsAccNoUsedNickName')
+data.setCell(42, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(42, 3, 0);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'reportSpamUnBlock')
+data.setCell(43, 2, 'mBankingTestVIJComplete.MenuDrawerOptionsTest')
+data.setCell(43, 3, 0);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'addAlreadyAddedVirAddress')
+data.setCell(44, 2, 'mBankingTestVIJComplete.AddVirtualAddrTest')
+data.setCell(44, 3, 0);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'deleteParticipantsAccNo')
+data.setCell(45, 2, 'mBankingTestVIJComplete.ParticipantsTest')
+data.setCell(45, 3, 0);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'setUPIPIN')
+data.setCell(46, 2, 'mBankingTestVIJComplete.SetUPIPINTest')
+data.setCell(46, 3, 0);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'CollectMoneyVir2')
+data.setCell(47, 2, 'mBankingTestVIJComplete.CollectMoneyTest')
+data.setCell(47, 3, 0);
 window.suiteTableData['Positive_Transaction_flow']= { tableData: data, tableDiv: 'times-div-Positive_Transaction_flow'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 46 ms</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Positive_Transaction_flow">
               </div> <!-- times-div-Positive_Transaction_flow -->
             </div> <!-- times-div -->
@@ -921,69 +1288,6 @@ return data;
             <span class="header-content">22 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mBankingTestVIJComplete.ChangePinTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">extentReportSetUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mBankingTestVIJComplete.AddVirtualAddrTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">extentReportSetUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mBankingTestVIJComplete.ViewBalanceTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">extentReportSetUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mBankingTestVIJComplete.PayMoneyTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">extentReportSetUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mBankingTestVIJComplete.ParticipantsTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">extentReportSetUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mBankingTestVIJComplete.ManageAcTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">extentReportSetUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">mBankingTestVIJComplete.TxnStatusTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">extentReportSetUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">mBankingTestVIJComplete.MenuDrawerOptionsTest</span>
               <div class="ignored-methods-div">
@@ -1003,6 +1307,15 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
+              <span class="ignored-class-name">mBankingTestVIJComplete.ManageAcTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">extentReportSetUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">mBankingTestVIJComplete.CollectMoneyTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">extentReportSetUp</span>
@@ -1012,7 +1325,61 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
+              <span class="ignored-class-name">mBankingTestVIJComplete.ViewBalanceTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">extentReportSetUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">mBankingTestVIJComplete.ChangePinTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">extentReportSetUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">mBankingTestVIJComplete.TxnStatusTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">extentReportSetUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">mBankingTestVIJComplete.PayMoneyTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">extentReportSetUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">mBankingTestVIJComplete.PendingApprovalTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">extentReportSetUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">mBankingTestVIJComplete.ParticipantsTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">extentReportSetUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">mBankingTestVIJComplete.AddVirtualAddrTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">extentReportSetUp</span>
                 <br/>
@@ -1030,187 +1397,291 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.AddBankTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">extentReportSetUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJComplete.AddBankTest.AddbankOnly())</span>
+                <span class="method-start">27463 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">AddbankOnly</span>
-                <span class="method-start">28967 ms</span>
+                <span class="method-start">37796 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">extentGetResult([TestResult name=AddbankOnly status=SUCCESS method=AddBankTest.AddbankOnly()[pri:0, instance:mBankin...)</span>
+                <span class="method-start">57049 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJComplete.AddBankTest.AddbankCreateVpaOnly())</span>
+                <span class="method-start">57054 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">AddbankCreateVpaOnly</span>
-                <span class="method-start">28972 ms</span>
+                <span class="method-start">67317 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">extentGetResult([TestResult name=AddbankCreateVpaOnly status=SUCCESS method=AddBankTest.AddbankCreateVpaOnly()[pri:0...)</span>
+                <span class="method-start">112303 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJComplete.AddBankTest.AddBankCreateVpaSetPin() throws java.lang.Interrupte...)</span>
+                <span class="method-start">112306 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">AddBankCreateVpaSetPin</span>
-                <span class="method-start">28978 ms</span>
+                <span class="method-start">122634 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">extentGetResult([TestResult name=AddBankCreateVpaSetPin status=SUCCESS method=AddBankTest.AddBankCreateVpaSetPin()[p...)</span>
+                <span class="method-start">197734 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJComplete.AddBankTest.AddBankAccNotExists() throws java.lang.InterruptedEx...)</span>
+                <span class="method-start">197734 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">AddBankAccNotExists</span>
-                <span class="method-start">28984 ms</span>
+                <span class="method-start">207970 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">extentGetResult([TestResult name=AddBankAccNotExists status=SUCCESS method=AddBankTest.AddBankAccNotExists()[pri:0, ...)</span>
+                <span class="method-start">222212 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJComplete.AddBankTest.AddbankCreateVpaOnlyOtherBank())</span>
+                <span class="method-start">222213 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">AddbankCreateVpaOnlyOtherBank</span>
-                <span class="method-start">28993 ms</span>
+                <span class="method-start">233102 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">extentGetResult([TestResult name=AddbankCreateVpaOnlyOtherBank status=SUCCESS method=AddBankTest.AddbankCreateVpaOnl...)</span>
+                <span class="method-start">280761 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.AddVirtualAddrTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJComplete.AddVirtualAddrTest.addVirAddressValid())</span>
+                <span class="method-start">280768 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">addVirAddressValid</span>
-                <span class="method-start">29001 ms</span>
+                <span class="method-start">291151 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">extentGetResult([TestResult name=addVirAddressValid status=FAILURE method=AddVirtualAddrTest.addVirAddressValid()[pr...)</span>
+                <span class="method-start">307640 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.ViewBalanceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">extentbeforeMethod(public void mBankingTestVIJComplete.ViewBalanceTest.BalanceEnquiryValid() throws java.lang.Interrupt...)</span>
+                <span class="method-start">311715 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">BalanceEnquiryValid</span>
-                <span class="method-start">29009 ms</span>
+                <span class="method-start">322469 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">extentGetResult([TestResult name=BalanceEnquiryValid status=FAILURE method=ViewBalanceTest.BalanceEnquiryValid()[pri...)</span>
+                <span class="method-start">328351 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">BalanceEnquiryInValidNPCIPin</span>
-                <span class="method-start">29014 ms</span>
+                <span class="method-start">328455 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">BalanceEnquiryPinNotConfigured</span>
-                <span class="method-start">29020 ms</span>
+                <span class="method-start">328456 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.CollectMoneyTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">CollectMoneyVir1</span>
-                <span class="method-start">29026 ms</span>
+                <span class="method-start">328458 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">CollectMoneyVir2</span>
-                <span class="method-start">29047 ms</span>
+                <span class="method-start">328460 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">CollectMoneyVir3</span>
-                <span class="method-start">29052 ms</span>
+                <span class="method-start">328461 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.PendingApprovalTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">pendingApprovalDefer</span>
-                <span class="method-start">29057 ms</span>
+                <span class="method-start">328462 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">pendingApprovalDecline</span>
-                <span class="method-start">29062 ms</span>
+                <span class="method-start">328464 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">pendingApprovalApprove</span>
-                <span class="method-start">29067 ms</span>
+                <span class="method-start">328465 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.PayMoneyTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <span class="method-name">PayMoneyVir</span>
+                <span class="method-start">328466 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PayMoneyIFSC</span>
+                <span class="method-start">328467 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">PayMoneyAad</span>
-                <span class="method-start">29073 ms</span>
+                <span class="method-start">328469 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.ParticipantsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">viewParticipantsVirAdd</span>
-                <span class="method-start">29078 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">viewParticipantsAcIfsc</span>
-                <span class="method-start">29081 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">viewParticipantsAadNum</span>
-                <span class="method-start">29087 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <span class="method-name">addParticipantsVirNo</span>
-                <span class="method-start">29156 ms</span>
+                <span class="method-start">328470 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addParticipantsVirNoUsedNickName</span>
+                <span class="method-start">328471 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addParticipantsVirNoAlreadyRegd</span>
+                <span class="method-start">328472 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">viewParticipantsVirAdd</span>
+                <span class="method-start">328499 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteParticipantsVirAdd</span>
+                <span class="method-start">328500 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addParticipantsAccNo</span>
-                <span class="method-start">29160 ms</span>
+                <span class="method-start">328502 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addParticipantsAccNoUsedNickName</span>
+                <span class="method-start">328505 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addParticipantsAccNoAlreadyRegd</span>
+                <span class="method-start">328506 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">viewParticipantsAccNo</span>
+                <span class="method-start">328507 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteParticipantsAccNo</span>
+                <span class="method-start">328508 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addParticipantsAadNo</span>
-                <span class="method-start">29168 ms</span>
+                <span class="method-start">328509 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addParticipantsAadNoUsedNickName</span>
+                <span class="method-start">328536 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addParticipantsAadNoAlreadyRegd</span>
+                <span class="method-start">328537 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">viewParticipantsAadNo</span>
+                <span class="method-start">328539 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteParticipantsAadNo</span>
+                <span class="method-start">328540 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.MenuDrawerOptionsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">termsAndCondition</span>
-                <span class="method-start">29175 ms</span>
+                <span class="method-start">328541 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">reportSpamBlock</span>
-                <span class="method-start">29182 ms</span>
+                <span class="method-start">328568 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">reportSpamUnBlock</span>
-                <span class="method-start">29193 ms</span>
+                <span class="method-start">328569 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">complaintStatus</span>
-                <span class="method-start">29207 ms</span>
+                <span class="method-start">328590 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.TxnStatusTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">txnStatus</span>
-                <span class="method-start">29211 ms</span>
+                <span class="method-start">328591 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.SetUPIPINTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">setUPIPIN</span>
-                <span class="method-start">29243 ms</span>
+                <span class="method-start">328592 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.ChangePinTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">ChangePINWhenVPANotCreated</span>
-                <span class="method-start">29250 ms</span>
+                <span class="method-start">328593 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ChangePinWhenUPIPinNotAvailable</span>
-                <span class="method-start">29254 ms</span>
+                <span class="method-start">328594 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ChangePinInvalidNPCIPIN</span>
-                <span class="method-start">29275 ms</span>
+                <span class="method-start">328613 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ChangePinValid</span>
-                <span class="method-start">29280 ms</span>
+                <span class="method-start">328614 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mBankingTestVIJComplete.ManageAcTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">generateQRforVirAdd</span>
-                <span class="method-start">29285 ms</span>
+                <span class="method-start">328615 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">editVirAddress</span>
-                <span class="method-start">29288 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">deleteVirAddress</span>
-                <span class="method-start">29293 ms</span>
+                <span class="method-start">328616 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">deleteBankAccount</span>
-                <span class="method-start">29296 ms</span>
+                <span class="method-start">328617 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteVirAddress</span>
+                <span class="method-start">328617 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
